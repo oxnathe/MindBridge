@@ -17,11 +17,11 @@ Digital Mental Health Companion App - User Authentication System
 
 ## API Endpoints
 
-### Register User route
+### Register User route/endpoint
 **POST** `http://localhost:3000/api/v1/auth/register`
 
 
-### Login User route 
+### Login User  routes/endpoint
 **POST** `http://localhost:3000/api/v1/auth/login`
 
 
@@ -44,14 +44,12 @@ PORT=3000
 ```
 
 ### 3. Database Setup
-Database and tables are created automatically when server starts. No manual database creation needed using mysql workbench .
+Database and tables are created automatically when server starts and checked using mysql workbench.
 
 ### 4. Start Server
-bash
+```bash
 npm run start
-
+```
 
 ## Testing
-Used Postman to test the endpoints above.
-
-
+Use Postman to test the endpoints above.
