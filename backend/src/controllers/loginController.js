@@ -22,7 +22,7 @@ const login = async (req, res, next) => {
         if (!isPasswordValid) {
             return res.status(401).json({
                 success: false,
-                message: 'Invalid email or password'
+                message: 'Invalid password'
             });
         }
 

@@ -6,7 +6,7 @@ A Digital Mental Health Companion App that provides free or low-cost access to t
 ## Overview
 Digital Mental Health Companion App - User Authentication System
 
-## Features ✅
+## Features 
 - User Registration & Login
 - JWT Authentication  
 - Password Hashing
@@ -17,25 +17,13 @@ Digital Mental Health Companion App - User Authentication System
 
 ## API Endpoints
 
-### Register User
+### Register User route/endpoint
 **POST** `http://localhost:3000/api/v1/auth/register`
-```json
-{
-    "username": "johndoe",
-    "email": "john@example.com", 
-    "password": "password123",
-    "isAnonymous": false
-}
-```
 
-### Login User  
+
+### Login User  routes/endpoint
 **POST** `http://localhost:3000/api/v1/auth/login`
-```json
-{
-    "email": "john@example.com",
-    "password": "password123"
-}
-```
+
 
 ## Setup
 
@@ -56,14 +44,12 @@ PORT=3000
 ```
 
 ### 3. Database Setup
-Database and tables are created automatically when server starts. No manual database creation needed.
+Database and tables are created automatically when server starts and checked using mysql workbench.
 
 ### 4. Start Server
 ```bash
-npm start
+npm run start
 ```
 
 ## Testing
 Use Postman to test the endpoints above.
-
-**Phase 1 Complete!** ✅ Ready for Phase 2: Mood Tracking

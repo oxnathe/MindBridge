@@ -6,7 +6,6 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
 import authRoutes from './src/routes/authRoutes.js';
-import authMiddleware from './src/middleware/auth.js';
 import { notFound, errorHandler } from './src/middleware/errorHandler.js';
 import { connectDB } from './src/config/db.js';
 
