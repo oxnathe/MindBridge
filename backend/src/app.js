@@ -6,9 +6,11 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
 import authRoutes from './src/routes/authRoutes.js';
+import journalRoutes from './src/routes/journalRoutes.js';
 import { notFound, errorHandler } from './src/middleware/errorHandler.js';
 import { connectDB } from './src/config/db.js';
 import moodRoutes from './routes/moodRoutes.js';
+import authMiddleware from './src/middleware/auth.js';
 
 
 const app = express();
@@ -22,6 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/v1/auth', authRoutes); //routes
 app.use('/api/v1/mood', moodRoutes);
+app.use('/api/v1/journal', authMiddleware, journalRoutes);
 
 
 
