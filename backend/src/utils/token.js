@@ -6,16 +6,16 @@ export const generateToken = (payload) => {
     // expiresIn defines how long the token is valid (7 days here)
     return jwt.sign(
         payload,
-        process.env.JWT_SECRET, { expiresIn: "7d" });
+        process.env.JWT_SECRET, { expiresIn: "4w" });
 };
 
 export const verifyToken = (token) => {
     try {
         // Decode and verify the token
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        return decoded; // Returns { id, email, role, iat, exp }
+        return decoded; // Returns { id, email, role }
     } catch (error) {
-        // Token is invalid, expired, or malformed
+        // Token is invalid or expired
         throw new Error('Invalid or expired token');
     }
 };

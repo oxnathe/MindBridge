@@ -1,6 +1,6 @@
 import { extractTokenFromHeader, verifyToken } from "../utils/token.js";
 
-const authMiddleware = (req, res) => {
+const authMiddleware = (req, res,next) => {
     try {
 
         const authHeader = req.headers.authorization;
