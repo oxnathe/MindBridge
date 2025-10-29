@@ -54,4 +54,4 @@ npm run start
 ## Testing
 Used Postman to test the endpoints above.
 
-**Phase 1 Complete!**  Ready for Phase 2: Mood Tracking
+
