@@ -2,12 +2,12 @@
 
 
 const COLORS = {
-    backgroundColor: '#EFF6FF',
-    textColor: '#031633',
-    neutralColor: "#404040",
+    backgroundColor: '#9DD4EF',
+    textColor: '#0C2F40',
+    neutralColor: "#09202B",
     white: "#FFFFFF",
     skipColor: "#031633",
-    buttonColor: "#0057B2",
+    buttonColor: "#003148",
     btnColor: "#084298",
     formText: "#404040"
 }
@@ -19,3 +19,5 @@ const SIZES = {
     regular: 18,
     small: 16,
 }
+
+export {COLORS, SIZES}

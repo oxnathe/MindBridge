@@ -1,7 +1,12 @@
 import { Stack } from "expo-router";
+import Splash from "./Splash";
 import { useFonts } from "expo-font";
+import { useEffect, useState } from "react";
 
 export default function RootLayout() {
+
+
+  const [showSplash, setShowSplash] = useState(true)
 
   const [loaded, error] = useFonts({
     serifRegular: require('../assets/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf'),
@@ -11,6 +16,17 @@ export default function RootLayout() {
     poppinsLight: require('../assets/fonts/Poppins/Poppins-Light.ttf'),
     poppinsBold: require('../assets/fonts/Poppins/Poppins-Bold.ttf'),
   })
+
+  useEffect(() =>{
+    setTimeout( ()=>{
+      setShowSplash(false)
+    }, 5000)
+  })
+
+
+  if(showSplash){
+    return<Splash/>
+  }
 
 
   return (
