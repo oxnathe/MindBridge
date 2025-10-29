@@ -3,7 +3,7 @@ import bcrypt from "bcrypt";
 // Hash password function
 export const hashPassword = async (password) => {
     try {
-        const salt = await bcrypt.genSalt(12); // Generate salt with 12 rounds (more secure)
+        const salt = await bcrypt.genSalt(12); // Generate salt with 12 rounds
         const hashedPassword = await bcrypt.hash(password, salt);
         return hashedPassword;
     } catch (error) {

@@ -6,7 +6,7 @@ export const generateToken = (payload) => {
     // expiresIn defines how long the token is valid (7 days here)
     return jwt.sign(
         payload,
-        process.env.JWT_SECRET, { expiresIn: "7d" });
+        process.env.JWT_SECRET, { expiresIn: "4w" });
 };
 
 export const verifyToken = (token) => {
