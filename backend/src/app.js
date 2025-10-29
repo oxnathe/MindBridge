@@ -9,6 +9,8 @@ import authRoutes from './src/routes/authRoutes.js';
 import authMiddleware from './src/middleware/auth.js';
 import { notFound, errorHandler } from './src/middleware/errorHandler.js';
 import { connectDB } from './src/config/db.js';
+import moodRoutes from './routes/moodRoutes.js';
+
 
 const app = express();
 
@@ -20,6 +22,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/v1/auth', authRoutes); //routes
+app.use('/api/v1/mood', moodRoutes);
+
 
 
 app.use(notFound);      // 404 handler
