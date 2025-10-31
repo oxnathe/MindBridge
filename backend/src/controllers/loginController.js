@@ -1,33 +1,41 @@
 import User from "../models/user.js";
-import bcrypt from "bcryptjs";
-import { generateToken } from "../utils/token.js";
-import { comparePassword } from '../utils/hashPass.js';
+import bcrypt from 'bcryptjs';
+import { validationResult } from "express-validator";
+import { createToken } from "../utils/token.js";
+
 
 const login = async (req, res, next) => {
     try {
-        // 1. Get email and password from request body
+
+        // check for validation errors
+        const error = validationResult(req);
+        if (!error.isEmpty()) {
+            return res.stats(400).json({ errors: error.array() })
+        }
+
+        //  Get email and password from request body
         const { email, password } = req.body;
 
-        // 2. Find user by email
+        //  Find user by email
         const user = await User.findOne({ where: { email } });
         if (!user) {
+            return res.status(401).json({
+                success: false,
+                message: 'Invalid credentials'
+            });
+        }
+
+        //  Compare passwords
+        const isPasswordValid = await bcrypt.compare(password, user.password);
+        if (!isPasswordValid) {
             return res.status(401).json({
                 success: false,
                 message: 'Invalid email or password'
             });
         }
 
-        // 3. Compare passwords
-        const isPasswordValid = await comparePassword(password, user.password);
-        if (!isPasswordValid) {
-            return res.status(401).json({
-                success: false,
-                message: 'Invalid password'
-            });
-        }
-
-        // 4. Generate JWT token
-        const token = generateToken({
+        //  Generate JWT token
+        const token = createToken({
             id: user.id,
             email: user.email,
             role: user.role

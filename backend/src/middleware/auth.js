@@ -1,30 +1,30 @@
-import { extractTokenFromHeader, verifyToken } from "../utils/token.js";
-
-const authMiddleware = (req, res,next) => {
-    try {
-
-        const authHeader = req.headers.authorization;
-        const token = extractTokenFromHeader(authHeader);
-
-        if (!token) {
-            return res.status(401).json({
-                success: false,
-                message: 'Access denied. No token provided.'
-            });
-        }
-
-        const decoded = verifyToken(token);
-        req.user = decoded;
-        next();
+import jwt from 'jsonwebtoken';
 
 
 
-    } catch (error) {
+const JWT_SECRET = process.env.JWT_SECRET
+export const protect = (req, res, next) => {
+    const token = req.headers.authorization?.split('')[1];
+
+    if (!token) {
         return res.status(401).json({
             success: false,
-            message: 'Access denied. Invalid token.'
-        })
+            message: 'Access denied. No token provided.'
+        });
     }
 }
 
-export default authMiddleware;
+try {
+
+    const decoded = jwt.verifyToken(token, JWT_SECRET);
+    req.user = decoded;
+    next();
+
+
+} catch (error) {
+    return res.status(401).json({
+        success: false,
+        message: 'Access denied. Invalid token.'
+    })
+}
+
