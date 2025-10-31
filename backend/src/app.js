@@ -3,12 +3,13 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
-import authRoutes from './src/routes/authRoutes.js';
-import journalRoutes from './src/routes/journalRoutes.js';
-import { notFound, errorHandler } from './src/middleware/errorHandler.js';
-import { connectDB } from './src/config/db.js';
+import authRoutes from './routes/authRoutes.js';
+import journalRoutes from './routes/journalRoutes.js';
+import therapistRoutes from './routes/therapistRoutes.js';
+import { notFound, errorHandler } from './middleware/errorHandler.js';
+import { connectDB } from './config/db.js';
 import moodRoutes from './routes/moodRoutes.js';
-import authMiddleware from './src/middleware/auth.js';
+import authMiddleware from './middleware/auth.js';
 
 
 const app = express();
@@ -23,6 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/v1/auth', authRoutes); //routes
 app.use('/api/v1/mood', moodRoutes);
 app.use('/api/v1/journal', authMiddleware, journalRoutes);
+app.use('/api/v1/therapists', therapistRoutes);
 
 
 
@@ -38,7 +40,7 @@ const startServer = async () => {
         await connectDB();
         console.log('Database connected successfully');
 
-        app.listen(PORT, () => {
+        app.listen(PORT, '0.0.0.0' , () => {
             console.log(`Server running on http://localhost:${PORT}`);
         });
     } catch (err) {

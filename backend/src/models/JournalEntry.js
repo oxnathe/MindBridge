@@ -1,5 +1,5 @@
 import { DataTypes } from 'sequelize';
-import sequelize from '../config/database.js';
+import {sequelize} from '../config/db.js';
 
 const JournalEntry = sequelize.define('JournalEntry', {
   userId: {
@@ -14,8 +14,8 @@ const JournalEntry = sequelize.define('JournalEntry', {
     type: DataTypes.TEXT,
     allowNull: false,
   },
-  emotionTags: {
-    type: DataTypes.ARRAY(DataTypes.STRING),
+ emotionTags: {
+    type: DataTypes.JSON, 
     allowNull: true,
   },
 }, {
