@@ -1,6 +1,6 @@
 import User from "../models/user.js";
 import { validationResult } from "express-validator";
-import { hashPassword } from "../utils/harshpass.js";
+import { hashPassword } from "../utils/hashPass.js";
 import { createToken } from '../utils/token.js';
 
 
