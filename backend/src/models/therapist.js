@@ -1,18 +1,19 @@
-import sequelize from '../config/database.js';
 import { DataTypes } from 'sequelize';
-
+import sequelize from '../config/database.js';
+import User from './User.js';
 
 const Therapist = sequelize.define('Therapist', {
-userId: {
+  userId: {
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
-        model: 'Users',
-        key: 'id'
-    }
-},
+      model: 'Users',
+      key: 'id',
+    },
+  },
   name: {
     type: DataTypes.STRING,
+    allowNull: false,
   },
   bio: {
     type: DataTypes.TEXT,
@@ -26,25 +27,39 @@ userId: {
     type: DataTypes.STRING,
     allowNull: false,
     unique: true,
+    validate: { isEmail: true },
   },
   phone: {
     type: DataTypes.STRING,
     allowNull: false,
     unique: true,
-    constraints: {
-        is: /^[0-9+\-() ]+$/i,
-        notEmpty: true
-    }
+    validate: {
+      is: /^[0-9+\-() ]+$/i,
+      notEmpty: true,
+    },
   },
   specialization: {
-    type: DataTypes.STRING,
+    type: DataTypes.ENUM(
+      'Anxiety',
+      'Depression',
+      'Stress Management',
+      'Relationship Issues',
+      'Trauma',
+      'Self-Esteem',
+      'Grief Counseling',
+      'Career Counseling',
+      'Family Therapy',
+      'Addiction'
+    ),
     allowNull: false,
-    values: ['Anxiety', 'Depression', 'Stress Management', 'Relationship Issues', 'Trauma', 'Self-Esteem', 'Grief Counseling', 'Career Counseling', 'Family Therapy', 'Addiction'],
   },
-  isApproved:{
+  isApproved: {
     type: DataTypes.BOOLEAN,
     defaultValue: false,
-  }
+  },
 });
+
+Therapist.belongsTo(User, { foreignKey: 'userId' });
+User.hasOne(Therapist, { foreignKey: 'userId' });
 
 export default Therapist;
