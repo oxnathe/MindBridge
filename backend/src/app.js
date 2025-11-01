@@ -17,18 +17,27 @@ const app = express();
 dotenv.config();
 app.use(helmet());
 app.use(cors());
-app.use(morgan('combined'));
+app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+
+const authLimiter = rateLimit({
+    windowMs: 15 * 60 * 6000,
+    max: 20,
+    message: 'Too many request,please trt again later'
+});
+app.use('/api/v1/auth', authLimiter);
+
+//route
+app.use('/api/v1/auth', authRoutes); // for login &register routes
 app.use('/api/v1/auth', authRoutes); //routes
 app.use('/api/v1/mood', moodRoutes);
 app.use('/api/v1/journal', authMiddleware, journalRoutes);
 app.use('/api/v1/therapists', therapistRoutes);
 
 
-
-app.use(notFound);      // 404 handler
+//error Handler
 app.use(errorHandler);  // Error handler (must be last)
 
 const PORT = process.env.PORT || 3000;

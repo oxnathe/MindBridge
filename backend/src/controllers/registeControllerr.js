@@ -1,43 +1,57 @@
 import User from "../models/user.js";
-import { generateToken } from "../utils/token.js";
-import { hashPassword } from '../utils/hashPass.js';
+import { validationResult } from "express-validator";
+import { hashPassword } from "../utils/hashPass.js";
+import { createToken } from '../utils/token.js';
 
 
 
 const register = async (req, res, next) => {
     try {
-        // 1. Get data from request body
-        const { username, email, password, isAnonymous = false } = req.body;
-
-        // 2. Check if user already exists
-        const existingUser = await User.findOne({ where: { email } });
-        if (existingUser) {
-            return res.status(409).json({
-                success: false,
-                message: 'User already exists with this email'
-            });
+        // check for validation errors
+        const error = validationResult(req);
+        if (!error.isEmpty()) {
+            return res.status(400).json({ errors: error.array() })
         }
 
-        // 3. Hash the password
-        const hashedPassword = await hashPassword(password);
+        //  Get data from request body
+        const { username, email, password, isAnonymous = false } = req.body;
+        if (!isAnonymous) {
 
-        // 4. Create new user
+            //  Check if user already exists
+            const existingUser = await User.findOne({ where: { email } });
+            if (existingUser) {
+                return res.status(409).json({
+                    success: false,
+                    message: 'User already exists with this email'
+                });
+            }
+        }
+
+
+        //  Hash the password
+        let hashedPassword = null;
+        if (!isAnonymous && password) {
+            hashedPassword = await hashPassword(password, 10);
+        }
+
+
+        //  Create new user
         const newUser = await User.create({
-            username,
-            email,
+            username: isAnonymous ? null : username,
+            email: isAnonymous ? null : email,
             password: hashedPassword,
-            isAnonymous,
+            isAnonymous: isAnonymous || false,
             role: 'user'
         });
 
-        // 5. Generate JWT token
-        const token = generateToken({
+        //  Generate JWT token
+        const token = createToken({
             id: newUser.id,
             email: newUser.email,
             role: newUser.role
         });
 
-        // 6. Send success response
+        //  Send success response
         res.status(201).json({
             success: true,
             message: 'User registered successfully',
