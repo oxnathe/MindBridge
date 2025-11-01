@@ -1,8 +1,7 @@
-import User from "../models/user.js";
-import bcrypt from 'bcryptjs';
-import { validationResult } from "express-validator";
-import { createToken } from "../utils/token.js";
-
+import User from "../models/User.js";
+import bcrypt from "bcryptjs";
+import { generateToken } from "../utils/token.js";
+import { comparePassword } from '../utils/hashPass.js';
 
 const login = async (req, res, next) => {
     try {
