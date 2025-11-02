@@ -1,4 +1,4 @@
-import { body } from 'express-validator';
+import { body, validationResult } from 'express-validator';
 
 
 
@@ -29,3 +29,90 @@ export const moodValidator = [
     .isLength({ max: 255 })
     .withMessage('Note must be a string up to 255 characters'),
 ];
+
+// Common error handler for all validators
+export const handleValidation = (req, res, next) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({
+      success: false,
+      errors: errors.array().map((err) => ({
+        field: err.path,
+        message: err.msg,
+      })),
+    });
+  }
+  next();
+};
+
+
+
+
+
+// Therapist Application Validator
+
+export const therapistApplyValidator = [
+  body('name')
+    .isString()
+    .trim()
+    .notEmpty()
+    .withMessage('Name is required'),
+
+  body('bio')
+    .optional()
+    .isString()
+    .withMessage('Bio must be a string'),
+
+  body('NGO')
+    .optional()
+    .isString()
+    .withMessage('NGO must be a string'),
+
+  body('email')
+    .optional()
+    .isEmail()
+    .withMessage('Invalid email format'),
+
+  body('phone')
+    .isString()
+    .notEmpty()
+    .matches(/^[0-9+\-() ]+$/)
+    .withMessage('Phone number is required and must be valid'),
+
+  body('specialization')
+    .isString()
+    .notEmpty()
+    .isIn([
+      'Anxiety',
+      'Depression',
+      'Stress Management',
+      'Relationship Issues',
+      'Trauma',
+      'Self-Esteem',
+      'Grief Counseling',
+      'Career Counseling',
+      'Family Therapy',
+      'Addiction',
+    ])
+    .withMessage('Specialization must be one of the predefined categories'),
+
+  handleValidation,
+];
+
+// Validation for profile update
+export const profileUpdateValidator = [
+  body('username')
+    .optional()
+    .isString()
+    .withMessage('Username must be a string'),
+  body('email')
+    .optional()
+    .isEmail()
+    .withMessage('Email must be valid'),
+  body('password')
+    .optional()
+    .isLength({ min: 6 })
+    .withMessage('Password must be at least 6 characters'),
+];
+
+

@@ -1,3 +1,4 @@
+
 import express from 'express';
 import {
   applyAsTherapist,
@@ -7,14 +8,25 @@ import {
   removeTherapist,
   approveTherapist,
 } from '../controllers/therapistController.js';
+import { protect } from '../middleware/auth.js';
+import { therapistApplyValidator } from '../middleware/validate.js';
 
 const router = express.Router();
 
-router.post('/apply', applyAsTherapist);
+
 router.get('/', getAllTherapists);
+
 router.get('/:id', getTherapistById);
-router.put('/:id', updateTherapist);
-router.patch('/approve/:id', approveTherapist);
-router.delete('/:id', removeTherapist);
+
+
+router.post('/apply', protect, therapistApplyValidator, applyAsTherapist);
+
+
+router.put('/:id', protect, updateTherapist);
+
+router.patch('/approve/:id', protect, approveTherapist);
+
+
+router.delete('/:id', protect, removeTherapist);
 
 export default router;
