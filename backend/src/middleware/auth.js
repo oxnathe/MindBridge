@@ -1,33 +1,42 @@
-import jwt from 'jsonwebtoken';
+// src/middleware/auth.js
+import jwt from "jsonwebtoken";
+import User from "../models/user.js"; 
 
+const JWT_SECRET = process.env.JWT_SECRET;
 
+export const protect = async (req, res, next) => {
+  try {
+    const authHeader = req.headers.authorization;
 
-const JWT_SECRET = process.env.JWT_SECRET
-export const authMiddleware = (req, res, next) => {
-    const token = req.headers.authorization?.split(' ')[1];
-    console.log('Token received:', token);
-    console.log('JWT_SECRET:', JWT_SECRET);
-
-
-    if (!token) {
-        return res.status(401).json({
-            success: false,
-            message: 'Access denied. No token provided.'
-        });
+    if (!authHeader || !authHeader.startsWith("Bearer ")) {
+      return res.status(401).json({
+        success: false,
+        message: "Access denied. No token provided.",
+      });
     }
 
-    try {
+    const token = authHeader.split(" ")[1];
+    const decoded = jwt.verify(token, JWT_SECRET);
 
-        const decoded = jwt.verifyToken(token, JWT_SECRET);
-        req.user = decoded;
-        next();
+    //  Fetch full user details from DB
+    const user = await User.findByPk(decoded.id, {
+      attributes: ["id", "username", "email", "role"],
+    });
 
-
-    } catch (error) {
-        res.status(401).json({
-            success: false,
-            message: 'Access denied. Invalid token.'
-        })
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: "User not found.",
+      });
     }
 
-}
+    req.user = user; 
+    next();
+  } catch (error) {
+    console.error("JWT verification error:", error.message);
+    res.status(401).json({
+      success: false,
+      message: "Access denied. Invalid or expired token.",
+    });
+  }
+};
