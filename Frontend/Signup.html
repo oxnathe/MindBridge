@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindBridge | Sign Up</title>
+
+  <link rel="stylesheet" href="Signup.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+        <!-- --------------THE LOGO SECTION---------------- -->
+
+
+  <main class="signup-page">
+    <div class="page-container">
+
+      <header class="page-header">
+        <a href="#" class="logo" aria-label="MindBridge Home">
+          <div class="logo-icon-wrapper">
+            <img src="logo bg.svg" alt="MindBridge logo background" class="logo-bg">
+            <img src="logo.png" alt="MindBridge logo icon" class="logo-icon">
+          </div>
+          <span class="logo-text">MindBridge</span>
+        </a>
+      </header>
+
+        <!-- --------------THE FORM SECTION---------------- -->
+
+
+      <div class="form-wrapper">
+        <a href="#" class="back-link">
+          <img src="arrow-right.svg" alt="Back arrow" class="back-arrow-icon">
+          <span>Back Home</span>
+        </a>
+
+        <section class="signup-content">
+          <div class="form-card">
+
+            <div class="form-header">
+              <h1 class="form-title">Let's get started</h1>
+              <p class="form-subtitle">Join <strong>MindBridge</strong> and begin tracking your mood today.</p>
+            </div>
+
+            <form class="signup-form" action="#" method="POST">
+              <div class="form-group">
+                <label for="username">Username</label>
+                <div class="input-wrapper">
+                  <input type="text" id="username" name="username" placeholder="Enter username" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <div class="input-wrapper">
+                  <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <div class="input-wrapper">
+                  <input type="tel" id="phone" name="phone" placeholder="+234 123 456 7890">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-wrapper">
+                  <input type="password" id="password" name="password" placeholder="Enter password" required>
+                  <button type="button" class="input-icon-btn" aria-label="Show password">
+                    <img src="password-eye.svg" alt="Show password">
+                  </button>
+                </div>
+                <p class="helper-text">Must contain at least one uppercase, one lowercase, and one special character.</p>
+              </div>
+
+              <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <div class="input-wrapper">
+                  <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm password" required>
+                  <button type="button" class="input-icon-btn" aria-label="Show password">
+                    <img src="password-eye.svg" alt="Show password">
+                  </button>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-submit">Create Account</button>
+            </form>
+
+            <footer class="form-footer">
+              <p>Already have an account? <a href="#" class="signin-link">Sign in</a></p>
+              <small>Your data is encrypted and never shared without your consent.</small>
+            </footer>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
