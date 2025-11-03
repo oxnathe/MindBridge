@@ -24,10 +24,10 @@ const Signup = () =>{
         }}>
             <View>
                 <Text style={formStyles.formHeader}>
-                    Welcome Back!
+                    Let’s get started
                 </Text>
                 <Text style={formStyles.formText}>
-                    It’s good to have you here again. Let’s {'\n'} continue your journey.
+                    Join <Text style={formStyles.span}>MindBridge</Text> and begin tracking your mood {'\n'} today.
                 </Text>
             </View>
 
@@ -39,7 +39,28 @@ const Signup = () =>{
                 </Text>
                 <InputComponent placeholder={"Enter your username"}/>
             </View>
-
+            <View style={{
+                marginTop: 10,
+            }}>
+                <Text style={formStyles.label}>
+                    Email Address
+                </Text>
+                <InputComponent 
+                placeholder={"you@example.com"}
+                keyboardType={"email-address"}
+                />
+            </View>
+            <View style={{
+                marginTop: 10,
+            }}>
+                <Text style={formStyles.label}>
+                    Phone Number
+                </Text>
+                <InputComponent 
+                placeholder={"+234"}
+                keyboardType={"number-pad"}
+                />
+            </View>
             <View style={{
                 marginTop: 10,
             }}>
@@ -65,23 +86,40 @@ const Signup = () =>{
                     setPasswordVisible(!passwordVisible)
                 }}/>
                 <Text style={{
-                        fontFamily: 'poppinsRegular',
-                        fontSize: '10',
-                    }}>
+                    fontFamily: 'poppinsRegular',
+                    fontSize: '10',
+                }}>
                     Must contain at least a uppercase, a lowercase, a character
                 </Text>
             </View>
             <View style={{
-                alignSelf: 'right'
+                marginTop: 10,
             }}>
-                <Text>
-                    Forgot your password?
+                <Text style={formStyles.label}>
+                   Confirm Password
                 </Text>
+                <TextInput style={formStyles.inputPassword} 
+                placeholder="Enter Password"
+                placeholderTextColor= '#AFAFAF'
+                returnKeyType="done"
+                secureTextEntry={!passwordVisible}
+                onChangeText={(password)=>{
+                    setPassword(password)
+                }}
+                />
+                <Image style={{
+                    width: 16,
+                    height: 16,
+                    position: "absolute",
+                    top: 40,
+                    left: 370,
+                }} source={require('../../assets/images/eye-alt.png')} onPress={() =>{
+                    setPasswordVisible(!passwordVisible)
+                }}/>
             </View>
-            
 
             <View style={{
-                marginTop: 300,
+                marginTop: 50,
             }}>
                 <Button text={'Create Account'}/>
             </View>
@@ -93,7 +131,7 @@ const Signup = () =>{
                     color: '#002131',
                 }}>
                     Already have an account? <Text style={formStyles.span} onPress={()=>{
-                        router.push('./sign-up')
+                        router.push('./sign-in')
                     }} >Sign-In</Text>
                 </Text>
             </View>

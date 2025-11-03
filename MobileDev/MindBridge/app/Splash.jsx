@@ -6,7 +6,7 @@ import { COLORS, SIZES } from "../themes/theme";
 const Splash = ()=> {
     return(
         <SafeAreaView style={{
-            backgroundColor: COLORS.backgroundColor ,
+            backgroundColor: '#9DD4EF' ,
             flex: 1,
             alignItems: 'center',
             justifyContent: 'center'
