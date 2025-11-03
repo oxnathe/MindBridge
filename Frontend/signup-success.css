@@ -1,0 +1,222 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #031633;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+
+.congrats-container {
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+}
+
+.page-header {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo__icon-wrapper {
+  position: relative;
+  width: 50px;
+  height: 48px;
+}
+
+.logo__icon-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 48px;
+}
+
+.logo__icon-fg {
+  position: absolute;
+  top: 7px;
+  left: 8px;
+  width: 34px;
+  height: 34px;
+}
+
+.logo__text {
+  font-family: 'DM Serif Display', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #052c65;
+  line-height: 1;
+}
+
+.main-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.congrats-card {
+  width: 100%;
+  max-width: 572px;
+  padding: 32px 24px;
+  border: 1.5px solid #99adb6;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 73px;
+}
+
+.congrats-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.congrats-card__icon {
+  width: 64px;
+  height: 64px;
+}
+
+.congrats-card__text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.congrats-card__title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #031633;
+  line-height: 1.15;
+}
+
+.congrats-card__subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #404040;
+  letter-spacing: -0.3px;
+  line-height: 1.15;
+}
+
+.congrats-card__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 524px;
+  height: 48px;
+  background-color: #003148;
+  border: 1px solid #2c2c2c;
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: -0.31px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #014a6b;
+}
+
+.security-notice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.security-notice__icon {
+  width: 24px;
+  height: 24px;
+}
+
+.security-notice__text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #031633;
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .congrats-container {
+    justify-content: flex-start;
+    padding-top: 60px;
+  }
+
+  .page-header {
+    position: static;
+    margin-bottom: 60px;
+  }
+
+  .congrats-card {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .congrats-container {
+    padding: 40px 20px;
+  }
+  
+  .page-header {
+    margin-bottom: 40px;
+  }
+
+  .congrats-card {
+    padding: 24px 16px;
+    gap: 40px;
+  }
+
+  .congrats-card__title {
+    font-size: 22px;
+  }
+
+  .congrats-card__subtitle {
+    font-size: 14px;
+  }
+
+  .security-notice__text {
+    font-size: 12px;
+  }
+}

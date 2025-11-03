@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBridge | Sign In</title>
+    <link rel="stylesheet" href="Signin.css">
+</head>
+<body>
+
+        <!-- --------------THE LOGO SECTION---------------- -->
+
+
+    <section id="signup">
+  <div class="signup-page-container">
+    <header class="signup-header">
+      <a href="#" class="logo-wrapper">
+        <div class="logo-image-container">
+          <img src="logo bg.svg" alt="Logo background" class="logo-bg">
+          <img src="logo.png" alt="MindBridge icon" class="logo-icon">
+        </div>
+        <span class="logo-text">MindBridge</span>
+      </a>
+    </header>
+
+        <!-- --------------THE FORM SECTION---------------- -->
+
+
+    <main class="signup-main-content">
+      <a href="#" class="back-home-link">
+        <img src="arrow-right.svg" alt="Arrow left" class="back-arrow-icon">
+        <span>Back Home</span>
+      </a>
+
+      <div class="signup-card">
+        <div class="card-content">
+          <div class="card-header-text">
+            <h1>Welcome Back!</h1>
+            <p>Join <strong>MindBridge</strong> and begin tracking your mood today.</p>
+          </div>
+
+          <form class="signup-form">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <div class="input-wrapper">
+                <input type="text" id="username" name="username" placeholder="Enter username">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <div class="input-wrapper password-input-wrapper">
+                <input type="password" id="password" name="password" placeholder="Enter password">
+                <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
+                  <img src="password-eye.svg" alt="Show password icon">
+                </button>
+              </div>
+              <small class="helper-text">Must contain at least a uppercase, a lowercase, a character</small>
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="create-account-btn">Create Account</button>
+            </div>
+          </form>
+
+          <div class="signup-footer">
+            <p>You don’t have an account? <a href="#">Sign-up</a></p>
+            <small>Your data is encrypted and never shared without your consent.</small>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</section>
+</body>
+</html>
