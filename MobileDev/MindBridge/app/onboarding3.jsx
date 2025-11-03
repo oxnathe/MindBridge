@@ -21,7 +21,7 @@ const ThirdOnboarding = ()=>{
                 flexDirection: 'row',
                 alignItems: 'center',
                 }} onPress={() =>{
-                router.push('./login')
+                router.push('./sign-in')
                 }}>
                     <Text style={{
                         fontFamily: 'poppinsSemiBold'
