@@ -4,7 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context"
 
 
 
-const Login = () =>{
+const Signin = () =>{
     return(
         <SafeAreaView>
             <View>
@@ -16,4 +16,4 @@ const Login = () =>{
     )
 }
 
-export default Login;
+export default Signin;
