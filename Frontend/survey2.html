@@ -6,41 +6,62 @@
   <title>MindBridge | Survey</title>
   <link rel="stylesheet" href="survey2.css">
 </head>
+
 <body>
+  <!-- ==================== HEADER SECTION ==================== -->
   <header class="site-header">
     <div class="logo">
+      <!-- Logo Icon -->
       <div class="logo__icon">
-        <img src="logo bg.svg" alt="Logo background shape" class="logo__bg">
-        <img src="logo.png" alt="Logo hand and brain icon" class="logo__fg">
+        <img src="assets/pages assets/logo bg.svg" alt="Logo background shape" class="logo__bg">
+        <img src="assets/pages assets/logo.png" alt="Logo hand and brain icon" class="logo__fg">
       </div>
+
+      <!-- Logo Text -->
       <h1 class="logo__text">MindBridge</h1>
     </div>
   </header>
 
+
+  <!-- ===================== MAIN SURVEY SECTION ===================== -->
   <main class="survey">
     <div class="survey__card">
       <div class="survey__content">
         <section class="survey__question">
+
+          <!-- Question Header -->
           <header class="survey__header">
             <h2 class="survey__title">How stressed have you felt in the past few days?</h2>
-            <p class="survey__subtitle">Slide to rate your stress level.</p>
+            <p class="survey__subtitle">Select your stress level.</p>
           </header>
 
+          <!-- ==================== SURVEY OPTIONS ==================== -->
           <div class="survey__options">
+
+            <!-- Option 1 -->
             <button class="survey__option" role="listitem">
-              <span class="survey__label">0 = Not at all</span>
+              <span class="survey__label">0-5 = Not at all - Mildly Stressed</span>
             </button>
 
+            <!-- Option 2 -->
             <button class="survey__option survey__option--high" role="listitem">
-              <span class="survey__label">Extremely Stressed</span>
+              <span class="survey__label">5-10 = Stressed - Extremely Stressed</span>
             </button>
           </div>
         </section>
 
+
+        <!-- ==================== FOOTER SECTION ==================== -->
         <footer class="survey__footer">
-          <button class="survey__next-btn">Next</button>
+
+          <!-- Next Button  -->
+          <a href="survey3.html" class="survey__next-btn">
+            <button class="survey__next-btn">Next</button>
+          </a>
+
+          <!-- Note -->
           <div class="survey__note">
-            <img src="Frame.svg" alt="Info icon" class="survey__note-icon">
+            <img src="assets/pages assets/Frame.svg" alt="Info icon" class="survey__note-icon">
             <p class="survey__note-text">
               It’s okay if it changes, this just helps us understand your day.
             </p>
