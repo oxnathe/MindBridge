@@ -4,58 +4,83 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MindBridge | Survey</title>
+
+  <!-- External CSS -->
   <link rel="stylesheet" href="survey3.css">
 </head>
+
 <body>
+  <!-- ==================== HEADER SECTION ==================== -->
   <header class="site-header">
     <div class="logo">
+      <!-- Logo Icon  -->
       <div class="logo__icon">
-        <img src="logo bg.svg" alt="Logo background shape" class="logo__bg">
-        <img src="logo.png" alt="Logo hand and brain icon" class="logo__fg">
+        <img src="assets/pages assets/logo bg.svg" alt="Logo background shape" class="logo__bg">
+        <img src="assets/pages assets/logo.png" alt="Logo hand and brain icon" class="logo__fg">
       </div>
+
+      <!-- Logo Text -->
       <h1 class="logo__text">MindBridge</h1>
     </div>
   </header>
 
+  <!-- ===================== MAIN SURVEY SECTION ===================== -->
   <main class="survey">
     <section class="survey__card">
       <div class="survey__content">
         <div class="survey__question">
+
+          <!-- Question Header -->
           <header class="survey__header">
             <h2 class="survey__title">How's your sleep and focus recently?</h2>
             <p class="survey__subtitle">Choose the emotion that best describes your current mood.</p>
           </header>
 
+          <!-- ==================== SURVEY OPTIONS ==================== -->
           <div class="survey__options" role="list">
+
+            <!-- Option 1 -->
             <button class="survey__option" role="listitem">
-              <img src="calm.svg" alt="Calm face emoji" class="survey__icon">
+              <img src="assets/pages assets/calm.svg" alt="Calm face emoji" class="survey__icon">
               <span class="survey__label">Sleep has been great</span>
             </button>
-            
 
+            <!-- Option 2 -->
             <button class="survey__option" role="listitem">
-              <img src="neutral.svg" alt="Neutral face emoji" class="survey__icon">
+              <img src="assets/pages assets/neutral.svg" alt="Neutral face emoji" class="survey__icon">
               <span class="survey__label">Sleep has been okay, but not great</span>
             </button>
 
+            <!-- Option 3 -->
             <button class="survey__option" role="listitem">
-              <img src="neutral.svg" alt="Happy face emoji" class="survey__icon">
+              <img src="assets/pages assets/neutral.svg" alt="Happy face emoji" class="survey__icon">
               <span class="survey__label">Having trouble sleeping</span>
             </button>
 
+            <!-- ==================== SUBTEXT AFTER QUESTION ==================== -->
             <div class="survey__sub">
-                <h2 class="survey__text">You're all set</h2>
-            <p class="survey__subtext">Thanks for sharing,
-                 your responses will help us recommend the right tools for you.</p>
-                </div>
+              <h2 class="survey__text">You're all set</h2>
+              <p class="survey__subtext">
+                Thanks for sharing, your responses will help us recommend the right tools for you.
+              </p>
+            </div>
           </div>
         </div>
 
+        <!-- ==================== FOOTER SECTION ==================== -->
         <footer class="survey__footer">
-          <button class="survey__next-btn">Go to Dashboard</button>
+
+          <!-- Go to Dashboard Button -->
+          <a href="Dashboard/dashboard.html" class="survey__next-btn">
+            <button class="survey__next-btn">Go to Dashboard</button>
+          </a>
+
+          <!-- Note/Info Text -->
           <div class="survey__note">
-            <img src="Frame.svg" alt="Info icon" class="survey__note-icon">
-            <p class="survey__note-text">It’s okay if it changes, this just helps us understand your day.</p>
+            <img src="assets/pages assets/Frame.svg" alt="Info icon" class="survey__note-icon">
+            <p class="survey__note-text">
+              It’s okay if it changes, this just helps us understand your day.
+            </p>
           </div>
         </footer>
       </div>
