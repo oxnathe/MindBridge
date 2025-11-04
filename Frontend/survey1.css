@@ -1,0 +1,273 @@
+/* ==========================
+   🎨 GLOBAL VARIABLES
+========================== */
+:root {
+  --color-primary: #003148;
+  --color-primary-dark: #052c65;
+  --color-text-dark: #0b212c;
+  --color-text-light: #ffffff;
+  --color-border-light: #a6b7bf;
+  --color-border-dark: #003148;
+  --font-serif: 'DM Serif Display', serif;
+  --font-sans: 'Poppins', sans-serif;
+}
+
+/* ==========================
+   🌍 BASE STYLES
+========================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-text-light);
+  color: var(--color-text-dark);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* ==========================
+   🧠 SITE HEADER
+========================== */
+.site-header {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo__icon {
+  position: relative;
+  width: 50px;
+  height: 48px;
+}
+
+.logo__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 48px;
+}
+
+.logo__fg {
+  position: absolute;
+  top: 7px;
+  left: 8px;
+  width: 34px;
+  height: 34px;
+}
+
+.logo__text {
+  color: var(--color-primary-dark);
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+}
+
+/* ==========================
+   📋 SURVEY CARD
+========================== */
+.survey {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.survey__card {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1.5px solid var(--color-border-light);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -24px;
+}
+
+.survey__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ==========================
+   ❓ QUESTION SECTION
+========================== */
+.survey__question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.survey__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.survey__title {
+  color: var(--color-text-dark);
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.1;
+  letter-spacing: -0.4px;
+}
+
+.survey__subtitle {
+  color: var(--color-text-dark);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: -0.4px;
+  max-width: 456px;
+}
+
+/* ==========================
+   😀 EMOTION OPTIONS
+========================== */
+.survey__options {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.survey__option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 18px;
+  border: 1.5px solid var(--color-border-dark);
+  border-radius: 99px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.survey__option:hover,
+.survey__option:focus {
+  background-color: #f0f5f8;
+  border-color: var(--color-primary);
+}
+
+.survey__icon {
+  width: 32px;
+  height: 32px;
+}
+
+.survey__label {
+  color: var(--color-primary);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+/* ==========================
+   🔘 FOOTER SECTION
+========================== */
+.survey__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.survey__next-btn {
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px;
+  border: 1px solid #2c2c2c;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.survey__next-btn:hover {
+  background-color: #004a6b;
+}
+
+.survey__note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.survey__note-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.survey__note-text {
+  color: var(--color-text-dark);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 20px;
+}
+
+/* ==========================
+   📱 RESPONSIVE
+========================== */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .site-header {
+    justify-content: center;
+  }
+
+  .survey__card {
+    padding: 24px 16px;
+    border: none;
+    margin-top: 6px;
+  }
+
+  .survey__title {
+    font-size: 20px;
+  }
+
+  .survey__subtitle {
+    font-size: 12px;
+  }
+
+  .survey__options {
+    gap: 6px;
+  }
+
+  .survey__option {
+    height: 46px;
+    padding: 8px;
+  }
+}
