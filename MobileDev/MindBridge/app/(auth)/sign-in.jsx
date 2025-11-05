@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View, Platform, TextInput } from "react-native"
+import { Image, StyleSheet, Text, View, Platform, TextInput, Modal, TouchableOpacity } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import InputComponent from "../../components/InputComponent"
 import { SIZES } from "../../themes/theme"
@@ -7,13 +7,30 @@ import { useState } from "react"
 import Button from "../../components/Button"
 import { router } from "expo-router"
 
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+
 
 
 
 const Signup = () =>{
 
+
+    const TimedPopUp = () =>{
+        const [showPopup, setShowPopup ] = useState(false);
+
+        const openPopup = () =>{
+            setShowPopup(true)
+
+            const timer = setTimeout(()=>{
+                setShowPopup(false)
+            }, 5000)
+        }
+    }
     const [password, setPassword] = useState('')
     const [passwordVisible, setPasswordVisible] = useState(false)
+
+    const [modalVisible, setModalVisible] = useState(false)
+    
 
 
     return(
@@ -72,18 +89,97 @@ const Signup = () =>{
                 </Text>
             </View>
             <View style={{
-                alignSelf: 'right'
-            }}>
-                <Text>
+                marginLeft: 250,
+                marginTop: 10,
+                }}>
+                <Text style={{
+                    fontFamily: 'poppinsSemiBold',
+                    textDecorationStyle: 'solid',
+                    textDecorationLine: 'underline',
+                    fontSize: 14,
+                }} onPress={()=>{
+                    setModalVisible(true)
+                }}>
                     Forgot your password?
                 </Text>
             </View>
+
+            <Modal 
+                animationType="slide"
+                transparent={true}
+                visible={modalVisible}
+                onRequestClose={()=>{
+                    setModalVisible(!modalVisible)
+                }}>
+
+                    <View style={{
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        backgroundColor: '#fff',
+                        marginTop: 380,
+                        borderTopLeftRadius: 40,
+                        borderTopRightRadius: 40
+                    }}>
+                        <View style={{
+                            marginTop: 20,
+                            marginLeft: 350,
+                        }}> 
+                            <TouchableOpacity onPress={()=> setModalVisible(!modalVisible)}>
+                                <MaterialIcons name="cancel" size={24} color="black"/>
+                            </TouchableOpacity>
+                        </View> 
+                        <View style={{
+                            marginTop: 30,
+                        }}>
+                            <Text style={{
+                                fontFamily: 'serifRegular',
+                                fontSize: SIZES.medium,
+                                textAlign: 'center',
+                                marginBottom: 10,
+                            }}>
+                                Forgot Password?
+                            </Text>
+                            <Text style={{
+                                fontFamily: 'poppinsRegular',
+                                textAlign: 'center',
+                                fontSize: SIZES.small,
+                                color: '#0B212C'
+                            }}>
+                                Enter your email address. We’ll send you a 6-digit code to reset it.
+                            </Text>
+                        </View>
+
+                        <View style={{
+                            marginTop: 50,
+                        }}>
+                            <Text style={formStyles.label}>
+                                Email Address
+                            </Text>
+                            <InputComponent 
+                                placeholder={"you@example.com"}
+                                keyboardType={"email-address"}
+                            />
+                        </View>
+
+                        <View style={{
+                            marginTop: 150,
+                            marginBottom: 100,
+                        }}>
+                            <Button text={'Send me a link'} onPress={() =>{
+                                setModalVisible(!modalVisible)
+                                router.push('./create-password')
+                            }}/>
+                        </View>
+                        
+                    </View>
+
+            </Modal>
             
 
             <View style={{
                 marginTop: 300,
             }}>
-                <Button text={'Create Account'}/>
+                <Button text={'Sign In'}/>
             </View>
 
             <View>
@@ -93,8 +189,8 @@ const Signup = () =>{
                     color: '#002131',
                 }}>
                     Already have an account? <Text style={formStyles.span} onPress={()=>{
-                        router.push('./sign-up')
-                    }} >Sign-In</Text>
+                        router.replace('./sign-up')
+                    }} >Sign-Up</Text>
                 </Text>
             </View>
             

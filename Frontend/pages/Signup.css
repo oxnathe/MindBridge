@@ -46,7 +46,7 @@ input, button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0px;
+  padding: 10px;
   min-height: 100vh;
 }
 
@@ -72,6 +72,7 @@ input, button {
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  margin-left: 10px;
 }
 
 .logo-icon-wrapper {
@@ -114,6 +115,7 @@ input, button {
   font-family: var(--font-serif);
   font-size: 16px;
   color: #000000;
+  margin-right: 18px;
 }
 
 .back-arrow-icon {
@@ -145,11 +147,11 @@ input, button {
   padding: 12px 16px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 /* =========================================================
-   FORM HEADER (TITLE + SUBTITLE)
+   FORM HEADER 
    ========================================================= */
 .form-header {
   text-align: center;
@@ -184,7 +186,7 @@ input, button {
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 }
 
 .form-group label {
@@ -217,7 +219,7 @@ input, button {
 
 /* =========================================================
    ERROR & SUCCESS STATES
-   ========================================================= 
+   ========================================================= */
 .form-group .error {
   color: red;
   font-size: 12px;
@@ -231,7 +233,7 @@ input, button {
 .form-group.success input {
   border: 1px solid #008aca;
 }
-*/
+
 
 /* =========================================================
    PASSWORD TOGGLE ICON

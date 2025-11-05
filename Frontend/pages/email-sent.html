@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MindBridge | Email Sent</title>
+    <title>MindBridge |Verify Email</title>
     <link rel="stylesheet" href="email-sent.css">
 </head>
 <body>
@@ -11,41 +11,49 @@
         <!-- --------------THE LOGO SECTION---------------- -->
 
 
-    <section class="email-sent-page">
-  <div class="page-container">
-    <header class="page-header">
-      <a href="#" class="logo">
-        <div class="logo__image-container">
-          <img src="logo bg.svg" alt="Logo background" class="logo__bg">
-          <img src="logo.png" alt="MindBridge icon" class="logo__icon">
-        </div>
-        <span class="logo__text">MindBridge</span>
-      </a>
+    <main id="forgot-password" class="page-container">
+    <header class="header-logo">
+        <a href="/Frontend/pages/index.html" aria-label="MindBridge Home">
+            <div class="logo-image-wrapper">
+                <img src="../assets/logo bg.svg" alt="" class="logo-bg">
+                <img src="../assets/logo.png" alt="MindBridge icon" class="logo-icon">
+            </div>
+            <p class="brand-name">MindBridge</p>
+        </a>
     </header>
 
         <!-- --------------THE CARD SECTION---------------- -->
 
 
-    <main class="main-content">
-      <div class="confirmation-card">
-        <div class="confirmation-card__main-info">
-          <img src="success.svg" alt="Success checkmark" class="confirmation-card__icon">
-          <div class="confirmation-card__text-content">
-            <h1 class="confirmation-card__title">Email Sent!</h1>
-            <p class="confirmation-card__description">Check your inbox for a link to reset your password.</p>
-          </div>
+    <section class="form-section" aria-labelledby="form-title">
+        <a href="/Frontend/pages/Signin.html" class="back-link">
+            <img src="../assets/pages assets/arrow-right.svg" alt="Back arrow" class="back-arrow">
+            <span href="/Frontend/pages/Signin.html">Back To Sign-in</span>
+        </a>
+        <div class="form-card">
+            <div class="form-content">
+                <div class="form-header">
+                    <h1 id="form-title">Verify Code</h1>
+                    <p>We’ve sent a 6-digit code to +23481720****98</p> 
+                </div>
+                
+                <p class="form-subtitle">Enter the code below to continue</p>
+
+              
+                <form class="reset-form" action="#">
+                    <div class="input-group">
+                        <div class="input-field-wrapper">
+                            <input type="text" id="text" name="text" placeholder="Enter the code">
+                        </div>
+                    </div>
+                    <a href="/Frontend/pages/password-reset.html" class="submit-button">
+                        <button type="submit" class="submit-button">Verify Code</button>
+                </a>
+                    </form>
+                    <p class="form-footer-text">Didn't get the code? <span>Resend in 45s</span></p>
+            </div>
         </div>
-        <div class="confirmation-card__actions">
-          <p class="action-prompt">
-            Didn’t get it? <a href="forgot-password.html" class="action-link">Resend link</a>
-          </p>
-          <p class="action-prompt">
-            Remembered your password? <a href="Signin.html" class="action-link action-link--semibold">Sign In</a>
-          </p>
-        </div>
-      </div>
-    </main>
-  </div>
-</section>
+    </section>
+</main>
 </body>
 </html>
