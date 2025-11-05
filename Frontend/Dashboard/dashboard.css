@@ -232,3 +232,10 @@ body
     background-color: #9DD4EF;
     padding: 2rem;
 }
+
+.quick-actions
+{
+    background-color: pink;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
