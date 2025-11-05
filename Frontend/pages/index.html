@@ -16,13 +16,23 @@
         <header>
             <section id="header" class="header__section">
                 <div class="brand__rapper">
-                    <img class="brand__logo" src="../assets/image 2.png" alt="Brand logo image">
+                    <a href="/Frontend/pages/index.html"><img class="brand__logo" src="../assets/image 2.png" alt="Brand logo image"></a>
                     <p class="brand__name">MindBridge</p>
                 </div>
 
                 <span class="header__menu"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="16" viewBox="0 0 21 16" fill="none">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M20.6667 7.66667C20.6667 7.40145 20.5613 7.1471 20.3738 6.95956C20.1862 6.77202 19.9319 6.66667 19.6667 6.66667H1C0.734784 6.66667 0.480429 6.77202 0.292893 6.95956C0.105357 7.1471 0 7.40145 0 7.66667C0 7.93188 0.105357 8.18624 0.292893 8.37377C0.480429 8.56131 0.734784 8.66667 1 8.66667H19.6667C19.9319 8.66667 20.1862 8.56131 20.3738 8.37377C20.5613 8.18624 20.6667 7.93188 20.6667 7.66667ZM20.6667 1C20.6667 0.734783 20.5613 0.480429 20.3738 0.292893C20.1862 0.105357 19.9319 0 19.6667 0H1C0.734784 0 0.480429 0.105357 0.292893 0.292893C0.105357 0.480429 0 0.734783 0 1C0 1.26522 0.105357 1.51957 0.292893 1.70711C0.480429 1.89464 0.734784 2 1 2H19.6667C19.9319 2 20.1862 1.89464 20.3738 1.70711C20.5613 1.51957 20.6667 1.26522 20.6667 1ZM20.6667 14.3333C20.6667 14.0681 20.5613 13.8138 20.3738 13.6262C20.1862 13.4387 19.9319 13.3333 19.6667 13.3333H1C0.734784 13.3333 0.480429 13.4387 0.292893 13.6262C0.105357 13.8138 0 14.0681 0 14.3333C0 14.5985 0.105357 14.8529 0.292893 15.0404C0.480429 15.228 0.734784 15.3333 1 15.3333H19.6667C19.9319 15.3333 20.1862 15.228 20.3738 15.0404C20.5613 14.8529 20.6667 14.5985 20.6667 14.3333Z" fill="#003148"/>
                     </svg></span>
+                <nav class=" menu__nav">
+                    <ul class="menu__items">
+                        <li class="menu__item"><a class="menu__link" href="#tools">Features</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#how-it-works">How it Works</a></li>
+                        <li class="menu__item"><a class="menu__link" href="/">About Us</a></li>
+                        <li class="menu__item"><a class="menu__link" href="/">Blog</a></li>
+                        <button class="menu__button  sign__btn"><a href="Signin.html">Sign in</a></button>
+                        <button class="menu__button download__btn">Download the App</button>
+                    </ul>   
+                </nav>
                 <nav class="header__nav">
                     <ul class="nav__items">
                         <li class="nav__item"><a class="nav__link" href="#tools">Features</a></li>
@@ -33,10 +43,8 @@
                 </nav>
 
                 <div class="nav__button-rapper">
-                    <a href="Signin.html">
-                        <button class="nav__button  sign__btn">Sign in</button>
-                    </a>
-                    <button class="nav__button download__btn">Download the App</button>
+                    <button class="nav__button  sign__btn"><a href="Signin.html">Sign in</a></button>
+                    <button class="nav__button download__btn"><a href="#">Download the App</a></button>
                 </div>
             </section>
         </header>
@@ -49,11 +57,9 @@
                         <h4 class="hero__sm-heading"><span class="hero__span"><img class="hero__span-icon" src="../assets/Icon-14.png" alt=""></span>Free to use. Your data stays private.</h4>
                         <h1 class="hero__title">Bridging minds, Building wellness</h1>
                         <p class="hero__description">Understand how you feel each day, uncover emotional patterns, and take small steps toward better mental well-being.</p>
-                        <div class="hero__btns">
-                            <a href="Signup.html">
-                                <button class="hero__btn btn--primary">Get Started </button>
-                            </a>
-                            <button class="hero__btn btn--secondary ">Join Community <span></span></button>
+                        <div class="hero__btns">               
+                            <button class="hero__btn btn--primary"><a href="Signup.html">Get Started</a> </button>
+                            <button class="hero__btn btn--secondary "><a href="">Join Community</a> <span></span></button>
                         </div>
                     </div>                    
                     <img class="hero__image" src="../assets/image 23.png" alt="Profile picture">
@@ -182,10 +188,10 @@
                         <h4 class="CAT__title">Ready to Start Your Mental Health Journey?</h4>
                         <p class="CAT__description">Join thousands of people already transforming their lives. Get started today with our free plan and upgrade anytime as your needs grow.</p>
                         <div class="CAT__btns">
-                            <a href="Signin.html">
-                                <button class="hero__btn btn--secondary ">Get Started Free </button>
-                            </a>
-                            <button class="hero__btn btn--primary ">Join Community <span></button>
+                            
+                                <button class="hero__btn btn--primary "><a href="Signin.html"></a>Get Started Free</a> </button>
+
+                            <button class="hero__btn btn--secondary"> <a href="#">Join Community</a> <span></button>
                         </div>
                     </div>
                 </div>
@@ -204,10 +210,10 @@
                     </div>
                     <p class="footer__descrition">Making mental health support accessible and affordable for everyone. Your journey to better mental wellness starts here.</p>
                     <div class="footer__icon-rapper">
-                        <span><img class="footer__icon" src="../assets/Icon-10.png" alt=""></span>
-                        <span><img class="footer__icon" src="../assets/Icon-11.png" alt=""></span>
-                        <span><img class="footer__icon" src="../assets/Icon-12.png" alt=""></span>
-                        <span><img class="footer__icon" src="../assets/Icon-13.png" alt=""></span>
+                        <a href="#"><img class="footer__icon" src="../assets/Icon-10.png" alt=""></a>
+                        <a href="#"><img class="footer__icon" src="../assets/Icon-11.png" alt=""></a>
+                        <a href="#"><img class="footer__icon" src="../assets/Icon-12.png" alt=""></a>
+                        <a href="#"><img class="footer__icon" src="../assets/Icon-13.png" alt=""></a>
                     </div>
                 </div>
                 
@@ -244,7 +250,7 @@
                             <label class="form__label" for="message">Note</label>
                             <textarea class="form__textarea" name="message" id="message" placeholder="Write a brief note" cols="28" rows="8"></textarea>
                         </div>
-                        <button class="form__btn" type="submit">Submit</button>
+                        <button class="form__btn" type="submit"><a href="#">Submit</a></button>
                     </form>
                 
                     

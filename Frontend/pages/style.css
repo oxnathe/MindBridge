@@ -82,6 +82,12 @@ button
     --footer-BG: #9DD4EF;
 }
 
+a:any-link
+{
+    text-decoration: none;
+    color: inherit;
+}
+
 
 /* --------------GENERAL STYLING------------------ */
 
@@ -138,6 +144,10 @@ body
     cursor: pointer;
 }
 
+.menu__nav
+{
+    display: none;
+}
 .header__nav
 {
     display: flex;
@@ -158,6 +168,14 @@ body
     color:var(--alt-text-color) ;
 }
 
+.nav__link:hover
+{
+    border-top: .15rem solid var(--brand-color);
+    border-bottom: .15rem solid var(--brand-color);
+    padding: 1rem 0;
+    opacity: .6;
+}
+
 .nav__button-rapper
 {
     display: flex;
@@ -172,6 +190,7 @@ font-weight: 700;
 padding: .8rem 1.6rem;
 border-radius: .8rem;
 background: var(--btn-color);
+border: none;
 }
 
 .download__btn
@@ -188,6 +207,8 @@ background: var(--text-color);
     margin-top: 2rem;
 }
 
+
+
 .btn--primary
 {
 color: var(--text-color);
@@ -195,6 +216,7 @@ font-weight: 700;
 padding: .8rem 1.6rem;
 border-radius: .8rem;
 background: var(--btn-color);
+border: none;
 }
 
 .btn--secondary
@@ -241,49 +263,52 @@ background: var(--text-color);
     {
         display: block;
         padding: 2rem;
+        position: relative;
     }
  
-  .header__nav {
+  .menu__nav
+   {
     position: absolute;
-    top: 70px;
-    right: 0;
+    top: 6rem;
+    right: 1rem;
+    width: 40%;
     display: none;
-    flex-direction: column;
-    align-items: start;
-    background-color: #fff;
-    width: 30%;
-    padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    transition: all 0.3s ease;
+    padding: 3rem;
+    border-radius: 1rem;
+    transition: all 0.5s ease;
     z-index: 10;
+    color: var(--footer-color);
+    background-color: var(--footer-BG);
+    
   }
 
-  .header__nav.active {
-    display: flex;
-  }
-
-  .nav__items
+  .menu__items
   {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    height: 30vh;
+    align-items: center;
+    line-height: 2;
+    gap: 2rem;
+    list-style-type: none;
+    
+    
   }
 
-  .nav__item 
+  .menu__item
   {
-    width: 100%;
-    margin-bottom: 10px;
+    padding: 1rem;
+    border-bottom: .1rem solid var(--text-color);
   }
 
-  .nav__link 
+
+  .active
   {
-    display: block;
-    width: 100%;
-    text-decoration: none;
-    color: #003148;
-    font-weight: 500;
+    display: flex;
   }
+
+
+
 }
 
 
@@ -428,8 +453,15 @@ main
     gap: 1rem;
     border-radius: 0 0 .8rem .8rem;
     background: #D9D9D9;
+    transition: all .5s ease-in-out;
     /* width: 32rem;? */
     
+}
+
+.card:hover
+{
+    box-shadow: 2px 3px 3px var(--brand-color);
+    transform: translateY(-1rem);
 }
 
 .card__content
@@ -546,7 +578,7 @@ main
     grid-template-columns: repeat(auto-fit, 23rem);
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 .step
 {
@@ -560,8 +592,15 @@ main
     background: #EFF6FF;
     padding: 1rem 2rem;
     border-radius: .8rem;
+    transition: all .8s ease-in-out;
 }
 
+
+.step:hover
+{
+    box-shadow: 1.5px 1.5px 5px var(--brand-color);
+    transform: scale(1.1);
+}
 .step__number
 {
     width: 2rem;
@@ -618,7 +657,7 @@ main
     justify-content: space-between;
     gap: 2rem;
     border-radius: 12px;
-    border: 1px solid #E5E7EB;
+    border: 2px solid #E5E7EB;
     background: #FFF;
 
 }
