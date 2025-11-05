@@ -4,9 +4,9 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
   background-color: #ffffff;
-  color: #404040;
+  font-family: 'Poppins', sans-serif;
+  color: #0b212c;
 }
 
 * {
@@ -14,60 +14,54 @@ body {
 }
 
 a {
-  color: #003148;
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  color: inherit;
 }
 
 /* =========================
-   PAGE LAYOUT
+   PAGE CONTAINER
 ========================= */
-.email-sent-page {
-  background-color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
-  padding: 20px;
-}
-
 .page-container {
-  width: 100%;
   max-width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
 /* =========================
-   LOGO SECTION
+   HEADER & LOGO
 ========================= */
-.logo {
+.header-logo {
+  position: static;
+  top: 32px;
+  left: 99px;
+}
+
+.header-logo a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  text-decoration: none;
+  gap: 6px;
 }
 
-.logo__image-container {
+.logo-image-wrapper {
   position: relative;
   width: 50px;
   height: 48px;
 }
 
-.logo__bg {
+.logo-bg {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 50px;
+  height: 48px;
 }
 
-.logo__icon {
+.logo-icon {
   position: absolute;
   top: 7px;
   left: 8px;
@@ -75,7 +69,7 @@ a:hover {
   height: 34px;
 }
 
-.logo__text {
+.brand-name {
   font-family: 'DM Serif Display', serif;
   font-size: 18px;
   font-weight: 600;
@@ -86,33 +80,61 @@ a:hover {
 }
 
 /* =========================
-   MAIN CONTENT
+   FORM SECTION
 ========================= */
-.main-content {
+.form-section {
+  position: static;
   width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+  flex-grow: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
 }
 
 /* =========================
-   CONFIRMATION CARD
+   BACK LINK
 ========================= */
-.confirmation-card {
+.back-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'DM Serif Display', serif;
+  font-size: 18px;
+  color: #000;
+  line-height: 20.7px;
+}
+
+.back-arrow {
+  width: 32px;
+  height: 18px;
+}
+
+/* =========================
+   FORM CARD
+========================= */
+.form-card {
   width: 100%;
-  max-width: 536px;
+  max-width: 500px;
   border: 1.5px solid #99adb6;
   border-radius: 16px;
   padding: 32px 24px;
+  background-color: #ffffff;
+}
+
+/* =========================
+   FORM CONTENT & HEADER
+========================= */
+.form-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 32px;
 }
 
-/* =========================
-   CARD MAIN INFO
-========================= */
-.confirmation-card__main-info {
+.form-header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -120,77 +142,178 @@ a:hover {
   text-align: center;
 }
 
-.confirmation-card__icon {
-  width: 48px;
-  height: 48px;
-}
-
-.confirmation-card__text-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px; /* Calculated from y-positions */
-}
-
-/* =========================
-   CARD TEXTS
-========================= */
-.confirmation-card__title {
+.form-header h1 {
   font-family: 'DM Serif Display', serif;
-  font-size: 24px;
-  font-weight: 400;
-  color: #031633;
+  font-size: 28px;
+  color: #0b212c;
+  font-weight: 600;
   line-height: 27.6px;
+  letter-spacing: -0.3px;
   margin: 0;
 }
 
-.confirmation-card__description {
+.form-header p {
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
-  font-weight: 400;
-  color: #404040;
+  color: #0b212c;
   line-height: 18.4px;
   letter-spacing: -0.3px;
   margin: 0;
-  max-width: 349px;
+}
+
+.form-subtitle{
+  margin-top: -8px;
+  color: rgba(72, 59, 0, 0.40);
 }
 
 /* =========================
-   CARD ACTIONS
+   INPUT FIELDS
 ========================= */
-.confirmation-card__actions {
+.reset-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 24px;
+  gap: 30px;
+  width: 100%;
 }
 
-.action-prompt {
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+.input-field-wrapper {
+  background-color: #f9f8f8;
+  border-radius: 6px;
+  display: flex;
+}
+
+.input-field-wrapper input {
+  width: 100%;
+  background: transparent;
+  padding: 12px 20px;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
-  font-weight: 400;
-  color: #404040;
   line-height: 16.1px;
-  letter-spacing: -0.3px;
-  margin: 0;
+  color: #0b212c;
+  border: 2px solid #B2B2B2;
+  border-radius: 8px ;
 }
 
-.action-link {
+.input-field-wrapper input::placeholder {
+  color: #003148;
+  opacity: 1;
+}
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+.submit-button {
+  background-color: #003148;
+  color: #ffffff;
+  border: 1px solid #2c2c2c;
+  border-radius: 8px;
+  padding: 5px;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: -0.31px;
+  cursor: pointer;
+  text-align: center;
 }
 
-.action-link--semibold {
-  font-weight: 600;
+.form-footer-text{
+  color: #99adb6;
+}
+
+.form-footer-text span{
+  font-weight: 550;
+  color: #003148;
 }
 
 /* =========================
    RESPONSIVE STYLES
 ========================= */
-@media (max-width: 768px) {
-  .page-header {
-    margin-top: 20px;
-    margin-bottom: 60px;
+@media (max-width: 1200px) {
+  .back-link {
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 0;
+    font-weight: 550;
+    margin-bottom: 8px;
   }
 
-  .confirmation-card {
-    padding: 32px 20px;
+  .page-container {
+    position: static;
+    height: auto;
+    min-height: 100vh;
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: -30px;
+  }
+
+  .header-logo,
+  .form-section {
+    position: static;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .form-section {
+    max-width: 450px;
+  }
+
+  .form-card {
+    width: 100%;
+    padding: 24px;
+  }
+    .form-header h1 {
+    font-size: 24px;
+  }
+  .form-header p {
+    font-size: 14px;
+  }
+  .form-section{
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-container {
+    padding: 30px 16px;
+    gap: 40px;
+  }
+
+  .form-card {
+    padding: 24px 16px;
+  }
+
+  .form-header h1 {
+    font-size: 20px;
+  }
+  .back-link{
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 0;
+    font-weight: 550;
+    margin-bottom: 8px;
+    font-size: 18px;
+  }
+
+  .form-header p {
+    font-size: 14px;
+  }
+
+  .input-group label {
+    font-size: 15px;
+  }
+
+  .submit-button {
+    font-size: 16px;
   }
 }

@@ -262,10 +262,10 @@ background: var(--text-color);
     
     .header__menu
     {
-        display: block;
+        display: inline-block;
         padding: 2rem;
         position: relative;
-    }
+        }
  
   .menu__nav
    {
@@ -277,7 +277,7 @@ background: var(--text-color);
     padding: 3rem;
     border-radius: 1rem;
     transition: all 0.5s ease;
-    z-index: 10;
+    z-index: 1001;
     color: var(--footer-color);
     background-color: var(--footer-BG);
     

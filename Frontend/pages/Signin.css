@@ -248,6 +248,25 @@ a {
   text-align: right;
 }
 
+
+/* =========================================================
+   ERROR & SUCCESS STATES
+   ========================================================= */
+.form-group .error {
+  color: red;
+  font-size: 12px;
+  margin-top: -4px;
+
+}
+
+.form-group.error .input-wrapper {
+  border: 1px solid red;
+}
+
+.form-group.success .input-wrapper {
+  border: 1px solid #008aca;
+}
+
 /* ===========================
    BUTTON STYLES
    =========================== */
