@@ -57,6 +57,10 @@ const Therapist = sequelize.define('Therapist', {
     type: DataTypes.BOOLEAN,
     defaultValue: false,
   },
+  createdAt: {
+  type: DataTypes.DATE,
+  defaultValue: DataTypes.NOW,
+}
 });
 
 Therapist.belongsTo(User, { foreignKey: 'userId' });
