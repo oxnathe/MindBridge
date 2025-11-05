@@ -1,3 +1,4 @@
+
 /* -------------- RESET------------------ */
 
 *
@@ -173,6 +174,13 @@ border-radius: .8rem;
 background: var(--btn-color);
 }
 
+.sign__btn:hover
+{
+    background-color: var(--brand-color);
+    cursor: pointer;
+    transform: translateY(+2px);
+}
+
 .download__btn
 {
 border:.15rem solid var(--btn-color);
@@ -180,6 +188,14 @@ font-weight: 700;
 padding: .8rem 1.6rem;
 border-radius: .8rem;
 background: var(--text-color);
+}
+
+.download__btn:hover
+{
+    background-color: var(--brand-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transform: translateY(+2px);
 }
 
 .hero__btns
@@ -196,6 +212,13 @@ border-radius: .8rem;
 background: var(--btn-color);
 }
 
+.btn--primary:hover
+{
+    background-color: var(--brand-color);
+    cursor: pointer;
+    transform: translateY(+2px);
+}
+
 .btn--secondary
 {
 border:.15rem solid var(--btn-color);
@@ -203,6 +226,14 @@ font-weight: 700;
 padding: .8rem 1.6rem;
 border-radius: .8rem;
 background: var(--text-color);
+}
+
+.btn--secondary:hover
+{
+    background-color: var(--brand-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transform: translateY(+2px);
 }
 
 @media(max-width:1000px)
@@ -386,6 +417,13 @@ main
     background: #D9D9D9;
     /* width: 32rem;? */
     
+}
+
+.card:hover
+{
+    box-shadow: 2px 3px 3px var(--accent-hover);
+    transform: translateY(-6px);
+    cursor: pointer;
 }
 
 .card__content
@@ -727,6 +765,13 @@ main
     color: var(--text-color);
     font-weight: bold;
     font-size: 2rem;
+}
+
+.form__btn:hover
+{
+    background-color: var(--brand-color);
+    cursor: pointer;
+    transform: translateY(+2px);
 }
 
 .copyright
