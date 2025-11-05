@@ -1,0 +1,212 @@
+import { useState } from "react";
+import { 
+  Image, 
+  StyleSheet, 
+  Text, 
+  View, 
+  Platform, 
+  TextInput, 
+  Alert, 
+  ActivityIndicator, 
+  TouchableOpacity 
+} from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import Button from "../../components/Button";
+import { SIZES } from "../../themes/theme";
+import { router } from "expo-router";
+
+const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleLogin = async () => {
+    if (!email || !password) {
+      Alert.alert("Missing Fields", "Please enter your email and password.");
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const response = await fetch("http://YOUR_SERVER_IP:PORT/api/v1/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        Alert.alert("Error", data.message || "Login failed.");
+        return;
+      }
+
+      Alert.alert("Success", "Login successful!");
+      console.log("User:", data.user);
+      console.log("Token:", data.token);
+
+      // Navigate to home or dashboard
+      router.push("/home");
+
+    } catch (error) {
+      console.error("Login error:", error);
+      Alert.alert("Error", "Unable to connect to server.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <View>
+        <Text style={styles.formHeader}>Welcome Back!</Text>
+        <Text style={styles.formText}>
+          It’s good to have you here again. Let’s {"\n"}continue your journey.
+        </Text>
+      </View>
+
+      <View style={{ marginTop: 20 }}>
+        <Text style={styles.label}>Email</Text>
+        <TextInput
+          style={styles.inputField}
+          placeholder="Enter your email"
+          placeholderTextColor="#AFAFAF"
+          value={email}
+          onChangeText={setEmail}
+          keyboardType="email-address"
+          autoCapitalize="none"
+        />
+      </View>
+
+      <View style={{ marginTop: 20 }}>
+        <Text style={styles.label}>Password</Text>
+        <View>
+          <TextInput
+            style={styles.inputPassword}
+            placeholder="Enter Password"
+            placeholderTextColor="#AFAFAF"
+            secureTextEntry={!passwordVisible}
+            value={password}
+            onChangeText={setPassword}
+          />
+          <TouchableOpacity
+            style={styles.eyeButton}
+            onPress={() => setPasswordVisible(!passwordVisible)}
+          >
+            <Image
+              style={{ width: 18, height: 18 }}
+              source={
+                passwordVisible
+                  ? require("../../assets/images/eye.png")
+                  : require("../../assets/images/eye-alt.png")
+              }
+            />
+          </TouchableOpacity>
+        </View>
+
+        <Text style={styles.helperText}>
+          Must contain at least one uppercase, lowercase, and special character
+        </Text>
+      </View>
+
+      <TouchableOpacity>
+        <Text style={styles.forgotText}>Forgot your password?</Text>
+      </TouchableOpacity>
+
+      <View style={{ marginTop: 60 }}>
+        <Button text={loading ? "Loading..." : "Login"} onPress={handleLogin} />
+        {loading && <ActivityIndicator size="small" color="#000" />}
+      </View>
+
+      <View style={{ marginTop: 20 }}>
+        <Text style={styles.footerText}>
+          Don’t have an account?{" "}
+          <Text style={styles.span} onPress={() => router.push("./sign-up")}>
+            Sign Up
+          </Text>
+        </Text>
+      </View>
+    </SafeAreaView>
+  );
+};
+
+export default Login;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    marginTop: 80,
+  },
+  formHeader: {
+    fontFamily: "serifRegular",
+    fontSize: SIZES.medium,
+    color: "#0B212C",
+    textAlign: "center",
+  },
+  formText: {
+    fontFamily: "poppinsRegular",
+    fontSize: SIZES.small,
+    color: "#0B212C",
+    textAlign: "center",
+  },
+  label: {
+    fontFamily: "serifRegular",
+    fontSize: SIZES.regular,
+    color: "#0B212C",
+    marginBottom: 5,
+  },
+  inputField: {
+    width: 400,
+    height: 46,
+    backgroundColor: "#F9F8F8",
+    borderRadius: 6,
+    paddingHorizontal: 20,
+    ...Platform.select({
+      ios: {
+        shadowColor: "#0031484D",
+        shadowOffset: { width: 2, height: 2 },
+        shadowOpacity: 0.75,
+        shadowRadius: 0.5,
+      },
+      android: {
+        elevation: 5,
+      },
+    }),
+  },
+  inputPassword: {
+    width: 400,
+    height: 46,
+    backgroundColor: "#F9F8F8",
+    borderRadius: 6,
+    paddingHorizontal: 20,
+  },
+  eyeButton: {
+    position: "absolute",
+    right: 20,
+    top: 13,
+  },
+  helperText: {
+    fontFamily: "poppinsRegular",
+    fontSize: 10,
+    color: "#888",
+    marginTop: 4,
+  },
+  forgotText: {
+    marginTop: 10,
+    color: "#007AFF",
+    fontSize: 12,
+  },
+  footerText: {
+    fontFamily: "poppinsRegular",
+    fontSize: SIZES.extraSmall,
+    color: "#002131",
+  },
+  span: {
+    fontFamily: "poppinsSemiBold",
+    color: "#007AFF",
+  },
+});

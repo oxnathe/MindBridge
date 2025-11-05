@@ -1,13 +1,9 @@
 // controllers/therapistController.js
 import Therapist from '../models/therapist.js';
 import User from '../models/user.js';
-import { Op } from 'sequelize'; // ✅ Correct import
+import { Op } from 'sequelize'; 
 
-/**
- * @desc    Apply as a therapist
- * @route   POST /api/v1/therapists/apply
- * @access  Private (Authenticated users)
- */
+
 export const applyAsTherapist = async (req, res) => {
   try {
     if (!req.user) {

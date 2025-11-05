@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindBridge | Sign In</title>
+  <link rel="stylesheet" href="Signin.css">
+</head>
+<body>
+
+  <!-- ===========================
+       LOGO SECTION
+       =========================== -->
+  <section id="signup">
+    <div class="signup-page-container">
+      <header class="signup-header">
+        <a href="index.html" class="logo-wrapper">
+          <div class="logo-image-container">
+            <img  src="../assets/image 2.png" alt="MindBridge icon" class="logo-icon brand__logo">
+          </div>
+          <span class="logo-text">MindBridge</span>
+        </a>
+      </header>
+
+      <!-- ===========================
+           MAIN FORM SECTION
+           =========================== -->
+      <main class="signup-main-content">
+
+        <!-- Back to home link -->
+        <a href="index.html" class="back-home-link">
+          <img src="arrow-right.svg" alt="Arrow left" class="back-arrow-icon">
+          <span>Back Home</span>
+        </a>
+
+        <!-- Sign-in card -->
+        <div class="signup-card">
+          <div class="card-content">
+
+            <!-- Header text -->
+            <div class="card-header-text">
+              <h1>Welcome Back!</h1>
+              <p>Join <strong>MindBridge</strong> and begin tracking your mood today.</p>
+            </div>
+
+            <!-- Sign-in form -->
+            <form class="signup-form">
+              <div class="form-group">
+                <label for="username">Username</label>
+                <div class="input-wrapper">
+                  <input type="text" id="username" name="username" placeholder="Enter username">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-wrapper password-input-wrapper">
+                  <input type="password" id="password" name="password" placeholder="Enter password">
+                  <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
+                    <img src="password-eye.svg" alt="Show password icon">
+                  </button>
+                </div>
+
+                <!-- Forgot password link -->
+                <div class="forgot-text">
+                  <a href="forgot-password.html">Forgot Password?</a>
+                </div>
+              </div>
+
+              <!-- Submit button -->
+              <div class="form-actions">
+                <button type="submit" class="create-account-btn">Create Account</button>
+              </div>
+            </form>
+
+            <!-- Footer -->
+            <div class="signup-footer">
+              <p>You don’t have an account? <a href="Signup.html">Sign-up</a></p>
+              <small>Your data is encrypted and never shared without your consent.</small>
+            </div>
+
+          </div>
+        </div>
+      </main>
+    </div>
+  </section>
+
+</body>
+</html>

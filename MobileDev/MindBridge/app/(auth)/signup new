@@ -1,0 +1,172 @@
+import { Image, StyleSheet, Text, View, Platform, TextInput, Alert } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import InputComponent from "../../components/InputComponent";
+import { SIZES } from "../../themes/theme";
+import { useState } from "react";
+import Button from "../../components/Button";
+import { router } from "expo-router";
+
+const Signup = () => {
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleSignup = async () => {
+    if (!username || !email || !password) {
+      Alert.alert("Missing Fields", "Please fill all fields.");
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const response = await fetch("http://YOUR_SERVER_IP:5000/api/v1/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username,
+          email,
+          password,
+          isAnonymous: false
+        })
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        Alert.alert("Success", "Account created successfully!");
+        router.push("./login");
+      } else {
+        Alert.alert("Error", data.message || "Signup failed.");
+      }
+    } catch (error) {
+      Alert.alert("Error", "Network error. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <SafeAreaView style={{ flex: 1, alignItems: "center", marginTop: 80 }}>
+      <View>
+        <Text style={formStyles.formHeader}>Create Account</Text>
+        <Text style={formStyles.formText}>
+          Sign up to get started with your journey.
+        </Text>
+      </View>
+
+      <View style={{ marginTop: 10 }}>
+        <Text style={formStyles.label}>Username</Text>
+        <InputComponent
+          placeholder="Enter your username"
+          value={username}
+          onChangeText={setUsername}
+        />
+      </View>
+
+      <View style={{ marginTop: 10 }}>
+        <Text style={formStyles.label}>Email</Text>
+        <InputComponent
+          placeholder="Enter your email"
+          value={email}
+          onChangeText={setEmail}
+        />
+      </View>
+
+      <View style={{ marginTop: 10 }}>
+        <Text style={formStyles.label}>Password</Text>
+        <TextInput
+          style={formStyles.inputPassword}
+          placeholder="Enter Password"
+          placeholderTextColor="#AFAFAF"
+          returnKeyType="done"
+          secureTextEntry={!passwordVisible}
+          onChangeText={setPassword}
+          value={password}
+        />
+        <Image
+          style={{
+            width: 16,
+            height: 16,
+            position: "absolute",
+            top: 40,
+            left: 370,
+          }}
+          source={require("../../assets/images/eye-alt.png")}
+          onTouchEnd={() => setPasswordVisible(!passwordVisible)}
+        />
+      </View>
+
+      <View style={{ marginTop: 40 }}>
+        <Button text={loading ? "Creating..." : "Create Account"} onPress={handleSignup} />
+      </View>
+
+      <View>
+        <Text
+          style={{
+            fontFamily: "poppinsRegular",
+            fontSize: SIZES.extraSmall,
+            color: "#002131",
+          }}
+        >
+          Already have an account?{" "}
+          <Text
+            style={formStyles.span}
+            onPress={() => router.push("./login")}
+          >
+            Sign-In
+          </Text>
+        </Text>
+      </View>
+    </SafeAreaView>
+  );
+};
+
+export default Signup;
+
+const formStyles = StyleSheet.create({
+  formHeader: {
+    fontFamily: "serifRegular",
+    fontSize: SIZES.medium,
+    color: "#0B212C",
+    textAlign: "center",
+  },
+  formText: {
+    fontFamily: "poppinsRegular",
+    fontSize: SIZES.small,
+    color: "#0B212C",
+    textAlign: "center",
+  },
+  span: {
+    fontFamily: "poppinsSemiBold",
+    fontWeight: "600",
+  },
+  label: {
+    fontFamily: "serifRegular",
+    fontSize: SIZES.regular,
+    color: "#0B212C",
+    marginBottom: 5,
+  },
+  inputPassword: {
+    width: 400,
+    height: 46,
+    backgroundColor: "#F9F8F8",
+    paddingBottom: 12,
+    paddingTop: 12,
+    paddingRight: 16,
+    paddingLeft: 20,
+    borderRadius: 6,
+    borderBottom: 1,
+    ...Platform.select({
+      ios: {
+        shadowColor: "#0031484D",
+        shadowOffset: { width: 2, height: 2 },
+        shadowOpacity: 0.75,
+        shadowRadius: 0.5,
+      },
+      android: {
+        elevation: 5,
+      },
+    }),
+  },
+});
