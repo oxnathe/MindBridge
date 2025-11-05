@@ -1,4 +1,4 @@
-
+/* RESET */
 
 *
 {
@@ -7,12 +7,22 @@
     box-sizing: border-box;
 }
 
+html
+{
+    font-size: 62.5%;
+}
+
+
+/* GENERAL STYLING */
+
+body
+{
+    font-size: 1.6rem;
+}
 :root
 {
     --brand-color: #082A74;
 }
-
-
 
 .brand__logo
 {
@@ -23,4 +33,55 @@
 .brand__name
 {
     color: var(--brand-color);
+}
+
+
+.aside-main__container
+{
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.side-bar
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+    width: 25%;
+}
+
+.nav__items
+{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.main
+{
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: pink;
+}
+
+.main__section
+{
+    grid-column: span 6;
+}
+.notification-rapper
+{
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.dashboard
+{
+    dis
 }

@@ -135,6 +135,7 @@ body
 .header__menu
 {
     display: none;
+    cursor: pointer;
 }
 
 .header__nav
@@ -239,9 +240,52 @@ background: var(--text-color);
     .header__menu
     {
         display: block;
-        font-size: 3rem;
+        padding: 2rem;
     }
+ 
+  .header__nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    background-color: #fff;
+    width: 30%;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
+
+  .header__nav.active {
+    display: flex;
+  }
+
+  .nav__items
+  {
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+  }
+
+  .nav__item 
+  {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .nav__link 
+  {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #003148;
+    font-weight: 500;
+  }
 }
+
 
 /* THE MAIN SECTION STYLING */
 
