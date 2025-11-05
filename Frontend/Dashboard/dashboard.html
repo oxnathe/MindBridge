@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
-
+    <!-- -----------------DASHBOARD---------------------- -->
     <!------------------------------ THE ASIDE SECTION------------------ -->
-
+    <section class="aside-main__container">
     <aside id="aside" class="side-bar">
         <div class="side-bar__brand-rapper">
             <img class="side-bar__brand-logo" src="./Dashboard assets/image 2.png" alt="Brand logo image">
@@ -65,14 +65,15 @@
     <main id="main" class="main">
         <section class="main__section">
             <div class="notification-rapper">
-                <a class="notification__link" href=""><span class="notification__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <span class="notification__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M7.5793 4.08L6.1493 2.65C3.7493 4.48 2.1693 7.3 2.0293 10.5H4.0293C4.10049 9.23189 4.45664 7.99615 5.07125 6.88465C5.68586 5.77316 6.54312 4.81451 7.5793 4.08ZM19.9693 10.5H21.9693C21.8193 7.3 20.2393 4.48 17.8493 2.65L16.4293 4.08C17.461 4.81812 18.3145 5.77783 18.927 6.88872C19.5396 7.99962 19.8957 9.23355 19.9693 10.5ZM17.9993 11C17.9993 7.93 16.3593 5.36 13.4993 4.68V4C13.4993 3.17 12.8293 2.5 11.9993 2.5C11.1693 2.5 10.4993 3.17 10.4993 4V4.68C7.6293 5.36 5.9993 7.92 5.9993 11V16L3.9993 18V19H19.9993V18L17.9993 16V11ZM11.9993 22C12.1393 22 12.2693 21.99 12.3993 21.96C13.0493 21.82 13.5793 21.38 13.8393 20.78C13.9393 20.54 13.9893 20.28 13.9893 20H9.9893C9.9993 21.1 10.8893 22 11.9993 22Z" fill="black"/>
-                    </svg></span>Notification</a>
+                    </svg></span>
+                <a class="notification__link" href="">Notification</a>
                 <img class="notification__avatar" src="./Dashboard assets/Ellipse 21.png" alt="">
             </div>
 
             <div class="dashboard">
-                <div class="dashboard__header">
+                <div class="dashboard__head">
                     <h2 class="dashboard__greeting">Good Afternoon, Friend! <span><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
                         <g opacity="0.856864">
                             <path d="M20.1977 5.15908C20.2762 4.73852 20.4994 4.35867 20.8285 4.08533C21.1576 3.81198 21.572 3.66235 21.9998 3.66235C22.4277 3.66235 22.842 3.81198 23.1712 4.08533C23.5003 4.35867 23.7234 4.73852 23.802 5.15908L25.7288 15.3487C25.8657 16.0732 26.2177 16.7395 26.7391 17.2609C27.2604 17.7822 27.9267 18.1342 28.6512 18.2711L38.8408 20.1979C39.2614 20.2765 39.6412 20.4996 39.9146 20.8288C40.1879 21.1579 40.3376 21.5722 40.3376 22.0001C40.3376 22.4279 40.1879 22.8423 39.9146 23.1714C39.6412 23.5005 39.2614 23.7237 38.8408 23.8022L28.6512 25.7291C27.9267 25.8659 27.2604 26.218 26.7391 26.7393C26.2177 27.2606 25.8657 27.927 25.7288 28.6514L23.802 38.8411C23.7234 39.2616 23.5003 39.6415 23.1712 39.9148C22.842 40.1882 22.4277 40.3378 21.9998 40.3378C21.572 40.3378 21.1576 40.1882 20.8285 39.9148C20.4994 39.6415 20.2762 39.2616 20.1977 38.8411L18.2708 28.6514C18.134 27.927 17.7819 27.2606 17.2606 26.7393C16.7393 26.218 16.0729 25.8659 15.3485 25.7291L5.15883 23.8022C4.73827 23.7237 4.35843 23.5005 4.08508 23.1714C3.81174 22.8423 3.66211 22.4279 3.66211 22.0001C3.66211 21.5722 3.81174 21.1579 4.08508 20.8288C4.35843 20.4996 4.73827 20.2765 5.15883 20.1979L15.3485 18.2711C16.0729 18.1342 16.7393 17.7822 17.2606 17.2609C17.7819 16.7395 18.134 16.0732 18.2708 15.3487L20.1977 5.15908Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -83,32 +84,32 @@
                             </svg></span></h2>
                     <p class="dashboard__subtitle">How are you feeling today?</p>
                     <div class="dashboard__actions">
-                        <button class="dashboard_button dashboard_button--log-mood"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <button class="dashboard_button dashboard_button--log-mood btn--primary"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path d="M13.8941 3.07333C13.5536 2.73267 13.1493 2.46243 12.7043 2.27805C12.2593 2.09368 11.7824 1.99878 11.3007 1.99878C10.8191 1.99878 10.3421 2.09368 9.89716 2.27805C9.45219 2.46243 9.0479 2.73267 8.7074 3.07333L8.00073 3.78L7.29406 3.07333C6.60627 2.38554 5.67342 1.99914 4.70073 1.99914C3.72804 1.99914 2.79519 2.38554 2.1074 3.07333C1.4196 3.76112 1.0332 4.69397 1.0332 5.66666C1.0332 6.63935 1.4196 7.5722 2.1074 8.26L8.00073 14.1533L13.8941 8.26C14.2347 7.91949 14.505 7.51521 14.6893 7.07023C14.8737 6.62526 14.9686 6.14832 14.9686 5.66666C14.9686 5.185 14.8737 4.70807 14.6893 4.26309C14.505 3.81812 14.2347 3.41383 13.8941 3.07333Z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg></span>Log Mood</button>
-                        <button class="dashboard_button dashboard_button--journal"><span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none">
+                        <button class="dashboard_button dashboard_button--journal btn--secondary"><span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none">
                                 <path d="M7.46745 3.46672C7.46745 2.75947 7.1865 2.08119 6.6864 1.5811C6.1863 1.081 5.50803 0.800049 4.80078 0.800049H0.800781V10.8H5.46745C5.99788 10.8 6.50659 11.0108 6.88166 11.3858C7.25673 11.7609 7.46745 12.2696 7.46745 12.8M7.46745 3.46672V12.8M7.46745 3.46672C7.46745 2.75947 7.7484 2.08119 8.2485 1.5811C8.74859 1.081 9.42687 0.800049 10.1341 0.800049H14.1341V10.8H9.46745C8.93701 10.8 8.42831 11.0108 8.05323 11.3858C7.67816 11.7609 7.46745 12.2696 7.46745 12.8" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg></span>Journal</button>
                     </div>
                 </div>
                 <div class="dashboard__status">
-                    <div>
-                        <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <div class="status__content">
+                        <div class="status__icon-rapper"><svg class="status__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M4.31804 6.31804C3.90017 6.7359 3.5687 7.23198 3.34255 7.77795C3.1164 8.32392 3 8.90909 3 9.50004C3 10.091 3.1164 10.6762 3.34255 11.2221C3.5687 11.7681 3.90017 12.2642 4.31804 12.682L12 20.364L19.682 12.682C20.526 11.8381 21.0001 10.6935 21.0001 9.50004C21.0001 8.30656 20.526 7.16196 19.682 6.31804C18.8381 5.47412 17.6935 5.00001 16.5 5.00001C15.3066 5.00001 14.162 5.47412 13.318 6.31804L12 7.63604L10.682 6.31804C10.2642 5.90017 9.7681 5.5687 9.22213 5.34255C8.67616 5.1164 8.09099 5 7.50004 5C6.90909 5 6.32392 5.1164 5.77795 5.34255C5.23198 5.5687 4.7359 5.90017 4.31804 6.31804Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg></div>
                         <div class="status-card status-card--mood">
                             <p class="status-card__label">Today's Mood</p>
-                            <p class="status-card__value">Good</p>
+                            <h3 class="status-card__value">Good</h>
                         </div>
                     </div>
 
-                    <div>
-                        <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <div class="status__content">
+                        <div class="status__icon-rapper"><svg class="status__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16" fill="none">
                             <path d="M8.00065 4.66667C8.00065 3.95942 7.7197 3.28115 7.2196 2.78105C6.71951 2.28095 6.04123 2 5.33398 2H1.33398V12H6.00065C6.53108 12 7.03979 12.2107 7.41486 12.5858C7.78994 12.9609 8.00065 13.4696 8.00065 14M8.00065 4.66667V14M8.00065 4.66667C8.00065 3.95942 8.2816 3.28115 8.7817 2.78105C9.2818 2.28095 9.96007 2 10.6673 2H14.6673V12H10.0007C9.47022 12 8.96151 12.2107 8.58644 12.5858C8.21136 12.9609 8.00065 13.4696 8.00065 14" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg></div>
                         <div class="status-card status-card--mood">
                             <p class="status-card__label">Journal Streak</p>
-                            <p class="status-card__value">7 days</p>
+                            <h3 class="status-card__value">7 days</h3>
                         </div>
                     </div>
                 </div>
@@ -279,5 +280,6 @@
             </div>
         </section>
     </main>
+    </section>
 </body>
 </html>
