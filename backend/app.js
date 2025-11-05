@@ -14,6 +14,7 @@ import { protect } from './src/middleware/auth.js';
 import { notFound, errorHandler } from './src/middleware/errorHandler.js';
 import dashboardRoutes from './src/routes/dashboardRoutes.js';
 import profileRoutes from './src/routes/profileRoutes.js';
+import adminRoutes from './src/routes/adminRoutes.js';
 
 dotenv.config();
 
@@ -25,6 +26,7 @@ app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 
 // Rate Limiting
 const authLimiter = rateLimit({
@@ -49,6 +51,7 @@ app.use('/api/v1/journal', protect, journalRoutes);
 app.use('/api/v1/therapists', therapistRoutes);
 app.use('/api/v1/dashboard', dashboardRoutes);
 app.use('/api/v1/profile', profileRoutes);
+app.use('/api/v1/admin', adminRoutes);
 
 // Error Handling
 app.use(notFound);
