@@ -1,6 +1,6 @@
 
 import User from '../models/user.js';
-import Therapist from '../models/Therapist.js';
+import Therapist from '../models/therapist.js';
 
 export const getAdminDashboard = async (req, res, next) => {
   try {
