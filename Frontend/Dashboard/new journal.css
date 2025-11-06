@@ -1,0 +1,129 @@
+html
+{
+    font-size: 62.4%;
+    scroll-behavior: smooth;
+}
+
+@media(max-width:1200px)
+{
+    html
+    {
+        font-size: 58%;
+    }
+}
+
+@media(max-width:900px)
+{
+    html
+    {
+        font-size: 50%;
+    }
+}
+
+@media(max-width:800px)
+{
+    html
+    {
+        font-size: 46%;
+    }
+}
+
+@media(max-width:570px)
+{
+    html
+    {
+        font-size: 44%;
+    }
+}
+
+@media(max-width:400px)
+{
+    html
+    {
+        font-size: 34%;
+    }
+}
+
+@media(max-width:300px)
+{
+    html
+    {
+        font-size: 26%;
+    }
+}
+
+button
+{
+    font-size: inherit;
+}
+
+:root
+{
+    --spacing-unit: 3rem 10rem;
+
+    /* COLOR */
+    
+    --text-color: #fff;
+    --alt-text-color: #000;
+    --brand-color: #082A74;
+    --btn-color: #003148;
+    --footer-color: #002E45;
+    --footer-BG: #9DD4EF;
+}
+
+.journal__form
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    gap: 10px;
+    line-height: 2;
+}
+
+.form__label
+{
+    display: block;
+    font-weight: 600;
+}
+
+.form__input
+{
+    width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #EFF6FF;
+    border: none;
+    outline: none;
+
+}
+
+.form__textarea
+{
+    position: relative;
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #EFF6FF;
+    border: none;
+    outline: none;
+}
+
+.btn--primary
+{
+color: var(--text-color);
+font-weight: 700;
+padding: .8rem 1.6rem;
+border-radius: .8rem;
+background: var(--btn-color);
+border: none;
+}
+
+.btn--secondary
+{
+border:.15rem solid var(--btn-color);
+font-weight: 700;
+padding: .8rem 1.6rem;
+border-radius: .8rem;
+background: var(--text-color);
+}

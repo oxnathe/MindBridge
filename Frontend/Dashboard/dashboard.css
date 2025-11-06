@@ -1,4 +1,11 @@
-/* -------------- RESET------------------ */
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -------------- RESET---------------- */
 
 *
 {
@@ -11,6 +18,7 @@
 html
 {
     font-size: 62.4%;
+    scroll-behavior: smooth;
 }
 
 @media(max-width:1200px)
@@ -66,176 +74,428 @@ button
     font-size: inherit;
 }
 
-
-/* --------------UTILITY CLASS------------------ */
-:root
-{
-    --spacing-unit: 2rem 6rem;
-
-    /* COLOR */
-    
-    --text-color: #fff;
-    --alt-text-color: #000;
-    --brand-color: #082A74;
-    --btn-color: #003148;
-    --footer-color: #002E45;
-    --footer-BG: #9DD4EF;
-}
-
-a:any-link
-{
-    text-decoration: none;
-    color: inherit;
-}
-
-svg
-{
-    position: relative;
-    top: .3rem;
-    right: .5rem;
-}
-
-.btn--primary
-{
-    color: var(--text-color);
-    font-weight: 700;
-    padding: .8rem 1.6rem;
-    border-radius: 2rem;
-    border: none;
-    background: var(--btn-color);
-}
-
-.btn--secondary
-{
-    border:.15rem solid var(--btn-color);
-    font-weight: 700;
-    padding: .8rem 1.6rem;
-    border-radius: 2rem;
-    background: transparent;
-}
-
-/* ---------------------GENERAL STYLING----------------- */
-
-body
-{
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
     font-size: 1.6rem;
 }
 
-.aside-main__container
-{
+/* Dashboard Container */
+.dashboard-container {
     display: flex;
-    gap: 4rem;
     min-height: 100vh;
-    width: 100%;
-    padding: var(--spacing-unit);
+    gap: 2rem;
+    padding: 2rem;
 }
 
-.side-bar__brand-logo
-{
-    background-color: var(--brand-color);
+/* Sidebar */
+.sidebar {
+    width: 25rem;
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 1.2rem;
+    height: fit-content;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 4rem;
+}
+
+.brand-logo {
+    width: 4rem;
+    height: 4rem;
+    background-color: #003148;
     padding: .5rem;
     border-radius: 50%;
 }
-.side-bar__brand-name
-{
-    color: var(--brand-color);
+
+.brand-name {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2c5aa0;
 }
 
-.side-bar
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8rem;
-    width: 25%;
+.nav-menu ul {
+    list-style: none;
 }
 
-.nav__items
-{
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    list-style-type: none;
+.nav-menu li {
+    margin-bottom: .4rem;
 }
 
-.main
-{
-    width: 75%;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-}
-
-.main__section
-{
-    grid-column: span 6;
-
-}
-.notification-rapper
-{
-
+.nav-link {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: 1rem;
-    padding: 2rem;
+    gap: 1.2rem;
+    padding: 1.2rem 1.6rem;
+    text-decoration: none;
+    color: #666;
+    border-radius: .8rem;
+    transition: all 0.3s ease;
+    font-size: 1.4rem;
 }
 
-.dashboard__head
-{
-    background-color: var(--footer-BG);
+.nav-link:hover,
+.nav-link.active {
+    background-color: #f0f8ff;
+    color: #2c5aa0;
+}
+
+.nav-link svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    /* gap: 2rem; */
-    padding: 2rem;
-    border-radius: 1rem;
-    line-height: 2;
-
-}
-
-.dashboard__actions
-{
-    margin-top: 1.5rem;
-}
-
-.dashboard__status
-{
-    display: flex;
     gap: 2rem;
 }
 
-.status__content
-{
-    background-color: pink;
+/* Header */
+.header {
     display: flex;
-    border-radius: 1rem;
+    justify-content: flex-end;
+}
+
+.notification-area {
+    display: flex;
     align-items: center;
-    margin-top: 2rem;
-    padding: 1rem;
-    line-height: 1.5;
-    color: var(--brand-color);
-    gap: 1rem;
-
+    gap: 1.2rem;
+    color: #666;
+    font-size: 1.4rem;
 }
 
-
-.status__icon
-{
-    background-color: var(--brand-color);
-    /* margin: auto; */
-    padding: .5rem;
-    border-radius: .5rem;
-
+.profile-avatar {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
 }
 
-.dashboard__main
-{
-    background-color: #9DD4EF;
-    padding: 2rem;
+/* Welcome Section */
+.welcome-section {
+    background: linear-gradient(135deg, #9dd4ef 0%, #b8e0f5 100%);
+    padding: 4rem;
+    border-radius: 1.6rem;
 }
 
-.quick-actions
-{
-    background-color: pink;
+.welcome-section h1 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: #2c5aa0;
+    margin-bottom: .8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.welcome-section p {
+    color: #666;
+    margin-bottom: 2.4rem;
+    font-size: 1.6rem;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1.6rem;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    padding: 1.2rem 2.4rem;
+    border: none;
+    border-radius: 2.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.4rem;
+}
+
+.btn-primary {
+    background: #003148;
+    color: white;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #003148;
+    border: .2rem solid #003148;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 .4rem 1.2rem rgba(0, 0, 0, 0.15);
+}
+
+/* Status Cards */
+.status-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 23%);
+    gap: 2rem;
+}
+
+.status-card {
+    background: #FDF2F8;
+    padding: 2.4rem;
+    border-radius: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.6rem;
+    box-shadow: 0 .2rem 1rem rgba(0, 0, 0, 0.08);
+}
+
+.mood-card .card-icon {
+    background: #8b5cf6;
+    color: white;
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.streak-card .card-icon {
+    background: #3b82f6;
+    color: white;
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-label {
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: .4rem;
+}
+
+.card-value {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+}
+
+/* Quick Actions Card */
+.quick-actions-card {
+    background: #e0f2fe;
+    padding: 2.4rem;
+    border-radius: 1.2rem;
+    width: 40rem;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.card-header h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2c5aa0;
+}
+
+.header-icons {
+    color: #666;
+}
+
+.actions-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
 }
+
+.action-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 .4rem 1.2rem rgba(0, 0, 0, 0.1);
+}
+
+.action-icon {
+    margin-bottom: .8rem;
+    color: #003148;
+}
+
+.action-item p {
+    font-weight: 500;
+    color: #333;
+    font-size: 1.4rem;
+}
+
+/* Mood Trend Card */
+.mood-trend-card {
+    background: #e0f2fe;
+    padding: 2.4rem;
+    border-radius: 1.2rem;
+    width: 40rem;
+}
+
+.chart-container {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 1.6rem;
+}
+
+.chart-container p {
+    color: #666;
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+}
+
+.insight-inspiration__section
+{
+    /* grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+}
+
+.insight-card__rapper
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    width: 40rem;
+}
+/* Insight Cards */
+.insight-card {
+    background: #FDF2F8;
+    padding: 2rem;
+    border-radius: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    box-shadow: 0 .2rem 1rem rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.insight-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 .4rem 1.5rem rgba(0, 0, 0, 0.12);
+}
+
+.insight-content h4 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: .4rem;
+}
+
+.insight-content p {
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.insight-link {
+    color: #8b5cf6;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    font-size: 1.2rem;
+}
+
+/* Daily Inspiration Card */
+.inspiration-card {
+    background: #9dd4ef;
+    padding: 2.4rem;
+    border-radius: 1.2rem;
+    width: 40rem;
+}
+
+.inspiration-card .card-header h3 {
+    color: #2c5aa0;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.inspiration-content {
+    margin-top: 1.6rem;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.4rem;
+    color: #2c5aa0;
+    margin-bottom: .8rem;
+    line-height: 1.5;
+}
+
+.author {
+    color: #666;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+/* @media (max-width: 102.4rem) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .inspiration-card {
+        grid-column: span 1;
+    }
+
+    .status-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 76.8rem) {
+    .dashboard-container {
+        flex-direction: column;
+        padding: 1.6rem;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .actions-grid {
+        grid-template-columns: 1fr;
+    }
+} */

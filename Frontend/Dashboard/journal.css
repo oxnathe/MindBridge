@@ -1,0 +1,104 @@
+.journal-section
+{
+    display: flex;
+    width: 90%;
+    height: 13.9rem;
+    padding: 2.4rem;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1.6rem;
+    border: 1.5px solid #A3A3A3;
+}
+
+.journal__btn
+{
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+    border-radius: 1rem;
+    background: #59168B; 
+    color: #fff;   
+}
+
+a:any-link
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+.security__section
+{
+    display: flex;
+    width: 48.6rem;
+    height: 6.8rem;
+    padding: .8rem;
+    gap: 1.2rem;
+    align-items: center;
+    border-radius: 1.4rem;
+    background: #EFF6FF;
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.12);
+
+}
+
+.prompt__section
+{
+    display: flex;
+    padding: .8rem;
+    gap: 3.2rem;
+    flex-direction: column;
+    justify-content: center;
+    width: 48.6rem;
+}
+
+.prompt__image
+{
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-left: 1.6rem;
+}
+
+.prompt__question
+{
+    display: flex;
+    height: 5.3386rem;
+    padding: .8rem 1.6rem;
+    border-radius: 1rem;
+    border: 0.7px solid #A55DDA;
+    background: #FDF2F8;
+}
+
+.entery__section
+{
+    display: flex;
+    padding: .8rem;
+    gap: 3.2rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.entery__rapper
+{
+    display: flex;
+    width: 48.6rem;
+    padding: .8rem;
+    gap: 1.2rem;
+    align-items: center;
+    border-radius: 1.4rem;
+    background: #FDF2F8;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+.entery__svg
+{
+    background-color: #59168B;
+    padding: .3rem;
+    border-radius: .8rem;
+
+}
+
+.description__svg
+{
+    margin-right: .5rem;
+}
