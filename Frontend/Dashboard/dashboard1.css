@@ -81,9 +81,10 @@ button
 }
 
 .form__details
-{
-    
-}
+{    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    }
 
 .form__label
 {
