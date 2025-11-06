@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBridge</title>
+    <link rel="stylesheet" href="community.css">
+</head>
+<body>
+    <!-- DASHBOARD CONTAINER -->
+    <div class="dashboard-container">
+
+        <!-- PAGE CONTAINER -->
+        <div class="page-container">
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <div class="brand">
+                    <a href="/Frontend/pages/index.html" class="logo-link">
+                        <div class="logo-icon-wrapper">
+                            <img src="../assets/logo bg.svg" alt="Logo background shape" class="logo-bg">
+                            <img src="../assets/logo.png" alt="MindBridge icon" class="logo-fg">
+                        </div>
+                        <span class="logo-text">MindBridge</span>
+                    </a>
+                </div>
+
+                <!-- NAV MENU -->
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="../Dashboard/dashboard.html" class="nav-link">
+                            <img src="../assets/home.svg" alt="Cookie" class="sidebar__icons"> Home
+                        </a></li>
+                        <li><a href="../Dashboard/mood-register.html" class="nav-link">
+                            <img src="../assets/mood.svg" alt="Cookie" class="sidebar__icons"> Mood
+                        </a></li>
+                        <li><a href="../Dashboard/insights.html" class="nav-link">
+                            <img src="../assets/insights.svg" alt="Cookie" class="sidebar__icons"> Insight
+                        </a></li>
+                        <li><a href="#" class="nav-link active">
+                            <img src="../assets/community.svg" alt="Cookie" class="sidebar__icons"> Community
+                        </a></li>
+                        <li><a href="#" class="nav-link">
+                            <img src="../assets/resources.svg" alt=""> Resource
+                        </a></li>
+                        <li><a href="#" class="nav-link">
+                            <img src="../assets/receipt-text.svg" alt="Cookie" class="sidebar__icons"> Privacy Policy
+                        </a></li>
+                        <li><a href="#" class="nav-link">
+                            <img src="../assets/cookie.svg" alt="Cookie" class="sidebar__icons"> Terms of Service
+                        </a></li>
+                        <li><a href="#" class="nav-link">
+                            <img src="../assets/Support.svg" alt="Cookie" class="sidebar__icons"> Support
+                        </a></li>
+                        <li><a href="#" class="nav-link">
+                            <img src="../assets/logout.svg" alt="Cookie" class="sidebar__icons"> Logout
+                        </a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- MAIN CONTENT -->
+            <main class="main-content">
+
+                <!-- HEADER -->
+                <header class="header">
+                    <div class="notification-area">
+                        <img src="../assets/notification.svg" alt="Notification bell">
+                        <span>Notification</span>
+                        <img src="../assets/profile.svg" alt="Profile" class="profile-avatar">
+                    </div>
+                </header>
+
+                <!-- SEARCH BAR -->
+                <form class="search-form">
+                    <img src="../assets/search.svg" alt="Search Icon" class="search-icon">
+                    <input type="search" placeholder="Search communities, posts, or topics...">
+                </form>
+
+                <!-- CONTENT GRID -->
+                <div class="content-grid">
+
+                    <!-- FEED COLUMN -->
+                    <main class="feed-column">
+
+                        <!-- PAGE TITLE -->
+                        <header class="page-title">
+                            <h1>Community</h1>
+                            <p>Connect, share, and grow together</p>
+                        </header>
+
+                        <!-- GUIDELINES CARD -->
+                        <aside class="guidelines-card">
+                            <img src="../assets/shield.svg" alt="" class="guidelines-icon">
+                            <div class="guidelines-content">
+                                <h3>Community Guidelines</h3>
+                                <p>Our community is built on respect, empathy, and support. Please be kind, avoid medical advice, and remember that sharing is encouraged but never required.</p>
+                                <a href="#" class="btn btn-dark">Read Full Guidelines</a>
+                            </div>
+                        </aside>
+
+                        <!-- TABS -->
+                        <div class="tabs">
+                            <button class="tab-item active">Communities</button>
+                            <button class="tab-item">Recent Posts</button>
+                            <button class="tab-item">Events</button>
+                        </div>
+
+                        <!-- COMMUNITY LIST -->
+                        <div class="community-list">
+                            <!-- COMMUNITY CARDS -->
+                            <article class="community-card">
+                                <div class="card-icon-wrapper purple-gradient">
+                                    <img src="../assets/heart.svg" alt="">
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-header">
+                                        <h4>Anxiety Support Circle</h4>
+                                        <span class="badge badge-primary">Joined</span>
+                                    </div>
+                                    <span class="badge badge-light">Mental Health</span>
+                                    <p class="card-description">A safe space to share experiences and coping strategies for anxiety</p>
+                                    <div class="card-stats">
+                                        <span><img src="../assets/users.svg" alt="Members"> 2,340</span>
+                                        <span><img src="../assets/chat.svg" alt="Posts"> 1,523</span>
+                                        <span><img src="../assets/clodk.svg" alt="Activity"> 2 min ago</span>
+                                    </div>
+                                    <a href="#" class="btn btn-secondary">View Community</a>
+                                </div>
+                            </article>
+
+                            <article class="community-card">
+                                <div class="card-icon-wrapper purple-gradient">
+                                    <span class="emoji-icon">🧘</span>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-header">
+                                        <h4>Mindfulness & Meditation</h4>
+                                        <span class="badge badge-primary">Joined</span>
+                                    </div>
+                                    <span class="badge badge-light">Wellness</span>
+                                    <p class="card-description">Practice mindfulness together and share meditation techniques</p>
+                                    <div class="card-stats">
+                                        <span><img src="../assets/users.svg" alt="Members"> 1,892</span>
+                                        <span><img src="../assets/chat.svg" alt="Posts"> 982</span>
+                                        <span><img src="../assets/clodk.svg" alt="Activity"> 5 min ago</span>
+                                    </div>
+                                    <a href="#" class="btn btn-secondary">View Community</a>
+                                </div>
+                            </article>
+
+                            <article class="community-card">
+                                <div class="card-icon-wrapper purple-gradient">
+                                    <img src="../assets/heart.svg" alt="">
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-header">
+                                        <h4>Depression Warriors</h4>
+                                    </div>
+                                    <span class="badge badge-light">Mental Health</span>
+                                    <p class="card-description">Connect with others who understand what you're going through</p>
+                                    <div class="card-stats">
+                                        <span><img src="../assets/users.svg" alt="Members"> 3,120</span>
+                                        <span><img src="../assets/chat.svg" alt="Posts"> 2,145</span>
+                                        <span><img src="../assets/clodk.svg" alt="Activity"> 10 min ago</span>
+                                    </div>
+                                    <a href="#" class="btn btn-primary">Join Community</a>
+                                </div>
+                            </article>
+
+                            <article class="community-card">
+                                <div class="card-icon-wrapper purple-gradient">
+                                    <img src="../assets/sleep.svg" alt="">
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-header">
+                                        <h4>Sleep & Wellness</h4>
+                                    </div>
+                                    <span class="badge badge-light">Wellness</span>
+                                    <p class="card-description">Share tips and support for better sleep and overall wellness</p>
+                                    <div class="card-stats">
+                                        <span><img src="../assets/users.svg" alt="Members"> 1,567</span>
+                                        <span><img src="../assets/chat.svg" alt="Posts"> 845</span>
+                                        <span><img src="../assets/clodk.svg" alt="Activity"> 15 min ago</span>
+                                    </div>
+                                    <a href="#" class="btn btn-primary">Join Community</a>
+                                </div>
+                            </article>
+
+                            <article class="community-card">
+                                <div class="card-icon-wrapper purple-gradient">
+                                    <div class="family-icon-wrapper">
+                                        <img src="../assets/family.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-header">
+                                        <h4>Working Parents Support</h4>
+                                    </div>
+                                    <span class="badge badge-light">Lifestyle</span>
+                                    <p class="card-description">Navigate work-life balance and parenting challenges together</p>
+                                    <div class="card-stats">
+                                        <span><img src="../assets/users.svg" alt="Members"> 987</span>
+                                        <span><img src="../assets/chat.svg" alt="Posts"> 623</span>
+                                        <span><img src="../assets/clodk.svg" alt="Activity"> 1 hour ago</span>
+                                    </div>
+                                    <a href="#" class="btn btn-primary">Join Community</a>
+                                </div>
+                            </article>
+
+                            <article class="community-card">
+                                <div class="card-icon-wrapper purple-gradient">
+                                    <img src="../assets/graduation-cap.svg" alt="">
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-header">
+                                        <h4>College Mental Health</h4>
+                                        <span class="badge badge-primary">Joined</span>
+                                    </div>
+                                    <span class="badge badge-light">Students</span>
+                                    <p class="card-description">Support group for students managing academic and personal wellbeing</p>
+                                    <div class="card-stats">
+                                        <span><img src="../assets/users.svg" alt="Members"> 2,456</span>
+                                        <span><img src="../assets/chat.svg" alt="Posts"> 1,678</span>
+                                        <span><img src="../assets/clodk.svg" alt="Activity"> 30 min ago</span>
+                                    </div>
+                                    <a href="#" class="btn btn-secondary">View Community</a>
+                                </div>
+                            </article>
+                        </div>
+                    </main>
+
+                    <!-- RIGHT SIDEBAR -->
+                    <aside class="right-sidebar">
+
+                        <!-- TOP CONTRIBUTORS -->
+                        <section class="contributors-widget">
+                            <h3 class="widget-title">
+                                <img src="../assets/acheivement.svg" alt="">
+                                Top Contributors This Month
+                            </h3>
+                            <ul class="contributors-list">
+                                <li class="contributor-item">
+                                    <div class="contributor-avatar purple-gradient">A</div>
+                                    <div class="contributor-info">
+                                        <h4>Alex Johnson</h4>
+                                        <span class="badge badge-light">Mentor</span>
+                                    </div>
+                                    <span class="contributor-stats">156 helpful posts</span>
+                                </li>
+                                <li class="contributor-item">
+                                    <div class="contributor-avatar purple-gradient">M</div>
+                                    <div class="contributor-info">
+                                        <h4>Maria Garcia</h4>
+                                        <span class="badge badge-light">Helper</span>
+                                    </div>
+                                    <span class="contributor-stats">142 helpful posts</span>
+                                </li>
+                                <li class="contributor-item">
+                                    <div class="contributor-avatar purple-gradient">D</div>
+                                    <div class="contributor-info">
+                                        <h4>David Lee</h4>
+                                        <span class="badge badge-light">Guide</span>
+                                    </div>
+                                    <span class="contributor-stats">128 helpful posts</span>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <!-- VOICE MATTERS -->
+                        <section class="voice-matters-widget">
+                            <h3 class="widget-title">
+                                <img src="../assets/star.svg" alt="">
+                                Your Voice Matters
+                            </h3>
+                            <p>Every story shared helps someone feel less alone. Your experiences and insights can make a real difference in someone's journey. Thank you for being part of this supportive community! 💚</p>
+                        </section>
+                    </aside>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
