@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBridge</title>
+    <link rel="stylesheet" href="insights.css">
+</head>
+<body>
+   <!-- MAIN PAGE CONTAINER -->
+    <div class="page-container">
+
+        <!-- SIDE BAR -->
+        <aside class="sidebar">
+            <div class="brand">
+             <a href="/Frontend/pages/index.html" class="logo-link">
+        <div class="logo-icon-wrapper">
+          <img src="../assets/logo bg.svg" alt="Logo background shape" class="logo-bg">
+          <img src="../assets/logo.png" alt="MindBridge icon" class="logo-fg">
+        </div>
+        <span class="logo-text">MindBridge</span>
+      </a>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="../Dashboard/dashboard.html" class="nav-link">
+                            <img src="../assets/home.svg" alt="Cookie" class="sidebar__icons">
+                            Home
+                        </a></li>
+                    <li><a href="../pages/mood-register.html" class="nav-link">
+                            <img src="../assets/mood.svg" alt="Cookie" class="sidebar__icons">
+                            Mood
+                        </a></li>
+                    <li><a href="#" class="nav-link active">
+                            <img src="../assets/insights.svg" alt="Cookie" class="sidebar__icons">
+                            Insight
+                        </a></li>
+                    <li><a href="#" class="nav-link">
+                           <img src="../assets/community.svg" alt="Cookie" class="sidebar__icons">
+                            Community
+                        </a></li>
+                    <li><a href="#" class="nav-link">
+                            <img src="../assets/resources.svg" alt="">
+                            </svg>
+                            Resource
+                        </a></li>
+                    <li><a href="#" class="nav-link">
+                           <img src="../assets/receipt-text.svg" alt="Cookie" class="sidebar__icons">
+                            Privacy Policy
+                        </a></li>
+                    <li><a href="#" class="nav-link">
+                            <img src="../assets/cookie.svg" alt="Cookie" class="sidebar__icons">
+                            Terms of Service
+                        </a></li>
+                    <li><a href="#" class="nav-link">
+                            <img src="../assets/Support.svg" alt="Cookie" class="sidebar__icons">
+                            Support
+                        </a></li>
+                    <li><a href="#" class="nav-link">
+                            <img src="../assets/logout.svg" alt="Cookie" class="sidebar__icons">
+                            Logout
+                        </a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- HEADER -->
+            <header class="header">
+                <div class="notification-area">
+                       <img src="../assets/notification.svg" alt="Notification bell">
+                    <span>Notification</span>
+                    <img src="../assets/profile.svg" alt="Profile" class="profile-avatar">
+                </div>
+            </header>
+
+            <!-- DASHBOARD GRID -->
+ <div class="dashboard-grid">
+
+    <!-- MAIN COLUMN -->
+    <div class="column-main">
+
+      <!-- INSIGHTS HEADER -->
+      <section id="insights-header" class="card insights-header-card">
+        <h2>Your Insights</h2>
+        <p>Understand your mental health journey with data</p>
+      </section>
+
+      <!-- PRIVACY BANNER -->
+      <section id="privacy-banner" class="card card-blue privacy-banner">
+        <img src="../assets/privacy-icon.svg" alt="Lock Icon">
+        <div>
+          <h3>Your journal is private and secure</h3>
+          <p>Only you can see your entries</p>
+        </div>
+      </section>
+
+      <!-- STATS GRID -->
+      <div class="stats-grid">
+        <div class="card card-pink stat-card">
+          <div class="stat-header">
+            <img src="../assets/mood-avg.svg" alt="">
+            <span class="stat-value">78%</span>
+          </div>
+          <span class="stat-label">Avg Mood</span>
+        </div>
+        <div class="card card-blue stat-card">
+          <div class="stat-header">
+            <img src="../assets/improvement.svg" alt="">
+            <span class="stat-value">12%</span>
+          </div>
+          <span class="stat-label">Improvement</span>
+        </div>
+        <div class="card card-blue stat-card">
+          <div class="stat-header">
+            <img src="../assets/journal.svg" alt="">
+            <span class="stat-value">5</span>
+          </div>
+          <span class="stat-label">Journals</span>
+        </div>
+        <div class="card card-pink stat-card">
+          <div class="stat-header">
+            <img src="../assets/brain.svg" alt="">
+            <span class="stat-value">45</span>
+          </div>
+          <span class="stat-label">Meditated</span>
+        </div>
+        <div class="card card-pink stat-card">
+          <div class="stat-header">
+            <img src="../assets/session.svg" alt="">
+            <span class="stat-value">2</span>
+          </div>
+          <span class="stat-label">Sessions</span>
+        </div>
+        <div class="card card-blue stat-card">
+          <div class="stat-header">
+            <img src="../assets/acheivement.svg" alt="">
+            <span class="stat-value">7</span>
+          </div>
+          <span class="stat-label">Day Streak</span>
+        </div>
+      </div>
+
+      <!-- MOOD DISTRIBUTION -->
+      <section id="mood-distribution" class="card card-blue">
+        <div class="progress-card">
+        <h3 class="card-title">Mood Distribution (Last 30 Days)</h3>
+        <div class="progress-list">
+          <div class="progress-item">
+            <div class="progress-label">
+              <span class="emoji">😄</span>
+              <span>Amazing</span>
+            </div>
+            <span class="progress-value">10 days (35%)</span>
+            <div class="progress-bar-track"><div class="progress-bar" style="width: 35%; background-color: var(--color-primary-darker);"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-label">
+              <span class="emoji">😊</span>
+              <span>Good</span>
+            </div>
+            <span class="progress-value">13 days (44%)</span>
+            <div class="progress-bar-track"><div class="progress-bar" style="width: 44%; background-color: var(--color-primary-darker);"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-label">
+              <span class="emoji">😐</span>
+              <span>Okay</span>
+            </div>
+            <span class="progress-value">5 days (15%)</span>
+            <div class="progress-bar-track"><div class="progress-bar" style="width: 15%; background-color: var(--color-primary-darker);"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-label">
+              <span class="emoji">😞</span>
+              <span>Bad</span>
+            </div>
+            <span class="progress-value">2 days (6%)</span>
+            <div class="progress-bar-track"><div class="progress-bar" style="width: 6%; background-color: var(--color-primary-darker);"></div></div>
+          </div>
+        </div>
+    </div>
+      </section>
+
+      <!-- MOOD TRIGGERS -->
+<section id="mood-triggers" class="card mood-triggers-card">
+        <h3 class="card-title">Top Mood Triggers</h3>
+        <div class="trigger-list">
+          <div class="trigger-item">
+            <div class="trigger-info">
+              <div class="trigger-icon-bg trigger-icon-bg-red"><img src="../assets/red-graph-line.svg" alt=""></div>
+              <div>
+                <h4 class="trigger-name">Work Stress</h4>
+                <p class="trigger-occurrences">8 occurrences</p>
+              </div>
+            </div>
+            <span class="badge badge-negative">Negative</span>
+          </div>
+          <div class="trigger-item">
+            <div class="trigger-info">
+              <div class="trigger-icon-bg trigger-icon-bg-green"><img src="../assets/green-graph-line.svg" alt=""></div>
+              <div>
+                <h4 class="trigger-name">Exercise</h4>
+                <p class="trigger-occurrences">12 occurrences</p>
+              </div>
+            </div>
+            <span class="badge badge-positive">Positive</span>
+          </div>
+          <div class="trigger-item">
+            <div class="trigger-info">
+              <div class="trigger-icon-bg trigger-icon-bg-green"><img src="../assets/green-graph-line.svg" alt=""></div>
+              <div>
+                <h4 class="trigger-name">Social Time</h4>
+                <p class="trigger-occurrences">10 occurrences</p>
+              </div>
+            </div>
+            <span class="badge badge-positive">Positive</span>
+          </div>
+          <div class="trigger-item">
+            <div class="trigger-info">
+              <div class="trigger-icon-bg trigger-icon-bg-red"><img src="../assets/red-graph-line.svg" alt=""></div>
+              <div>
+                <h4 class="trigger-name">Poor Sleep</h4>
+                <p class="trigger-occurrences">6 occurrences</p>
+              </div>
+            </div>
+            <span class="badge badge-negative">Negative</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- GOALS PROGRESS -->
+      <section id="goals-progress" class="card card-blue">
+        <div class="card-header">
+            <h3 class="card-title">Goals Progress</h3>
+            <img src="../assets/goal.svg" alt="Settings Icon">
+        </div>
+        <div class="progress-list">
+          <div class="progress-item">
+            <div class="progress-label">
+              <span>Daily Mood Logging</span>
+              <div class="progress-tags">
+                <span class="badge badge-streak">30 day streak 🔥</span>
+                <span class="progress-percentage">100%</span>
+              </div>
+            </div>
+            <div class="progress-bar-track"><div class="progress-bar" style="width: 100%; background-color: var(--color-primary-darker);"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-label">
+              <span>Weekly Journaling</span>
+              <div class="progress-tags">
+                <span class="badge badge-streak">12 day streak 🔥</span>
+                <span class="progress-percentage">85%</span>
+              </div>
+            </div>
+            <div class="progress-bar-track"><div class="progress-bar" style="width: 85%; background-color: rgba(0, 49, 72, 0.2);"><div class="progress-bar-inner" style="width: 85%; background-color: var(--color-primary-darker);"></div></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-label">
+              <span>Meditation Practice</span>
+              <div class="progress-tags">
+                <span class="badge badge-streak">7 day streak 🔥</span>
+                <span class="progress-percentage">70%</span>
+              </div>
+            </div>
+            <div class="progress-bar-track"><div class="progress-bar" style="width: 70%; background-color: rgba(0, 49, 72, 0.2);"><div class="progress-bar-inner" style="width: 70%; background-color: var(--color-primary-darker);"></div></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-label">
+              <span>Therapy Sessions</span>
+              <div class="progress-tags">
+                <span class="badge badge-streak">8 day streak 🔥</span>
+                <span class="progress-percentage">90%</span>
+              </div>
+            </div>
+            <div class="progress-bar-track"><div class="progress-bar" style="width: 90%; background-color: rgba(0, 49, 72, 0.2);"><div class="progress-bar-inner" style="width: 90%; background-color: var(--color-primary-darker);"></div></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WEEKLY SUMMARY -->
+      <section id="weekly-summary" class="card card-highlight">
+        <div class="summary-header">
+          <img src="${ASSET_PATH}/1363_3899.svg" alt="">
+          <h3 class="summary-title">Weekly Summary</h3>
+        </div>
+        <p class="summary-text">Great week! Your mood improved by 12% and you maintained a 7-day streak. You're journaling regularly and meditation is clearly helping your wellbeing. Keep up the excellent work! 🌟</p>
+        <button class="share-button">Share Your Progress</button>
+      </section>
+    </div>
+
+    <!-- SIDE COLUMN -->
+    <div class="column-side">
+
+      <!-- MOOD TREND -->
+      <section id="mood-trend" class="card">
+        <div class="card-header">
+          <h3 class="card-title">7-Day Mood Trend</h3>
+          <div class="badge badge-pink"></div>
+        </div>
+        <div class="chart-container card-pink">
+            <!-- CHART IMAGE -->
+            <div class="mood-chart-visual">
+                <img src="../assets/graphcombined.png" alt="">
+                <span style="position:absolute; top:65.82px; left:5.41px; font-size:5.36px; color:#6b7280;">100</span>
+                <span style="position:absolute; top:93.76px; left:8.17px; font-size:5.36px; color:#6b7280;">75</span>
+                <span style="position:absolute; top:121.70px; left:8.17px; font-size:5.36px; color:#6b7280;">50</span>
+                <span style="position:absolute; top:149.64px; left:8.17px; font-size:5.36px; color:#6b7280;">25</span>
+                <span style="position:absolute; top:177.58px; left:11.39px; font-size:5.36px; color:#6b7280;">0</span>
+                <span style="position:absolute; top:185.63px; left:42.55px; font-size:6.26px; color:#6b7280;">Mon</span>
+                <span style="position:absolute; top:185.63px; left:89.47px; font-size:6.26px; color:#6b7280;">Tue</span>
+                <span style="position:absolute; top:185.63px; left:133.29px; font-size:6.26px; color:#6b7280;">Wed</span>
+                <span style="position:absolute; top:185.63px; left:180.21px; font-size:6.26px; color:#6b7280;">Thu</span>
+                <span style="position:absolute; top:185.63px; left:228.28px; font-size:6.26px; color:#6b7280;">Fri</span>
+                <span style="position:absolute; top:185.63px; left:273.13px; font-size:6.26px; color:#6b7280;">Sat</span>
+                <span style="position:absolute; top:185.63px; left:291.99px; font-size:6.26px; color:#6b7280;">Sun</span>
+            </div>
+        </div>
+        <div class="mood-legend">
+          <div class="mood-legend-item">
+            <span class="emoji">😄</span>
+            <span>Amazing (90-100)</span>
+          </div>
+          <div class="mood-legend-item">
+            <span class="emoji">😊</span>
+            <span>Good (70-89)</span>
+          </div>
+          <div class="mood-legend-item">
+            <span class="emoji">😐</span>
+            <span>Okay (50-69)</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- KEY INSIGHTS -->
+      <section id="key-insights" class="key-insights-section">
+        <h3 class="section-title">Key Insights</h3>
+        <div class="insight-card-list">
+          <div class="card card-pink insight-card">
+            <div class="insight-icon-bg"><img src="../assets/sun.svg" alt=""></div>
+            <div class="insight-content">
+              <div class="insight-header">
+                <h4>Morning Person Alert! 🌅</h4>
+                <span class="badge badge-white">Pattern</span>
+              </div>
+              <p>Your mood is consistently better in the morning hours (8am-11am). Consider scheduling important tasks during this time.</p>
+            </div>
+          </div>
+          <div class="card card-pink insight-card">
+            <div class="insight-icon-bg"><img src="../assets/journal2.svg" alt=""></div>
+            <div class="insight-content">
+              <div class="insight-header">
+                <h4>Journaling Boosts Your Mood 📝</h4>
+                <span class="badge badge-white">Correlation</span>
+              </div>
+              <p>On days when you journal, your mood scores are 23% higher on average. Keep up the writing!</p>
+            </div>
+          </div>
+          <div class="card card-pink insight-card">
+            <div class="insight-icon-bg"><img src="../assets/insights-down.svg" alt=""></div>
+            <div class="insight-content">
+              <div class="insight-header">
+                <h4>Weekend Wellness Dip 📉</h4>
+                <span class="badge badge-white">Trend</span>
+              </div>
+
+              <p>Your mood tends to drop slightly on weekends. Consider maintaining your weekday routines.</p>
+            </div>
+          </div>
+          <div class="card card-pink insight-card">
+            <div class="insight-icon-bg"><img src="../assets/brain2.svg" alt=""></div>
+            <div class="insight-content">
+              <div class="insight-header">
+                <h4>Meditation Master 🧘</h4>
+                <span class="badge badge-white">Success</span>
+              </div>
+              <p>Your anxiety levels decrease by 30% after meditation sessions. This is working well for you!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</main>
+</body>
+</html>
