@@ -1,0 +1,196 @@
+.resourcesSupport__rapper
+{
+    margin-bottom: 2rem;
+}
+
+.resourcesSupport__firstcontent, .resourcesSupport__secondcontent
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.resourcesSupport__description
+{
+    width: 40rem;
+}
+
+.crisis__section
+{
+    background-color: #9DD4EF;
+    border-radius: 1.4rem;
+    padding: 1.2rem;
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #fff;
+}
+
+.crisis__img
+{
+    padding:0 1rem;
+}
+
+.crisis__description
+{
+    width: 90%;
+}
+
+.crisis__card.card-one
+{
+    background-color: #FACC15;
+    color: #061F2B;
+}
+
+.crisis__card
+{
+    background-color: #061F2B;
+    padding: 1.2rem;
+}
+
+.crisis__anhor, .resourseaction__anchor
+{
+    background-color:#061F2B ;
+    padding: 1rem;
+    text-align: center;
+    width: 20rem;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 1rem;
+    
+}
+
+.guidedExercises__section
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.guidedExercises__rapper
+{
+    display: flex;
+    align-items: center;
+    width: 40rem;
+    gap: .5rem;
+    padding: 0 1rem;
+    border-radius: 1.4rem;
+    border: .1rem solid #333;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.12);
+    position: relative;
+    
+}
+
+.guidedExercises__rapper img
+{
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.guidedExercises__description
+{
+    padding: 2rem;
+}
+
+.guidedExercise__img
+{
+    position: absolute;
+    right: 1rem;
+    top: 3rem;
+    border-radius: 1rem;
+
+    color: #fff;
+}
+
+.resourseaction__section
+{
+    background-color:#9dd4ef ;
+    border-radius: 1rem;
+    width: 40rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.resourcesSupport__content
+{
+display: flex;
+flex-wrap: wrap;
+gap: 4rem;
+}
+
+.resourcesSupport__recommended
+{
+    display: flex;
+    justify-content: space-between;
+    width: 40rem;
+}
+
+.support__cards
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.support__card
+{
+display: flex;
+width: 40rem;
+line-height: 2;
+flex-direction: column;
+gap: 2rem;
+border-radius: 12px;
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.12);
+transition: all .5s ease-in-out;
+    
+}
+
+.support__card__img
+{
+    width: 100%;
+    height: 20rem;
+    border-radius: 12px 12px 0 0;
+}
+
+.support__card:hover
+{
+    box-shadow: 2px 3px 3px var(--brand-color);
+    transform: translateY(-1rem);
+}
+
+a:any-link
+{
+    text-decoration: none;
+}
+
+.resourcesSupport__recommended-btn
+{
+    background-color: transparent;
+    border: 1px solid #59168B;
+    color: #59168B;
+    padding: .5rem;
+    border-radius: .8rem;
+    
+}
+
+.btn1
+{
+    border-radius: 8px;
+    border: 0.7px solid rgba(0, 0, 0, 0.00);
+    background: #ECEEF2;
+    padding: .5rem;
+    margin-right: 1rem;
+}
+
+.btn2
+{
+    border-radius: 8px;
+    border: 0.7px solid rgba(0, 0, 0, 0.00);
+    background: #59168B;
+    padding: .5rem;
+    color: #fff;
+}
