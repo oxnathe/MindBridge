@@ -1,9 +1,7 @@
-// Get form and input elements
 const form = document.querySelector('.signup-form');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 
-// Show error under input
 function setError(element, message) {
   const formGroup = element.closest('.form-group');
   const errorDiv = formGroup.querySelector('.error');
@@ -12,7 +10,6 @@ function setError(element, message) {
   formGroup.classList.remove('success');
 }
 
-// Show success border
 function setSuccess(element) {
   const formGroup = element.closest('.form-group');
   const errorDiv = formGroup.querySelector('.error');
@@ -44,7 +41,7 @@ function validateInputs() {
 
 // Handle form submit
 form.addEventListener('submit', function (e) {
-  e.preventDefault(); // stop form from reloading page
+  e.preventDefault();
 
   if (!validateInputs()) {
     return;
@@ -56,8 +53,7 @@ form.addEventListener('submit', function (e) {
   };
 
 
-  // Make API request
-  fetch('http://localhost:3000/api/v1/auth/register', {
+  fetch('https://mindbridge-snlz.onrender.com/api/v1/auth/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -71,7 +67,7 @@ form.addEventListener('submit', function (e) {
       if (data.success || data.token) {
         localStorage.setItem('token', data.token);
 
-        window.location.href = '/Frontend/pages/dashboard.html';
+        window.location.assign('./Dashboard.html');
       } else {
 
         if (data.message) {

@@ -89,35 +89,59 @@ body {
     padding: 2rem;
 }
 
-/* Sidebar */
+
+/* ==== SIDE MENU/LOGO ==== */
 .sidebar {
-    width: 25rem;
+    width: 250px;
     background: white;
-    padding: 3rem 2rem;
-    border-radius: 1.2rem;
+    padding: 30px 20px;
+    border-radius: 12px;
     height: fit-content;
+    margin-left: -20px; 
+    transition: all 0.3s ease;
 }
 
-.brand {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.2rem;
-    margin-bottom: 4rem;
+.logo-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
 }
 
-.brand-logo {
-    width: 4rem;
-    height: 4rem;
-    background-color: #003148;
-    padding: .5rem;
-    border-radius: 50%;
+.logo-icon-wrapper {
+  position: relative;
+  width: 50px;
+  height: 48px;
 }
 
-.brand-name {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #2c5aa0;
+.logo-icon-wrapper img {
+  position: absolute;
+}
+
+.logo-bg {
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.logo-fg {
+  top: 7px;
+  left: 8px;
+  width: 24px;
+  height: 26px;
+}
+
+.logo-text {
+  font-family: 'DM Serif Display', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #061f2b;
+  line-height: 1;
+}
+
+.nav-menu{
+    margin-top: 60px;
 }
 
 .nav-menu ul {
@@ -125,19 +149,19 @@ body {
 }
 
 .nav-menu li {
-    margin-bottom: .4rem;
+    margin-bottom: 4px;
 }
 
 .nav-link {
     display: flex;
     align-items: center;
-    gap: 1.2rem;
-    padding: 1.2rem 1.6rem;
+    gap: 12px;
+    padding: 12px 16px;
     text-decoration: none;
-    color: #666;
-    border-radius: .8rem;
+    color: var(--text-light);
+    border-radius: 8px;
     transition: all 0.3s ease;
-    font-size: 1.4rem;
+    font-size: 14px;
 }
 
 .nav-link:hover,
@@ -146,20 +170,20 @@ body {
     color: #2c5aa0;
 }
 
-.nav-link svg {
-    width: 2rem;
-    height: 2rem;
+.nav-link .sidebar__icons {
+    width: 20px;
+    height: 20px;
 }
 
-/* Main Content */
+/* ==== MAIN CONTENT ====*/
 .main-content {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 20px;
 }
 
-/* Header */
+/* ==== HEADER ==== */
 .header {
     display: flex;
     justify-content: flex-end;
@@ -168,17 +192,16 @@ body {
 .notification-area {
     display: flex;
     align-items: center;
-    gap: 1.2rem;
+    gap: 12px;
     color: #666;
-    font-size: 1.4rem;
+    font-size: 14px;
 }
 
 .profile-avatar {
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
 }
-
 /* Welcome Section */
 .welcome-section {
     background: linear-gradient(135deg, #9dd4ef 0%, #b8e0f5 100%);
@@ -189,7 +212,7 @@ body {
 .welcome-section h1 {
     font-size: 3.2rem;
     font-weight: 600;
-    color: #2c5aa0;
+    color: #061f2b;
     margin-bottom: .8rem;
     display: flex;
     align-items: center;
