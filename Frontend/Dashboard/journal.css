@@ -67,6 +67,7 @@ a:any-link
     border-radius: 1rem;
     border: 0.7px solid #A55DDA;
     background: #FDF2F8;
+    align-items: center;
 }
 
 .entery__section

@@ -98,26 +98,43 @@ body {
     height: fit-content;
 }
 
-.brand {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.2rem;
-    margin-bottom: 4rem;
+.logo-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
 }
 
-.brand-logo {
-    width: 4rem;
-    height: 4rem;
-    background-color: #003148;
-    padding: .5rem;
-    border-radius: 50%;
+.logo-icon-wrapper {
+  position: relative;
+  width: 50px;
+  height: 48px;
 }
 
-.brand-name {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #2c5aa0;
+.logo-icon-wrapper img {
+  position: absolute;
+}
+
+.logo-bg {
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.logo-fg {
+  top: 7px;
+  left: 8px;
+  width: 24px;
+  height: 26px;
+}
+
+.logo-text {
+  font-family: 'DM Serif Display', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #082A74;
+  line-height: 1;
 }
 
 .nav-menu ul {
