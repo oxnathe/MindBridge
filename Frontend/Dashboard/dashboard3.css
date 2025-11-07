@@ -1,0 +1,349 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -------------- RESET---------------- */
+
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html
+{
+    font-size: 62.4%;
+    scroll-behavior: smooth;
+}
+
+@media(max-width:1200px)
+{
+    html
+    {
+        font-size: 58%;
+    }
+}
+
+@media(max-width:900px)
+{
+    html
+    {
+        font-size: 50%;
+    }
+}
+
+@media(max-width:800px)
+{
+    html
+    {
+        font-size: 46%;
+    }
+}
+
+@media(max-width:570px)
+{
+    html
+    {
+        font-size: 44%;
+    }
+}
+
+@media(max-width:400px)
+{
+    html
+    {
+        font-size: 34%;
+    }
+}
+
+@media(max-width:300px)
+{
+    html
+    {
+        font-size: 26%;
+    }
+}
+
+button
+{
+    font-size: inherit;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1.6rem;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 25rem;
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 1.2rem;
+    height: fit-content;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 4rem;
+}
+
+.brand-logo {
+    width: 4rem;
+    height: 4rem;
+    background-color: #003148;
+    padding: .5rem;
+    border-radius: 50%;
+}
+
+.brand-name {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2c5aa0;
+}
+
+.nav-menu ul {
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-bottom: .4rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.2rem 1.6rem;
+    text-decoration: none;
+    color: #666;
+    border-radius: .8rem;
+    transition: all 0.3s ease;
+    font-size: 1.4rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: #f0f8ff;
+    color: #2c5aa0;
+}
+
+.nav-link svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.notification-area {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    color: #666;
+    font-size: 1.4rem;
+}
+
+.profile-avatar {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+}
+
+.page-title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+    justify-content: center;
+}
+
+.page-subtitle {
+    font-size: 1.4rem;
+    color: #718096;
+    margin-bottom: 2.5rem;
+}
+
+/* Cards Container */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    width: 100%;
+    justify-items: center;
+}
+
+/* Individual Card Styling */
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 350px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f4ff;
+    position: relative;
+}
+
+.card-title::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #4a6cf7;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Settings Section */
+.settings-list {
+    list-style: none;
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.setting-item:last-child {
+    border-bottom: none;
+}
+
+.setting-info {
+    flex: 1;
+}
+
+.setting-title {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.setting-description {
+    font-size: 0.9rem;
+    color: #718096;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background-color: #4a6cf7;
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(26px);
+}
+
+/* Reset Onboarding Section */
+.reset-section {
+    text-align: center;
+    padding: 25px;
+}
+
+.reset-description {
+    margin-bottom: 20px;
+    color: #718096;
+}
+
+.reset-button {
+    background-color: #4a6cf7;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.reset-button:hover {
+    background-color: #3a5bd9;
+}

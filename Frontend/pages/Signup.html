@@ -4,14 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MindBridge | Sign Up</title>
-
-  <!-- =============== STYLESHEET LINKS =============== -->
   <link rel="stylesheet" href="Signup.css">
 
   <!-- =============== GOOGLE FONTS =============== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
 </head>
 
 <body>
@@ -21,10 +30,10 @@
 
       <!-- =============== HEADER / LOGO SECTION =============== -->
       <header class="page-header">
-        <a href="index.html" class="logo" aria-label="MindBridge Home">
+        <a href="/Frontend/pages/index.html" class="logo" aria-label="MindBridge Home">
           <div class="logo-icon-wrapper">
-            <img src="logo bg.svg" alt="MindBridge logo background" class="logo-bg">
-            <img src="logo.png" alt="MindBridge logo icon" class="logo-icon">
+            <img src="../assets/logo bg.svg" alt="MindBridge logo background" class="logo-bg">
+            <img src="../assets/logo.png" alt="MindBridge logo icon" class="logo-icon">
           </div>
           <span class="logo-text">MindBridge</span>
         </a>
@@ -34,8 +43,8 @@
       <div class="form-wrapper">
 
         <!-- =============== BACK LINK =============== -->
-        <a href="index.html" class="back-link">
-          <img src="arrow-right.svg" alt="Back arrow" class="back-arrow-icon">
+        <a href="/Frontend/pages/index.html" class="back-link">
+          <img src="../assets/arrow-right.svg" alt="Back arrow" class="back-arrow-icon">
           <span>Back Home</span>
         </a>
 
@@ -43,14 +52,13 @@
         <section class="signup-content">
           <div class="form-card">
 
-            <!-- =============== FORM HEADER =============== -->
             <div class="form-header">
               <h1 class="form-title">Let's get started</h1>
               <p class="form-subtitle">Join <strong>MindBridge</strong> and begin tracking your mood today.</p>
             </div>
 
             <!-- =============== SIGNUP FORM FIELDS =============== -->
-            <form class="signup-form" method="POST" id="signup-form">
+            <form class="signup-form" method="POST" id="signup-form" novalidate>
 
               <!-- Username -->
               <div class="form-group">
@@ -85,7 +93,7 @@
                 <div class="input-wrapper">
                   <input type="password" id="password" name="password" placeholder="Enter password">
                   <button type="button" class="input-icon-btn" aria-label="Show password">
-                    <img src="password-eye.svg" alt="Show password">
+                     <i class="ph ph-eye"></i>
                   </button>
                 </div>
                 <p class="helper-text">Must contain at least one uppercase, one lowercase, and one special character.</p>
@@ -94,11 +102,11 @@
 
               <!-- Confirm Password -->
               <div class="form-group">
-                <label for="confirm-password">Confirm Password</label>
+                <label for="confirm_password">Confirm Password</label>
                 <div class="input-wrapper">
-                  <input type="password" id="confirm_password" name="confirm-password" placeholder="Confirm password">
+                  <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm password">
                   <button type="button" class="input-icon-btn" aria-label="Show password">
-                    <img src="password-eye.svg" alt="Show password">
+                     <i class="ph ph-eye"></i>
                   </button>
                 </div>
                 <div class="error"></div>
@@ -118,5 +126,6 @@
       </div>
     </div>
   </main>
+  <script src="signup.js"></script>
 </body>
 </html>
