@@ -2,6 +2,7 @@ const form = document.querySelector('.signup-form');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 
+
 function setError(element, message) {
   const formGroup = element.closest('.form-group');
   const errorDiv = formGroup.querySelector('.error');
@@ -67,19 +68,23 @@ form.addEventListener('submit', function (e) {
       if (data.success || data.token) {
         localStorage.setItem('token', data.token);
 
-        window.location.assign('./Dashboard.html');
+        
+window.location.assign('./Dashboard/dashboard.html');
+
       } else {
 
         if (data.message) {
           alert(data.message);
         } else {
           alert('Login failed. Please check your email or password.');
+
         }
       }
     })
     .catch((err) => {
       console.error('Error:', err);
       alert('Something went wrong. Please try again later.');
+
     });
 });
 

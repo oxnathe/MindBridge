@@ -81,6 +81,9 @@ body {
     font-size: 1.6rem;
 }
 
+a{
+    text-decoration: none;
+}
 /* Dashboard Container */
 .dashboard-container {
     display: flex;

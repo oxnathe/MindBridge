@@ -1,6 +1,4 @@
-/* ===========================
-   ROOT VARIABLES
-   =========================== */
+/*  ROOT VARIABLES */
 :root {
   --font-primary: 'Poppins', sans-serif;
   --font-secondary: 'DM Serif Display', serif;
@@ -16,9 +14,7 @@
   --color-border-btn: #2c2c2c;
 }
 
-/* ===========================
-   GLOBAL STYLES
-   =========================== */
+/*  GLOBAL STYLES */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -35,9 +31,7 @@ a {
   color: inherit;
 }
 
-/* ===========================
-   PAGE CONTAINER
-   =========================== */
+/* PAGE CONTAINER */
 .signup-page-container {
   max-width: 1440px;
   margin: 0 auto;
@@ -48,9 +42,7 @@ a {
   box-sizing: border-box;
 }
 
-/* ===========================
-   LOGO SECTION
-   =========================== */
+/*  LOGO SECTION  */
 .logo-wrapper {
   display: inline-flex;
   flex-direction: column;
@@ -96,9 +88,7 @@ a {
   line-height: 0.86;
 }
 
-/* ===========================
-   MAIN CONTENT AREA
-   =========================== */
+/*  MAIN CONTENT AREA */
 .signup-main-content {
   display: flex;
   flex-direction: column;
@@ -121,9 +111,7 @@ a {
   margin-bottom: 18px;
 }
 
-/* ===========================
-   SIGN-UP CARD
-   =========================== */
+/*  SIGN-UP CARD */
 .signup-card {
   width: 100%;
   max-width: 550px;
@@ -142,9 +130,7 @@ a {
   padding: 16px;
 }
 
-/* ===========================
-   CARD HEADER TEXT
-   =========================== */
+/*  CARD HEADER TEXT */
 .card-header-text {
   display: flex;
   flex-direction: column;
@@ -173,9 +159,7 @@ a {
   font-weight: 600;
 }
 
-/* ===========================
-   FORM STYLES
-   =========================== */
+/*  FORM STYLES */
 .signup-form {
   width: 100%;
   display: flex;
@@ -201,9 +185,7 @@ a {
   margin-top: -3px;
 }
 
-/* ===========================
-   INPUT FIELDS
-   =========================== */
+/* INPUT FIELDS */
 .input-wrapper {
   display: flex;
   align-items: center;
@@ -249,9 +231,7 @@ a {
 }
 
 
-/* =========================================================
-   ERROR & SUCCESS STATES
-   ========================================================= */
+/*  ERROR & SUCCESS STATES */
 .form-group .error {
   color: red;
   font-size: 12px;
@@ -267,10 +247,8 @@ a {
   border: 1px solid #008aca;
 }
 
-/* ===========================
-   BUTTON STYLES
-   =========================== */
-.create-account-btn {
+/*  BUTTON STYLES */
+.login-btn {
   width: 100%;
   background-color: var(--color-primary);
   color: var(--color-white);
@@ -284,9 +262,14 @@ a {
   line-height: 1.33;
 }
 
-/* ===========================
-   FOOTER SECTION
-   =========================== */
+.login-btn:disabled{
+  background-color: #2d424b;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+
+/* FOOTER SECTION */
 .signup-footer {
   display: flex;
   flex-direction: column;
@@ -312,9 +295,7 @@ a {
   letter-spacing: -0.3px;
 }
 
-/* ===========================
-   RESPONSIVE STYLES
-   =========================== */
+/* RESPONSIVE STYLES */
 @media (max-width: 1200px) {
   .signup-page-container {
     padding: 32px;
