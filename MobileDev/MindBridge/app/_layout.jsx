@@ -2,6 +2,7 @@ import { Stack } from "expo-router";
 import Splash from "./Splash";
 import { useFonts } from "expo-font";
 import { useEffect, useState } from "react";
+import { StatusBar } from "react-native";
 
 export default function RootLayout() {
 
@@ -15,6 +16,7 @@ export default function RootLayout() {
     poppinsSemiBold: require('../assets/fonts/Poppins/Poppins-SemiBold.ttf'),
     poppinsLight: require('../assets/fonts/Poppins/Poppins-Light.ttf'),
     poppinsBold: require('../assets/fonts/Poppins/Poppins-Bold.ttf'),
+    poppinsItalic: require('../assets/fonts/Poppins/Poppins-Italic.ttf')
   })
 
   useEffect(() =>{
@@ -34,6 +36,7 @@ export default function RootLayout() {
       <Stack.Screen name="index"/>
       <Stack.Screen name="(auth)"/>
       <Stack.Screen name="(presurvey)"/>
+      <Stack.Screen name="(tabs)"/>
     </Stack>
   );
 }
