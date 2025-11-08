@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindbridge </title>
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+    <div class="dashboard-container">
+         <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <div class="brand">
+                    <a href="/Frontend/pages/index.html" class="logo-link">
+                        <div class="logo-icon-wrapper">
+                            <img src="../assets/logo bg.svg" alt="Logo background shape" class="logo-bg">
+                            <img src="../assets/logo.png" alt="MindBridge icon" class="logo-fg">
+                        </div>
+                        <span class="logo-text">MindBridge</span>
+                    </a>
+                </div>
+
+                <!-- NAV MENU -->
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="../Dashboard/dashboard.html" class="nav-link">
+                            <img src="../assets/home.svg" alt="Cookie" class="sidebar__icons"> Home
+                        </a></li>
+                        <li><a href="../Dashboard/mood-register.html" class="nav-link">
+                            <img src="../assets/mood.svg" alt="Cookie" class="sidebar__icons"> Mood
+                        </a></li>
+                        <li><a href="../Dashboard/insights.html" class="nav-link">
+                            <img src="../assets/insights.svg" alt="Cookie" class="sidebar__icons"> Insight
+                        </a></li>
+                        <li><a href="../Dashboard/community.html" class="nav-link">
+                            <img src="../assets/community.svg" alt="Cookie" class="sidebar__icons"> Community
+                        </a></li>
+                        <li><a href="../Dashboard/resources.html" class="nav-link">
+                            <img src="../assets/resources.svg" alt=""> Resource
+                        </a></li>
+                        <li><a href="#" class="nav-link">
+                            <img src="../assets/receipt-text.svg" alt="Cookie" class="sidebar__icons"> Privacy Policy
+                        </a></li>
+                        <li><a href="#" class="nav-link">
+                            <img src="../assets/cookie.svg" alt="Cookie" class="sidebar__icons"> Terms of Service
+                        </a></li>
+                        <li><a href="#" class="nav-link">
+                            <img src="../assets/Support.svg" alt="Cookie" class="sidebar__icons"> Support
+                        </a></li>
+                        <li><a href="#" class="nav-link">
+                            <img src="../assets/logout.svg" alt="Cookie" class="sidebar__icons"> Logout
+                        </a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- MAIN CONTENT -->
+            <main class="main-content">
+
+                <!-- HEADER -->
+                <header class="header">
+                    <div class="notification-area">
+                        <img src="../assets/notification.svg" alt="Notification bell">
+                        <span>Notification</span>
+                        <img src="../assets/profile.svg" alt="Profile" class="profile-avatar">
+                    </div>
+                </header>
+
+            <!-- Settings Header -->
+        <header class="header1">
+            <h1 class="page-title">Settings</h1>
+            <p class="page-subtitle">Manage your account and preferences.</p>
+            
+        </header>
+
+        <!-- Cards Container -->
+        <div class="cards-container">
+            <!-- Privacy & Security Card -->
+            <div class="card">
+                <h2 class="card-title">Privacy & Security</h2>
+                <div class="card-content">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="privacy-policy">
+                        <label for="privacy-policy">Privacy Policy</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="data-security">
+                        <label for="data-security">Data & Security</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Help & Support Card -->
+            <div class="card">
+                <h2 class="card-title">Help & Support</h2>
+                <div class="card-content">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="help-center" checked>
+                        <label for="help-center">Help Center</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="contact-support" checked>
+                        <label for="contact-support">Contact Support</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Preferences Section -->
+                <section class="content-section">
+                    <h3 class="section-title">Preferences</h3>
+                    <ul class="settings-list">
+                        <li class="setting-item">
+                            <div class="setting-info">
+                                <div class="setting-title">Push Notifications</div>
+                                <div class="setting-description">Receive daily mood reminders</div>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </li>
+                        <li class="setting-item">
+                            <div class="setting-info">
+                                <div class="setting-title">Dark Mode</div>
+                                <div class="setting-description">Use dark theme</div>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </li>
+                        <li class="setting-item">
+                            <div class="setting-info">
+                                <div class="setting-title">Colorful Interface</div>
+                                <div class="setting-description">Use vibrant colors</div>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Reset Onboarding Section -->
+                <section class="content-section reset-section">
+                    <h3 class="section-title">Reset Onboarding</h3>
+                    <p class="reset-description">Want to see the welcome screens again? You can restart the onboarding process.</p>
+                    <button class="reset-button">Reset Onboarding</button>
+                </section>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>

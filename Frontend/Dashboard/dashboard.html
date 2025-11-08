@@ -10,55 +10,33 @@
 
 <body>
     <div class="dashboard-container">
-        <!-- Sidebar -->
+        <!--SIDE BAR-->
         <aside class="sidebar">
             <div class="brand">
-                <img  class="brand-logo" src="../assets/image 2.png" alt="">
-                <h2 class="brand-name">MindBridge</h2>
-            </div>
+             <a href="/Frontend/pages/index.html" class="logo-link">
+        <div class="logo-icon-wrapper">
+          <img src="../assets/logo bg.svg" alt="Logo background shape" class="logo-bg">
+          <img src="../assets/logo.png" alt="MindBridge icon" class="logo-fg">
+        </div>
+        <span class="logo-text">MindBridge</span>
+      </a>
 
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="#" class="nav-link active">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path
-                                    d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"
-                                    stroke="currentColor" stroke-width="2" />
-                                <path d="M9 22V12H15V22" stroke="currentColor" stroke-width="2" />
-                            </svg>
+                    <li><a href="../Dashboard/dashboard.html" class="nav-link active">
+                            <img src="../assets/home.svg" alt="Cookie" class="sidebar__icons">
                             Home
                         </a></li>
-                    <li><a href="#" class="nav-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path
-                                    d="M20.84 4.61C19.32 3.04 17.13 3.04 15.61 4.61L12 8.22L8.39 4.61C6.87 3.04 4.68 3.04 3.16 4.61C1.64 6.18 1.64 8.37 3.16 9.94L12 18.78L20.84 9.94C22.36 8.37 22.36 6.18 20.84 4.61Z"
-                                    stroke="#0A58CA" stroke-width="2" />
-                            </svg>
+                    <li><a href="../Dashboard/mood-register.html" class="nav-link">
+                            <img src="../assets/mood.svg" alt="Cookie" class="sidebar__icons">
                             Mood
                         </a></li>
-                    <li><a href="#" class="nav-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path
-                                    d="M21 21H3.8C3.58783 21 3.38434 20.9157 3.23431 20.7657C3.08429 20.6157 3 20.4122 3 20.2V3M6 14L10 10L14 14L21 7"
-                                    stroke="currentColor" stroke-width="2" />
-                            </svg>
+                    <li><a href="../Dashboard/insights.html" class="nav-link">
+                            <img src="../assets/insights.svg" alt="Cookie" class="sidebar__icons">
                             Insight
                         </a></li>
-                    <li><a href="#" class="nav-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path
-                                    d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21"
-                                    stroke="currentColor" stroke-width="2" />
-                                <path
-                                    d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z"
-                                    stroke="currentColor" stroke-width="2" />
-                                <path
-                                    d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13"
-                                    stroke="currentColor" stroke-width="2" />
-                                <path
-                                    d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88"
-                                    stroke="currentColor" stroke-width="2" />
-                            </svg>
+                    <li><a href="../Dashboard/community.html" class="nav-link">
+                           <img src="../assets/community.svg" alt="Cookie" class="sidebar__icons">
                             Community
                         </a></li>
                     <li><a href="#" class="nav-link">
@@ -69,72 +47,34 @@
                             Resource
                         </a></li>
                     <li><a href="#" class="nav-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path
-                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                                    stroke="currentColor" stroke-width="2" />
-                                <path
-                                    d="M9.09 9C9.3251 8.33167 9.78915 7.76811 10.4 7.40913C11.0108 7.05016 11.7289 6.91894 12.4272 7.03871C13.1255 7.15849 13.7588 7.52152 14.2151 8.06353C14.6713 8.60553 14.9211 9.29152 14.92 10C14.92 12 11.92 13 11.92 13"
-                                    stroke="currentColor" stroke-width="2" />
-                                <path d="M12 17H12.01" stroke="currentColor" stroke-width="2" />
-                            </svg>
+                           <img src="../assets/receipt-text.svg" alt="Cookie" class="sidebar__icons">
                             Privacy Policy
                         </a></li>
                     <li><a href="#" class="nav-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path
-                                    d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
-                                    stroke="currentColor" stroke-width="2" />
-                                <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" />
-                                <path d="M16 13H8" stroke="currentColor" stroke-width="2" />
-                                <path d="M16 17H8" stroke="currentColor" stroke-width="2" />
-                                <path d="M10 9H9H8" stroke="currentColor" stroke-width="2" />
-                            </svg>
+                            <img src="../assets/cookie.svg" alt="Cookie" class="sidebar__icons">
                             Terms of Service
                         </a></li>
                     <li><a href="#" class="nav-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path
-                                    d="M3 11H6C6.53043 11 7.03914 11.2107 7.41421 11.5858C7.78929 11.9609 8 12.4696 8 13V16C8 16.5304 7.78929 17.0391 7.41421 17.4142C7.03914 17.7893 6.53043 18 6 18H5C4.46957 18 3.96086 17.7893 3.58579 17.4142C3.21071 17.0391 3 16.5304 3 16V11Z"
-                                    stroke="currentColor" stroke-width="2" />
-                                <path
-                                    d="M21 11H18C17.4696 11 16.9609 11.2107 16.5858 11.5858C16.2107 11.9609 16 12.4696 16 13V16C16 16.5304 16.2107 17.0391 16.5858 17.4142C16.9609 17.7893 17.4696 18 18 18H19C19.5304 18 20.0391 17.7893 20.4142 17.4142C20.7893 17.0391 21 16.5304 21 16V11Z"
-                                    stroke="currentColor" stroke-width="2" />
-                                <path
-                                    d="M3 11C3 9.8181 3.23279 8.64778 3.68508 7.55585C4.13738 6.46392 4.80031 5.47177 5.63604 4.63604C6.47177 3.80031 7.46392 3.13738 8.55585 2.68508C9.64778 2.23279 10.8181 2 12 2C13.1819 2 14.3522 2.23279 15.4442 2.68508C16.5361 3.13738 17.5282 3.80031 18.364 4.63604C19.1997 5.47177 19.8626 6.46392 20.3149 7.55585C20.7672 8.64778 21 9.8181 21 11"
-                                    stroke="currentColor" stroke-width="2" />
-                            </svg>
+                            <img src="../assets/Support.svg" alt="Cookie" class="sidebar__icons">
                             Support
                         </a></li>
                     <li><a href="#" class="nav-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path
-                                    d="M9 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9"
-                                    stroke="currentColor" stroke-width="2" />
-                                <path d="M16 17L21 12L16 7" stroke="currentColor" stroke-width="2" />
-                                <path d="M21 12H9" stroke="currentColor" stroke-width="2" />
-                            </svg>
+                            <img src="../assets/logout.svg" alt="Cookie" class="sidebar__icons">
                             Logout
                         </a></li>
                 </ul>
             </nav>
         </aside>
 
-        <!-- Main Content -->
+
+          <!-- MAIN CONTENT -->
         <main class="main-content">
-            <!-- Header -->
+            <!-- HEADER -->
             <header class="header">
                 <div class="notification-area">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                        <path
-                            d="M18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 15 3 17 3 17H21C21 17 18 15 18 8Z"
-                            stroke="currentColor" stroke-width="2" />
-                        <path
-                            d="M13.73 21C13.5542 21.3031 13.3019 21.5547 12.9982 21.7295C12.6946 21.9044 12.3504 21.9965 12 21.9965C11.6496 21.9965 11.3054 21.9044 11.0018 21.7295C10.6982 21.5547 10.4458 21.3031 10.27 21"
-                            stroke="currentColor" stroke-width="2" />
-                    </svg>
+                       <img src="../assets/notification.svg" alt="Notification bell">
                     <span>Notification</span>
-                    <img src="./Dashboard assets/Ellipse 21.png" alt="Profile" class="profile-avatar">
+                    <img src="../assets/profile.svg" alt="Profile" class="profile-avatar">
                 </div>
             </header>
             <!-- Welcome Section -->
@@ -143,32 +83,32 @@
                     <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
                         <path
                             d="M20.1977 5.15908C20.2762 4.73852 20.4994 4.35867 20.8285 4.08533C21.1576 3.81198 21.572 3.66235 21.9998 3.66235C22.4277 3.66235 22.842 3.81198 23.1712 4.08533C23.5003 4.35867 23.7234 4.73852 23.802 5.15908L25.7288 15.3487C25.8657 16.0732 26.2177 16.7395 26.7391 17.2609C27.2604 17.7822 27.9267 18.1342 28.6512 18.2711L38.8408 20.1979C39.2614 20.2765 39.6412 20.4996 39.9146 20.8288C40.1879 21.1579 40.3376 21.5722 40.3376 22.0001C40.3376 22.4279 40.1879 22.8423 39.9146 23.1714C39.6412 23.5005 39.2614 23.7237 38.8408 23.8022L28.6512 25.7291C27.9267 25.8659 27.2604 26.218 26.7391 26.7393C26.2177 27.2606 25.8657 27.927 25.7288 28.6514L23.802 38.8411C23.7234 39.2616 23.5003 39.6415 23.1712 39.9148C22.842 40.1882 22.4277 40.3378 21.9998 40.3378C21.572 40.3378 21.1576 40.1882 20.8285 39.9148C20.4994 39.6415 20.2762 39.2616 20.1977 38.8411L18.2708 28.6514C18.134 27.927 17.7819 27.2606 17.2606 26.7393C16.7393 26.218 16.0729 25.8659 15.3485 25.7291L5.15883 23.8022C4.73827 23.7237 4.35843 23.5005 4.08508 23.1714C3.81174 22.8423 3.66211 22.4279 3.66211 22.0001C3.66211 21.5722 3.81174 21.1579 4.08508 20.8288C4.35843 20.4996 4.73827 20.2765 5.15883 20.1979L15.3485 18.2711C16.0729 18.1342 16.7393 17.7822 17.2606 17.2609C17.7819 16.7395 18.134 16.0732 18.2708 15.3487L20.1977 5.15908Z"
-                            stroke="white" stroke-width="2" />
-                        <path d="M36.666 3.66663V11" stroke="white" stroke-width="2" />
-                        <path d="M40.3333 7.33337H33" stroke="white" stroke-width="2" />
+                            stroke="#061f2b" stroke-width="2" />
+                        <path d="M36.666 3.66663V11" stroke="#061f2b" stroke-width="2" />
+                        <path d="M40.3333 7.33337H33" stroke="#061f2b" stroke-width="2" />
                         <path
                             d="M7.33268 40.3333C9.35773 40.3333 10.9993 38.6917 10.9993 36.6667C10.9993 34.6416 9.35773 33 7.33268 33C5.30764 33 3.66602 34.6416 3.66602 36.6667C3.66602 38.6917 5.30764 40.3333 7.33268 40.3333Z"
-                            stroke="white" stroke-width="2" />
+                            stroke="#061f2b" stroke-width="2" />
                     </svg>
                 </h1>
                 <p>How are you feeling today?</p>
                 <div class="action-buttons">
-                    <button class="btn btn-primary">
+                   <a href="../Dashboard/mood-register.html"><button class="btn btn-primary">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <path
                                 d="M13.8941 3.07333C13.5536 2.73267 13.1493 2.46243 12.7043 2.27805C12.2593 2.09368 11.7824 1.99878 11.3007 1.99878C10.8191 1.99878 10.3421 2.09368 9.89716 2.27805C9.45219 2.46243 9.0479 2.73267 8.7074 3.07333L8.00073 3.78L7.29406 3.07333C6.60627 2.38554 5.67342 1.99914 4.70073 1.99914C3.72804 1.99914 2.79519 2.38554 2.1074 3.07333C1.4196 3.76112 1.0332 4.69397 1.0332 5.66666C1.0332 6.63935 1.4196 7.5722 2.1074 8.26L8.00073 14.1533L13.8941 8.26C14.2347 7.91949 14.505 7.51521 14.6893 7.07023C14.8737 6.62526 14.9686 6.14832 14.9686 5.66666C14.9686 5.185 14.8737 4.70807 14.6893 4.26309C14.505 3.81812 14.2347 3.41383 13.8941 3.07333Z"
                                 stroke="white" stroke-width="1.6" />
                         </svg>
                         Log Mood
-                    </button>
-                    <button class="btn btn-secondary">
+                    </button></a>
+                    <a href="../Dashboard/dashboard1.html"><button class="btn btn-secondary">
                         <svg width="15" height="14" viewBox="0 0 15 14" fill="none">
                             <path
                                 d="M7.46745 3.46672C7.46745 2.75947 7.1865 2.08119 6.6864 1.5811C6.1863 1.081 5.50803 0.800049 4.80078 0.800049H0.800781V10.8H5.46745C5.99788 10.8 6.50659 11.0108 6.88166 11.3858C7.25673 11.7609 7.46745 12.2696 7.46745 12.8M7.46745 3.46672V12.8M7.46745 3.46672C7.46745 2.75947 7.7484 2.08119 8.2485 1.5811C8.74859 1.081 9.42687 0.800049 10.1341 0.800049H14.1341V10.8H9.46745C8.93701 10.8 8.42831 11.0108 8.05323 11.3858C7.67816 11.7609 7.46745 12.2696 7.46745 12.8"
-                                stroke="white" stroke-width="1.6" />
+                                stroke="#061f2b" stroke-width="1.6" />
                         </svg>
                         Journal
-                    </button>
+                    </button></a>
                 </div>
             </section>
 
@@ -221,7 +161,7 @@
                         </div>
                     </div>
                     <div class="actions-grid">
-                        <div class="action-item">
+                        <div class="action-item"><a href="../Dashboard/dashboard1.html">
                             <div class="action-icon">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
                                     <path
@@ -230,8 +170,8 @@
                                 </svg>
                             </div>
                             <p>Journal</p>
-                        </div>
-                        <div class="action-item">
+                        </div></a>
+                        <div class="action-item"><a href="../Dashboard/community.html">
                             <div class="action-icon">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
                                     <path
@@ -249,8 +189,8 @@
                                 </svg>
                             </div>
                             <p>Community</p>
-                        </div>
-                        <div class="action-item">
+                        </div></a>
+                        <div class="action-item"><a href="../Dashboard/mood-register.html">
                             <div class="action-icon">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
                                     <path
@@ -259,7 +199,7 @@
                                 </svg>
                             </div>
                             <p>Log Mood</p>
-                        </div>
+                        </div></a>
                         <div class="action-item">
                             <div class="action-icon">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -308,7 +248,7 @@
                             <h4>View Insights</h4>
                             <p>Track your progress and patterns</p>
                         </div>
-                        <a href="#" class="insight-link">
+                        <a href="../Dashboard/insights.html" class="insight-link">
                             View Analytics
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path
@@ -338,7 +278,7 @@
                             <h4>Join Community</h4>
                             <p>Connect with supportive peers</p>
                         </div>
-                        <a href="#" class="insight-link">
+                        <a href="../Dashboard/community.html" class="insight-link">
                             Explore
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path

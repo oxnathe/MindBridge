@@ -1,6 +1,4 @@
-/* =========================================================
-   GLOBAL VARIABLES
-   ========================================================= */
+/*  GLOBAL VARIABLES */
 :root {
   --primary-dark-blue: #003148;
   --text-dark: #0b212c;
@@ -14,9 +12,7 @@
   --font-sans: 'Poppins', sans-serif;
 }
 
-/* =========================================================
-   BASE STYLES
-   ========================================================= */
+/*  BASE STYLES */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -38,9 +34,7 @@ input, button {
   font-family: inherit;
 }
 
-/* =========================================================
-   PAGE LAYOUT
-   ========================================================= */
+/*  PAGE LAYOUT */
 .signup-page {
   display: flex;
   flex-direction: column;
@@ -59,9 +53,7 @@ input, button {
   justify-content: center;
 }
 
-/* =========================================================
-   SITE HEADER / LOGO SECTION
-   ========================================================= */
+/*  SITE HEADER  */
 .page-header {
   display: flex;
   align-items: flex-start;
@@ -104,9 +96,7 @@ input, button {
   font-weight: 600;
 }
 
-/* =========================================================
-   BACK LINK SECTION
-   ========================================================= */
+/*  BACK LINK SECTION */
 .back-link {
   display: flex;
   align-items: center;
@@ -123,9 +113,7 @@ input, button {
   height: 22px;
 }
 
-/* =========================================================
-   SIGNUP CARD CONTAINER
-   ========================================================= */
+/*  SIGNUP CARD CONTAINER */
 .signup-content {
   display: flex;
   justify-content: center;
@@ -150,9 +138,7 @@ input, button {
   gap: 10px;
 }
 
-/* =========================================================
-   FORM HEADER 
-   ========================================================= */
+/* FORM HEADER  */
 .form-header {
   text-align: center;
   display: flex;
@@ -174,9 +160,7 @@ input, button {
   letter-spacing: -0.3px;
 }
 
-/* =========================================================
-   FORM BODY / INPUT FIELDS
-   ========================================================= */
+/*  FORM BODY  */
 .signup-form {
   display: flex;
   flex-direction: column;
@@ -217,9 +201,7 @@ input, button {
   font-size: 12px;
 }
 
-/* =========================================================
-   ERROR & SUCCESS STATES
-   ========================================================= */
+/*  ERROR & SUCCESS STATES */
 .form-group .error {
   color: red;
   font-size: 12px;
@@ -235,9 +217,7 @@ input, button {
 }
 
 
-/* =========================================================
-   PASSWORD TOGGLE ICON
-   ========================================================= */
+/*  PASSWORD TOGGLE ICON */
 .input-icon-btn {
   position: absolute;
   right: 16px;
@@ -250,9 +230,7 @@ input, button {
   justify-content: center;
 }
 
-/* =========================================================
-   HELPER TEXT & SUBMIT BUTTON
-   ========================================================= */
+/* HELPER TEXT & SUBMIT BUTTON */
 .helper-text {
   font-size: 10px;
   color: rgba(0, 39, 58, 0.8);
@@ -276,9 +254,11 @@ input, button {
   opacity: 0.9;
 }
 
-/* =========================================================
-   FORM FOOTER 
-   ========================================================= */
+.btn-submit:active{
+  opacity: 0.5;
+}
+
+/* FORM FOOTER  */
 .form-footer {
   display: flex;
   flex-direction: column;
@@ -307,16 +287,13 @@ input, button {
   letter-spacing: -0.3px;
 }
 
-/* =========================================================
-   RESPONSIVE ADJUSTMENTS
-   ========================================================= */
-@media (max-width: 992px) {
+/*  RESPONSIVENESS */
+@media (max-width: 1024px) {
   .page-header {
     padding: 0 20px;
   }
 }
 
-/* ============= TABLET & MOBILE RESPONSIVENESS =============== */
 @media (max-width: 768px) {
   .page-header {
     flex-direction: column;
