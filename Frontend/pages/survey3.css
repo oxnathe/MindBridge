@@ -1,4 +1,4 @@
-/* ================ GLOBAL VARIABLES ============== */
+/*  GLOBAL VARIABLES  */
 :root {
   --color-primary: #003148;
   --color-primary-dark: #052c65;
@@ -10,7 +10,7 @@
   --font-sans: 'Poppins', sans-serif;
 }
 
-/* ================ BASE STYLES =============== */
+/*  BASE STYLES  */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,7 +25,7 @@ body {
   padding: 20px;
 }
 
-/* ================ SITE HEADER ================ */
+/*  SITE HEADER  */
 .site-header {
   width: 100%;
   display: flex;
@@ -71,7 +71,7 @@ body {
   text-align: center;
 }
 
-/* =============== SURVEY CARD ================ */
+/*  SURVEY CARD  */
 .survey {
   display: flex;
   justify-content: center;
@@ -99,7 +99,7 @@ body {
   gap: 18px;
 }
 
-/* ================ QUESTION SECTION ================ */
+/*  QUESTION SECTION  */
 .survey__question {
   display: flex;
   flex-direction: column;
@@ -134,7 +134,7 @@ body {
   max-width: 456px;
 }
 
-/* ================ EMOTION OPTIONS ================ */
+/*  EMOTION OPTIONS  */
 .survey__options {
   width: 100%;
   max-width: 500px;
@@ -194,8 +194,13 @@ body {
     text-align: center;
     margin-bottom: 6px;
 }
+.survey__sub {
+    display: none; 
+    flex-direction: column;
+    gap: 6px;
+}
 
-/* ================ FOOTER SECTION ================ */
+/*  FOOTER SECTION  */
 .survey__footer {
   display: flex;
   flex-direction: column;

@@ -15,14 +15,14 @@
   --font-family-ui: 'Inter', sans-serif;
 }
 
-/* ==== RESET STYLES ==== */
+/*  RESET STYLES  */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* ==== BODY BASE STYLES ==== */
+/*  BASE STYLES  */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--white);
@@ -35,7 +35,7 @@ a{
     text-decoration: none;
 }
 
-/* ==== MAIN PAGE CONTAINER ==== */
+/*  MAIN PAGE CONTAINER */
 .page-container {
   display: flex;
   min-height: 100vh;
@@ -43,7 +43,7 @@ a{
   padding: 10px;
 }
 
-/* ==== MAIN CONTENT WRAPPER ==== */
+/*  MAIN CONTENT WRAPPER  */
 .main-content {
   flex: 1;
   display: flex;
@@ -51,7 +51,7 @@ a{
   gap: 20px;
 }
 
-/* ==== SIDEBAR STYLES ==== */
+/*  SIDEBAR STYLES */
 .sidebar {
   width: 250px;
   background: var(--white);
@@ -62,7 +62,7 @@ a{
   transition: all 0.3s ease;
 }
 
-/* ==== LOGO AREA ==== */
+/* LOGO AREA */
 .logo-link {
   display: flex;
   flex-direction: column;
@@ -102,7 +102,7 @@ a{
   line-height: 1;
 }
 
-/* ==== NAVIGATION MENU ==== */
+/* NAVIGATION MENU */
 .nav-menu {
   margin-top: 60px;
 }
@@ -138,7 +138,7 @@ a{
   height: 20px;
 }
 
-/* ==== HEADER AREA ==== */
+/*  HEADER AREA  */
 .header {
   display: flex;
   justify-content: flex-end;
@@ -158,7 +158,7 @@ a{
   border-radius: 50%;
 }
 
-/* ==== DASHBOARD GRID ==== */
+/* DASHBOARD GRID */
 .dashboard-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
@@ -223,7 +223,7 @@ a{
     border-radius: 50%;
 }
 
-/* ==== MAIN CONTENT GRID ==== */
+/*  MAIN CONTENT GRID  */
 .content-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 384px;
@@ -256,7 +256,7 @@ a{
     color: var(--color-text-secondary);
 }
 
-/* ==== GUIDELINES CARD ==== */
+/* GUIDELINES CARD  */
 .guidelines-card {
     background-color: var(--color-guidelines-bg);
     border-radius: 14px;
@@ -300,7 +300,7 @@ a{
     transition: all 0.3s ease;
 }
 
-/* ==== BUTTON STYLES ==== */
+/* BUTTON STYLES */
 .btn {
     display: inline-flex;
     justify-content: center;
@@ -335,7 +335,7 @@ a{
     font-size: 14px;
 }
 
-/* ==== TAB SECTION ==== */
+/* TAB SECTION */
 .tabs {
     background-color: #ececf0;
     border-radius: 14px;
@@ -365,7 +365,7 @@ a{
     font-weight: 700;
 }
 
-/* ==== COMMUNITY LIST & CARD ==== */
+/* COMMUNITY LIST */
 .community-list {
   display: grid ;
   grid-template-columns: 1fr ;
@@ -384,7 +384,6 @@ a{
   padding: 16px;
 }
 
-/* make community buttons smaller width (normal size) */
 .community-card a {
   width: auto;               
   padding: 8px 16px;        
@@ -396,7 +395,7 @@ a{
     transition: all 0.3s ease;
 }
 
-/* ==== CARD ICONS & CONTENT ==== */
+/*  CARD ICONS & CONTENT  */
 .card-icon-wrapper {
     width: 40px;
     height: 40px;
@@ -487,7 +486,7 @@ a{
     gap: 4px;
 }
 
-/* ==== RIGHT SIDEBAR ==== */
+/*  RIGHT SIDEBAR  */
 .right-sidebar {
     display: flex;
     flex-direction: column;
@@ -556,7 +555,7 @@ a{
     white-space: nowrap;
 }
 
-/* ==== VOICE MATTERS WIDGET ==== */
+/*  VOICE MATTERS WIDGET */
 .voice-matters-widget {
     background-color: var(--color-guidelines-bg);
     border-radius: 14px;
@@ -575,7 +574,7 @@ a{
     color: var(--color-text-dark);
 }
 
-/* ==== RESPONSIVENESS ==== */
+/*  RESPONSIVENESS */
 
 @media (max-width: 1200px) {
   .content-grid {

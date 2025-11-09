@@ -8,10 +8,9 @@
 </head>
 
 <body>
-  <!-- ==================== HEADER SECTION ==================== -->
+  <!--  HEADER SECTION  -->
   <header class="site-header">
     <div class="logo">
-      <!-- Logo Icon  -->
       <div class="logo__icon">
         <img src="../assets/logo bg.svg" alt="Logo background shape" class="logo__bg">
         <img src="../assets/logo.png" alt="Logo hand and brain icon" class="logo__fg">
@@ -20,34 +19,30 @@
     </div>
   </header>
 
-  <!-- ===================== MAIN SURVEY SECTION ===================== -->
+  <!--  MAIN SURVEY SECTION  -->
   <main class="survey">
     <section class="survey__card">
       <div class="survey__content">
         <div class="survey__question">
 
-          <!-- Question Header -->
           <header class="survey__header">
             <h2 class="survey__title">How's your sleep and focus recently?</h2>
             <p class="survey__subtitle">Choose the emotion that best describes your current mood.</p>
           </header>
 
-          <!-- ==================== SURVEY OPTIONS ==================== -->
+          <!--  SURVEY OPTIONS  -->
           <div class="survey__options" role="list">
 
-            <!-- Option 1 -->
             <button class="survey__option" role="listitem">
               <img src="../assets/pages assets/calm.svg" alt="Calm face emoji" class="survey__icon">
               <span class="survey__label">Sleep has been great</span>
             </button>
 
-            <!-- Option 2 -->
             <button class="survey__option" role="listitem">
               <img src="../assets/pages assets/neutral.svg" alt="Neutral face emoji" class="survey__icon">
               <span class="survey__label">Sleep has been okay, but not great</span>
             </button>
 
-            <!-- Option 3 -->
             <button class="survey__option" role="listitem">
               <img src="../assets/pages assets/sad.svg" alt="Sad face emoji" class="survey__icon">
               <span class="survey__label">Having trouble sleeping</span>
@@ -62,15 +57,13 @@
           </div>
         </div>
 
-        <!-- ==================== FOOTER SECTION ==================== -->
+        <!--  FOOTER SECTION  -->
         <footer class="survey__footer">
 
-          <!-- Go to Dashboard Button -->
           <a href="/Frontend/Dashboard/dashboard.html" class="survey__next-btn">
             <button class="survey__next-btn">Go to Dashboard</button>
           </a>
 
-          <!-- Note/Info Text -->
           <div class="survey__note">
             <img src="../assets/pages assets/message.svg" alt="Info icon" class="survey__note-icon">
             <p class="survey__note-text">
@@ -81,5 +74,19 @@
       </div>
     </section>
   </main>
+  <script>
+  const options = document.querySelectorAll('.survey__option');
+  const subMessage = document.querySelector('.survey__sub');
+
+  options.forEach(option => {
+    option.addEventListener('click', () => {
+      subMessage.style.display = 'flex';
+
+      options.forEach(btn => btn.classList.remove('selected'));
+      option.classList.add('selected');
+    });
+  });
+</script>
+
 </body>
 </html>

@@ -8,7 +8,7 @@
   transition: all 0.3s ease;
 }
 
-/* ==== LOGO AREA ==== */
+/*  LOGO AREA  */
 .logo-link {
   display: flex;
   flex-direction: column;
@@ -48,7 +48,7 @@
   line-height: 1;
 }
 
-/* ==== NAVIGATION MENU ==== */
+/* NAVIGATION MENU  */
 .nav-menu {
   margin-top: 60px;
 }
@@ -84,7 +84,7 @@
   height: 20px;
 }
 
-/* ==== HEADER AREA ==== */
+/*  HEADER AREA  */
 .header {
   display: flex;
   justify-content: flex-end;

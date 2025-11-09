@@ -474,7 +474,7 @@ body {
   transition: all 0.3s ease;
 }
 
-/* ==== CHARTS AND INSIGHTS ==== */
+/*  CHARTS AND INSIGHTS  */
 .column-side {
   margin-left: 10px;
 }
@@ -508,7 +508,7 @@ body {
   color: var(--color-text-muted);
 }
 
-/* ==== KEY INSIGHTS SECTION ==== */
+/* INSIGHTS SECTION  */
 .key-insights-section .section-title {
   font-size: 16px;
   font-weight: 600;
@@ -565,7 +565,7 @@ body {
   margin: 0;
 }
 
-/* ============== RESPONSIVENESS =============== */
+/*  RESPONSIVENESS  */
 
 @media (max-width: 1200px) {
   .dashboard-grid {
