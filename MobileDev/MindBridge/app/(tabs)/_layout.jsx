@@ -10,7 +10,6 @@ export default function TabLayout() {
         <Tabs
         screenOptions={{
             tabBarActiveTintColor: '#0B212C',
-            backgroundColor:'#9DD4EF',
             tabBarInactiveTintColor: '#666',
             tabBarStyle: {
                 backgroundColor: '#FFFFFF',
@@ -37,7 +36,7 @@ export default function TabLayout() {
                 options={{
                     title: 'Mood',
                     tabBarIcon: ({color, size}) => (
-                        <Feather name="heart" size={24} color="white" />
+                        <Feather name="heart" size={24} color="black" />
                     )
                 }}
             />
