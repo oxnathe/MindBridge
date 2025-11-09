@@ -121,7 +121,7 @@ button
   line-height: 1;
 }
 
-/* ==== NAVIGATION MENU ==== */
+/*  NAVIGATION MENU  */
 .nav-menu {
   margin-top: 60px;
 }
@@ -157,7 +157,7 @@ button
   height: 20px;
 }
 
-/* ==== HEADER AREA ==== */
+/*  HEADER AREA  */
 .header {
   display: flex;
   justify-content: flex-end;

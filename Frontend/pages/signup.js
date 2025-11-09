@@ -5,7 +5,6 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const confirm_password = document.getElementById('confirm_password');
 
-// PASSWORD TOGGLE FEATURE
 const toggleButtons = document.querySelectorAll('.input-icon-btn');
 toggleButtons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -20,7 +19,6 @@ toggleButtons.forEach((button) => {
     });
 });
 
-// HELPER FUNCTIONS
 const setError = (element, message) => {
     const formGroup = element.closest('.form-group');
     const errorDisplay = formGroup.querySelector('.error');
@@ -37,7 +35,6 @@ const setSuccess = (element) => {
     formGroup.classList.remove('error');
 };
 
-// VALIDATION FUNCTION
 const validateInputs = () => {
     let isValid = true;
     const usernameValue = username.value.trim();
@@ -99,7 +96,6 @@ const validateInputs = () => {
     return isValid;
 };
 
-// FORM SUBMISSION
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     if (!validateInputs()) return;
@@ -129,7 +125,6 @@ form.addEventListener('submit', async (e) => {
             return;
         }
 
-        // Success
         if (result.token) {
           console.log('Signup successful, navigating now...');
             localStorage.setItem('userToken', result.token);

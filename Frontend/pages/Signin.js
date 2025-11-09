@@ -1,6 +1,7 @@
 const form = document.querySelector('.signup-form');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
+const submitBtn = document.getElementById('login-btn')
 
 
 function setError(element, message) {
@@ -22,6 +23,10 @@ function setSuccess(element) {
 // Simple validation
 function validateInputs() {
   let valid = true;
+
+
+   submitBtn.disabled = true;
+  submitBtn.textContent = 'Logging in...'; 
 
   if (email.value.trim() === '') {
     setError(email, 'Email is required');
@@ -69,7 +74,7 @@ form.addEventListener('submit', function (e) {
         localStorage.setItem('token', data.token);
 
         
-window.location.assign('./Dashboard/dashboard.html');
+window.location.assign('../Dashboard/dashboard.html');
 
       } else {
 

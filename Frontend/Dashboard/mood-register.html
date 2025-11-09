@@ -27,19 +27,19 @@
                             <img src="../assets/home.svg" alt="Cookie" class="sidebar__icons">
                             Home
                         </a></li>
-                    <li><a href="#" class="nav-link active">
+                    <li><a href="../Dashboard/mood-register.html" class="nav-link active">
                             <img src="../assets/mood.svg" alt="Cookie" class="sidebar__icons">
                             Mood
                         </a></li>
-                    <li><a href="#" class="nav-link">
+                    <li><a href="../Dashboard/insights.html" class="nav-link">
                             <img src="../assets/insights.svg" alt="Cookie" class="sidebar__icons">
                             Insight
                         </a></li>
-                    <li><a href="#" class="nav-link">
+                    <li><a href="../Dashboard/community.html" class="nav-link">
                            <img src="../assets/community.svg" alt="Cookie" class="sidebar__icons">
                             Community
                         </a></li>
-                    <li><a href="#" class="nav-link">
+                    <li><a href="../Dashboard/resources.html" class="nav-link">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                 <path d="M16 7L20 23.3333M12 7V23.3333M8 9.33337V23.3334M4 4.66663V23.3333"
                                     stroke="currentColor" stroke-width="2" />
@@ -58,7 +58,7 @@
                             <img src="../assets/Support.svg" alt="Cookie" class="sidebar__icons">
                             Support
                         </a></li>
-                    <li><a href="#" class="nav-link">
+                    <li><a href="../pages/index.html" class="nav-link">
                             <img src="../assets/logout.svg" alt="Cookie" class="sidebar__icons">
                             Logout
                         </a></li>
@@ -87,37 +87,41 @@
     <div class="mood-selector">
       <h2>Select your mood</h2>
       <div class="mood-grid">
-        <button class="mood-card">
-          <div class="mood-card__icon-wrapper">
-            <img src="../assets/happy-face.svg" alt="Happy Face Emoji">
-          </div>
-          <span class="mood-card__label">Amazing</span>
-        </button>
-        <button class="mood-card">
-          <div class="mood-card__icon-wrapper">
-            <img src="../assets/smiley-face.svg" alt="Smiley Face Emoji">
-          </div>
-          <span class="mood-card__label">Good</span>
-        </button>
-        <button class="mood-card">
-          <div class="mood-card__icon-wrapper">
-            <img src="../assets/neutral-face.svg" alt="Neutral Face Emoji">
-          </div>
-          <span class="mood-card__label">Okay</span>
-        </button>
-        <button class="mood-card">
-          <div class="mood-card__icon-wrapper">
-            <img src="../assets/tired-face.svg" alt="Tired Face Emoji">
-          </div>
-          <span class="mood-card__label">Bad</span>
-        </button>
-        <button class="mood-card">
-          <div class="mood-card__icon-wrapper">
-            <img src="../assets/terrible-face.svg" alt="Terrible Face Emoji">
-          </div>
-          <span class="mood-card__label">Terrible</span>
-        </button>
-      </div>
+       <button class="mood-card" data-mood="5" data-label="Amazing">
+  <div class="mood-card__icon-wrapper">
+    <img src="../assets/happy-face.svg" alt="Happy Face Emoji">
+  </div>
+  <span class="mood-card__label">Amazing</span>
+</button>
+
+<button class="mood-card" data-mood="4" data-label="Good">
+  <div class="mood-card__icon-wrapper">
+    <img src="../assets/smiley-face.svg" alt="Smiley Face Emoji">
+  </div>
+  <span class="mood-card__label">Good</span>
+</button>
+
+<button class="mood-card" data-mood="3" data-label="Okay">
+  <div class="mood-card__icon-wrapper">
+    <img src="../assets/neutral-face.svg" alt="Neutral Face Emoji">
+  </div>
+  <span class="mood-card__label">Okay</span>
+</button>
+
+<button class="mood-card" data-mood="2" data-label="Bad">
+  <div class="mood-card__icon-wrapper">
+    <img src="../assets/tired-face.svg" alt="Tired Face Emoji">
+  </div>
+  <span class="mood-card__label">Bad</span>
+</button>
+
+<button class="mood-card" data-mood="1" data-label="Terrible">
+  <div class="mood-card__icon-wrapper">
+    <img src="../assets/terrible-face.svg" alt="Terrible Face Emoji">
+  </div>
+  <span class="mood-card__label">Terrible</span>
+</button>
+
     </div>
   </section>
 
@@ -135,6 +139,8 @@
         <button type="button" class="btn btn--secondary">Cancel</button>
       </div>
     </form>
+    <div id="mood-feedback" class="feedback"></div>
+
   </section>
 
   <section id="mood-history" class="mood-history">

@@ -1,6 +1,4 @@
-/* =========================
-   GLOBAL STYLES
-========================= */
+/*  GLOBAL STYLES */
 body {
   margin: 0;
   padding: 0;
@@ -18,9 +16,7 @@ a {
   color: inherit;
 }
 
-/* =========================
-   PAGE CONTAINER
-========================= */
+/*  PAGE CONTAINER */
 .page-container {
   max-width: 1440px;
   height: 100vh;
@@ -31,9 +27,7 @@ a {
   align-items: flex-start;
 }
 
-/* =========================
-   HEADER & LOGO
-========================= */
+/*  HEADER & LOGO */
 .header-logo {
   position: static;
   top: 32px;
@@ -79,9 +73,7 @@ a {
   margin: 0;
 }
 
-/* =========================
-   FORM SECTION
-========================= */
+/*  FORM SECTION */
 .form-section {
   position: static;
   width: 100%;
@@ -94,9 +86,7 @@ a {
   gap: 12px;
 }
 
-/* =========================
-   BACK LINK
-========================= */
+/*  BACK LINK */
 .back-link {
   display: flex;
   align-items: center;
@@ -112,9 +102,7 @@ a {
   height: 18px;
 }
 
-/* =========================
-   FORM CARD
-========================= */
+/*  FORM CARD */
 .form-card {
   width: 100%;
   max-width: 500px;
@@ -124,9 +112,7 @@ a {
   background-color: #ffffff;
 }
 
-/* =========================
-   FORM CONTENT & HEADER
-========================= */
+/*  FORM CONTENT & HEADER */
 .form-content {
   display: flex;
   flex-direction: column;
@@ -166,9 +152,7 @@ a {
   color: rgba(72, 59, 0, 0.40);
 }
 
-/* =========================
-   INPUT FIELDS
-========================= */
+/*  INPUT FIELDS */
 .reset-form {
   display: flex;
   flex-direction: column;
@@ -206,9 +190,7 @@ a {
   opacity: 1;
 }
 
-/* =========================
-   SUBMIT BUTTON
-========================= */
+/*  SUBMIT BUTTON */
 .submit-button {
   background-color: #003148;
   color: #ffffff;
@@ -233,9 +215,7 @@ a {
   color: #003148;
 }
 
-/* =========================
-   RESPONSIVE STYLES
-========================= */
+/*  RESPONSIVE STYLES */
 @media (max-width: 1200px) {
   .back-link {
     align-items: flex-start;
