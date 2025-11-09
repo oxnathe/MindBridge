@@ -1,4 +1,4 @@
-/*  ===== BASE STYLES ==== */
+/*   BASE STYLES  */
 :root {
   --primary-purple: #59168b;
   --light-blue-bg: #9dd4ef;
@@ -11,7 +11,7 @@
   --border-color: #d9d9d9;
 }
 
-/* ==== RESET ==== */
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -33,7 +33,7 @@ body {
     padding: 10px;
 }
 
-/* ==== SIDE MENU/LOGO ==== */
+/* SIDE MENU/LOGO */
 .sidebar {
     width: 250px;
     background: var(--white);
@@ -118,7 +118,7 @@ body {
     height: 20px;
 }
 
-/* ==== MAIN CONTENT ====*/
+/* MAIN CONTENT */
 .main-content {
     flex: 1;
     display: flex;
@@ -126,7 +126,7 @@ body {
     gap: 20px;
 }
 
-/* ==== HEADER ==== */
+/* HEADER */
 .header {
     display: flex;
     justify-content: flex-end;
@@ -146,7 +146,7 @@ body {
     border-radius: 50%;
 }
 
-/* ==== MOOD SELECTION ==== */
+/* MOOD SELECTION */
 .mood-tracker__intro {
   margin-bottom: 48px;
   font-family: 'DM Serif Display';
@@ -209,6 +209,12 @@ body {
     border: 1px solid #a1a1a1;
 }
 
+.mood-card.selected {
+    background-color: var(--light-blue-bg);
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
 .mood-card__icon-wrapper {
   position: relative;
   width: 59px;
@@ -230,7 +236,7 @@ body {
   color: var(--text-dark);
 }
 
-/* ==== MOOD ENTRY ==== */
+/* MOOD ENTRY */
 .mood-entry {
   max-width: 537px;
   margin-top: 10px;
@@ -325,8 +331,14 @@ body {
     transform: translateY(-2px);
     opacity: 0.8;
 }
+.feedback {
+    font-size: 14px;
+    color: green;
+    margin-top: 8px;
+}
 
-/* ==== MOOD HISTORY ==== */
+
+/* MOOD HISTORY */
 .mood-history {
   display: flex;
   flex-direction: column;
@@ -414,7 +426,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* ==== RESPONSIVENESS ==== */
+/* RESPONSIVENESS */
 @media (max-width: 1024px) {
   .page-container {
     flex-direction: column;

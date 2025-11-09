@@ -1,4 +1,4 @@
-/* ============= GLOBAL VARIABLES ================== */
+/*  GLOBAL VARIABLES  */
 :root {
   --color-primary: #003148;
   --color-primary-dark: #052c65;
@@ -10,7 +10,7 @@
   --font-sans: 'Poppins', sans-serif;
 }
 
-/* =================== BASE STYLES ==================== */
+/*  BASE STYLES  */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,7 +25,7 @@ body {
   padding: 20px;
 }
 
-/* ==================== SITE HEADER =================== */
+/* ] SITE HEADER  */
 .site-header {
   width: 100%;
   display: flex;
@@ -73,7 +73,7 @@ body {
   text-align: center;
 }
 
-/* ==================== SURVEY CARD ==================== */
+/*  SURVEY CARD  */
 .survey {
   display: flex;
   justify-content: center;
@@ -100,7 +100,7 @@ body {
   gap: 24px;
 }
 
-/* ==================== QUESTION AREA ==================== */
+/*  QUESTION AREA  */
 .survey__question {
   display: flex;
   flex-direction: column;
@@ -135,7 +135,7 @@ body {
   max-width: 456px;
 }
 
-/* ==================== OPTIONS ==================== */
+/*  OPTIONS  */
 .survey__options {
   width: 100%;
   max-width: 400px;
@@ -174,7 +174,7 @@ body {
   line-height: 16.1px;
 }
 
-/* =================== FOOTER ==================== */
+/*  FOOTER  */
 .survey__footer {
   display: flex;
   flex-direction: column;
@@ -223,7 +223,7 @@ body {
   line-height: 20px;
 }
 
-/* ======== RESPONSIVE DESIGN ========== */
+/*  RESPONSIVE DESIGN  */
 @media (max-width: 768px) {
   body {
     padding: 10px;

@@ -1,4 +1,3 @@
-// PASSWORD TOGGLE 
 const toggleButtons = document.querySelectorAll('.input-icon');
 
 toggleButtons.forEach((button) => {
@@ -18,7 +17,6 @@ const form = document.getElementById('password-form');
 const password = document.getElementById('password');
 const confirmPassword = document.getElementById('confirm-password');
 
-// HELPER FUNCTIONS 
 function setError(input, message) {
   const formGroup = input.closest('.form-group');
   const errorDiv = formGroup.querySelector('.error');
@@ -35,7 +33,6 @@ function setSuccess(input) {
   formGroup.classList.remove('error');
 }
 
-// VALIDATION 
 function validateInputs() {
   let isValid = true;
   const passwordValue = password.value.trim();
@@ -62,7 +59,6 @@ function validateInputs() {
     setSuccess(password);
   }
 
-  // Confirm password validation
   if (confirmValue === '') {
     setError(confirmPassword, 'Please confirm your password');
     isValid = false;
@@ -76,7 +72,6 @@ function validateInputs() {
   return isValid;
 }
 
-// FORM SUBMIT 
 form.addEventListener('submit', function (e) {
   e.preventDefault();
 
