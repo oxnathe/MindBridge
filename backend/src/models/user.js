@@ -6,12 +6,12 @@ const User = sequelize.define(
   {
     username: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
       unique: true,
     },
     email: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
       unique: true,
       validate: {
         isEmail: { msg: "Email must be valid" },
@@ -19,7 +19,7 @@ const User = sequelize.define(
     },
     password: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
     },
     role: {
       type: DataTypes.ENUM("user", "therapist", "admin"),
@@ -29,14 +29,14 @@ const User = sequelize.define(
       type: DataTypes.BOOLEAN,
       defaultValue: false,
     },
-     createdAt: {
+    createdAt: {
       type: DataTypes.DATE,
-      allowNull: true,
+      allowNull: false,
       defaultValue: DataTypes.NOW,
     },
   },
   {
-    timestamps: false, 
+    timestamps: false,
   }
 );
 

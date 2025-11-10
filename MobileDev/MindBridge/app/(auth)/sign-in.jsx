@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View, Platform, TextInput, Modal, TouchableOpacity, Alert } from "react-native"
+import { Image, StyleSheet, Text, View, Platform, TextInput, Modal, TouchableOpacity, Alert, KeyboardAvoidingView } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 import InputComponent from "../../components/InputComponent"
 import { SIZES } from "../../themes/theme"
@@ -103,7 +103,12 @@ const Signin = () =>{
             const result = await firebaseAuth.sendPasswordReset(forgotPasswordEmail)
             Alert.alert('Success', result.message)
             setModalVisible(false)
-            setForgotPasswordEmail('')
+            setForgotPasswordEmail('');
+
+            router.push({
+                pathname: './verifyPassword',
+                params: {email: forgotPasswordEmail}
+            })
         } catch (error) {
             Alert.alert('Error', error.message)
         } finally {
@@ -134,144 +139,143 @@ const Signin = () =>{
                     It’s good to have you here again. Let’s {'\n'} continue your journey.
                 </Text>
             </View>
+            <KeyboardAvoidingView>
+                <View style={{
+                    marginTop: 10,
+                }}>
+                    <Text style={formStyles.label}>
+                        Email Address
+                    </Text>
+                    <InputComponent 
+                    placeholder={"you@example.com"}
+                    keyboardType={"email-address"}
+                    value={formData.email}
+                    onChangeText={(value) => handleInputChange('email', value)}
+                    />
+                    {errors.email ? <Text style={formStyles.errorText}>{errors.email}</Text> : null}
+                </View>
 
-            <View style={{
-                marginTop: 10,
-            }}>
-                <Text style={formStyles.label}>
-                    Email Address
-                </Text>
-                <InputComponent 
-                placeholder={"you@example.com"}
-                keyboardType={"email-address"}
-                value={formData.email}
-                onChangeText={(value) => handleInputChange('email', value)}
-                />
-                {errors.email ? <Text style={formStyles.errorText}>{errors.email}</Text> : null}
-            </View>
-
-            <View style={{
-                marginTop: 10,
-            }}>
-                <Text style={formStyles.label}>
-                    Password
-                </Text>
-                <TextInput style={formStyles.inputPassword} 
-                placeholder="Enter Password"
-                placeholderTextColor= '#AFAFAF'
-                returnKeyType="done"
-                secureTextEntry={!passwordVisible}
-                value={formData.password}
-                onChangeText={(value)=> handleInputChange('password', value)}
-                autoCapitalize="none"
-                />
-                <Image style={{
-                    width: 16,
-                    height: 16,
-                    position: "absolute",
-                    top: 40,
-                    left: 370,
-                }} source={require('../../assets/images/eye-alt.png')} onPress={() =>
-                    setPasswordVisible(!passwordVisible)
-                }/>
-                <Text style={{
-                        fontFamily: 'poppinsRegular',
-                        fontSize: '10',
+                <View style={{
+                    marginTop: 10,
+                }}>
+                    <Text style={formStyles.label}>
+                        Password
+                    </Text>
+                    <TextInput style={formStyles.inputPassword} 
+                    placeholder="Enter Password"
+                    placeholderTextColor= '#AFAFAF'
+                    returnKeyType="done"
+                    secureTextEntry={!passwordVisible}
+                    value={formData.password}
+                    onChangeText={(value)=> handleInputChange('password', value)}
+                    autoCapitalize="none"
+                    />
+                    <Image style={{
+                        width: 16,
+                        height: 16,
+                        position: "absolute",
+                        top: 40,
+                        left: 370,
+                    }} source={require('../../assets/images/eye-alt.png')} onPress={() =>
+                        setPasswordVisible(!passwordVisible)
+                    }/>
+                    <Text style={{
+                            fontFamily: 'poppinsRegular',
+                            fontSize: '10',
+                        }}>
+                        Must contain at least a uppercase, a lowercase, a character
+                    </Text>
+                    {errors.password ? <Text style={formStyles.errorText}>{errors.password}</Text> : null}
+                </View>
+                <View style={{
+                    marginLeft: 250,
+                    marginTop: 10,
                     }}>
-                    Must contain at least a uppercase, a lowercase, a character
-                </Text>
-                {errors.password ? <Text style={formStyles.errorText}>{errors.password}</Text> : null}
-            </View>
-            <View style={{
-                marginLeft: 250,
-                marginTop: 10,
-                }}>
-                <Text style={{
-                    fontFamily: 'poppinsSemiBold',
-                    textDecorationStyle: 'solid',
-                    textDecorationLine: 'underline',
-                    fontSize: 14,
-                }} onPress={()=>{
-                    setModalVisible(true)
-                }}>
-                    Forgot your password?
-                </Text>
-            </View>
-
-            <Modal 
-                animationType="slide"
-                transparent={true}
-                visible={modalVisible}
-                onRequestClose={()=>{
-                    setModalVisible(!modalVisible)
-                }}>
-
-                    <View style={{
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        backgroundColor: '#fff',
-                        marginTop: 380,
-                        borderTopLeftRadius: 40,
-                        borderTopRightRadius: 40
+                    <Text style={{
+                        fontFamily: 'poppinsSemiBold',
+                        textDecorationStyle: 'solid',
+                        textDecorationLine: 'underline',
+                        fontSize: 14,
+                    }} onPress={()=>{
+                        setModalVisible(true)
                     }}>
+                        Forgot your password?
+                    </Text>
+                </View>
+
+                <Modal 
+                    animationType="slide"
+                    transparent={true}
+                    visible={modalVisible}
+                    onRequestClose={()=>{
+                        setModalVisible(!modalVisible)
+                    }}>
+
                         <View style={{
-                            marginTop: 20,
-                            marginLeft: 350,
-                        }}> 
-                            <TouchableOpacity onPress={()=> setModalVisible(!modalVisible)}>
-                                <MaterialIcons name="cancel" size={24} color="black"/>
-                            </TouchableOpacity>
-                        </View> 
-                        <View style={{
-                            marginTop: 30,
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            backgroundColor: '#fff',
+                            marginTop: 380,
+                            borderTopLeftRadius: 40,
+                            borderTopRightRadius: 40
                         }}>
-                            <Text style={{
-                                fontFamily: 'serifRegular',
-                                fontSize: SIZES.medium,
-                                textAlign: 'center',
-                                marginBottom: 10,
+                            <View style={{
+                                marginTop: 20,
+                                marginLeft: 350,
+                            }}> 
+                                <TouchableOpacity onPress={()=> setModalVisible(!modalVisible)}>
+                                    <MaterialIcons name="cancel" size={24} color="black"/>
+                                </TouchableOpacity>
+                            </View> 
+                            <View style={{
+                                marginTop: 30,
                             }}>
-                                Forgot Password?
-                            </Text>
-                            <Text style={{
-                                fontFamily: 'poppinsRegular',
-                                textAlign: 'center',
-                                fontSize: SIZES.small,
-                                color: '#0B212C'
+                                <Text style={{
+                                    fontFamily: 'serifRegular',
+                                    fontSize: SIZES.medium,
+                                    textAlign: 'center',
+                                    marginBottom: 10,
+                                }}>
+                                    Forgot Password?
+                                </Text>
+                                <Text style={{
+                                    fontFamily: 'poppinsRegular',
+                                    textAlign: 'center',
+                                    fontSize: SIZES.small,
+                                    color: '#0B212C'
+                                }}>
+                                    Enter your email address. We’ll send you a 6-digit code to reset it.
+                                </Text>
+                            </View>
+
+                            <View style={{
+                                marginTop: 50,
                             }}>
-                                Enter your email address. We’ll send you a 6-digit code to reset it.
-                            </Text>
+                                <Text style={formStyles.label}>
+                                    Email Address
+                                </Text>
+                                <InputComponent 
+                                    placeholder={"you@example.com"}
+                                    keyboardType={"email-address"}
+                                    autoCapitalize="none"
+                                    value={forgotPasswordEmail}
+                                    onChangeText={setForgotPasswordEmail}
+                                />
+                            </View>
+                            <View style={{
+                                marginTop: 150,
+                                marginBottom: 100,
+                            }}>
+                                <Button 
+                                text={forgotPasswordLoading ? 'Sending...' : 'Send Reset Link'}  
+                                onPress={handleForgotPassword}
+                                disabled={forgotPasswordLoading}/>
+                            </View>
+                            
                         </View>
 
-                        <View style={{
-                            marginTop: 50,
-                        }}>
-                            <Text style={formStyles.label}>
-                                Email Address
-                            </Text>
-                            <InputComponent 
-                                placeholder={"you@example.com"}
-                                keyboardType={"email-address"}
-                                autoCapitalize="none"
-                                value={forgotPasswordEmail}
-                                onChangeText={setForgotPasswordEmail}
-                            />
-                        </View>
-
-                        <View style={{
-                            marginTop: 150,
-                            marginBottom: 100,
-                        }}>
-                            <Button 
-                            text={forgotPasswordLoading ? 'Sending...' : 'Send Reset Link'}  
-                            onPress={handleForgotPassword}
-                            disabled={forgotPasswordLoading}/>
-                        </View>
-                        
-                    </View>
-
-            </Modal>
-            
+                    </Modal>
+                </KeyboardAvoidingView>
 
             <View style={{
                 marginTop: 300,
