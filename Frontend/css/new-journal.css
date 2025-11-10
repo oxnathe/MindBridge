@@ -1,3 +1,10 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html
 {
     font-size: 62.4%;
@@ -69,6 +76,12 @@ button
     --btn-color: #003148;
     --footer-color: #002E45;
     --footer-BG: #9DD4EF;
+}
+
+body
+{
+  line-height: 1.6;
+    font-size: 1.6rem;
 }
 
 .sidebar {

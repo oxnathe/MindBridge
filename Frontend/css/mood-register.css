@@ -22,15 +22,14 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--white);
   color: var(--text-main);
-  display: flex;
-  justify-content: center;
+
 }
 
 .page-container {
     display: flex;
     min-height: 100vh;
-    gap: 20px;
-    padding: 10px;
+    gap: 2rem;
+    padding: 2rem;
 }
 
 /* SIDE MENU/LOGO */
